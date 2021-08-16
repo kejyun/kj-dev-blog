@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>KJ Dev</title>
+        <link>https://dev.kejyun.com/</link>
+        <description>Recent content on KJ Dev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <lastBuildDate>Mon, 16 Aug 2021 09:50:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>打造漂亮好用的 Terminal by powerlevel10k</title>
+        <link>https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/</link>
+        <pubDate>Mon, 16 Aug 2021 09:50:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/cover.png" alt="Featured image of post 打造漂亮好用的 Terminal by powerlevel10k" /&gt;&lt;h2 id=&#34;安裝-oh-my-zsh&#34;&gt;安裝 Oh My Zsh&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sh -c &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安裝-nerd-字型&#34;&gt;安裝 Nerd 字型&lt;/h2&gt;
+&lt;p&gt;可以使用 powerlevel10k 推薦的 MesloLGS NF 字型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MesloLGS NF Regular.ttf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MesloLGS NF Bold.ttf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MesloLGS NF Italic.ttf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MesloLGS NF Bold Italic.ttf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 Mac 環境將字體下載後，點開檔案按右下方的 &lt;code&gt;Install Font&lt;/code&gt; 即可安裝字型&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 106; flex-basis: 256px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1.png&#34; data-size=&#34;512x480&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1_hucb1ae2dc795abe3867819129f7e1bc33_93616_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1_hucb1ae2dc795abe3867819129f7e1bc33_93616_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;512&#34;
+				height=&#34;480&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;powerful-terminal-command-line-powerlevel10k&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;powerful-terminal-command-line-powerlevel10k&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;設定-iterm2-字形&#34;&gt;設定 iTerm2 字形&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;iTerm2&lt;/code&gt; 的 &lt;code&gt;preference&lt;/code&gt; 中，點選 &lt;code&gt;Profile&lt;/code&gt; &amp;gt; &lt;code&gt;Text&lt;/code&gt; 頁籤，修改下方的 Font 設定為剛剛安裝的 &lt;code&gt;MesloLGS NF&lt;/code&gt; 字型&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 195; flex-basis: 470px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2.png&#34; data-size=&#34;942x481&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2_huc1dc84971d598a50d09500b972fd0c53_107536_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2_huc1dc84971d598a50d09500b972fd0c53_107536_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;942&#34;
+				height=&#34;481&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;powerful-terminal-command-line-powerlevel10k&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;powerful-terminal-command-line-powerlevel10k&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下載-powerlevel10k-到-oh-my-zsh-主題中&#34;&gt;下載 powerlevel10k 到 Oh My Zsh 主題中&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone --depth&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; https://github.com/romkatv/powerlevel10k.git &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ZSH_CUSTOM&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/.oh-my-zsh/custom&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;/themes/powerlevel10k
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;設定-zsh-主題為-powerlevel10kpowerlevel10k&#34;&gt;設定 ZSH 主題為 &lt;code&gt;powerlevel10k/powerlevel10k&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;修改 &lt;code&gt;~/.zshrc&lt;/code&gt; 檔案，將 &lt;code&gt;ZSH_THEME&lt;/code&gt; 改為 &lt;code&gt;powerlevel10k/powerlevel10k&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ZSH_THEME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;powerlevel10k/powerlevel10k&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;設定-powerlevel10k&#34;&gt;設定 powerlevel10k&lt;/h2&gt;
+&lt;p&gt;在命令列輸入 &lt;code&gt;p10k configure&lt;/code&gt; 即可設定您要的主題樣式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;p10k configure
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 150; flex-basis: 360px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3.png&#34; data-size=&#34;709x472&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3_hu0d340dd47d6c247ccc3b7014eed107c2_37561_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3_hu0d340dd47d6c247ccc3b7014eed107c2_37561_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;709&#34;
+				height=&#34;472&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;powerful-terminal-command-line-powerlevel10k&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;powerful-terminal-command-line-powerlevel10k&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;設定完成後就可以開始用漂亮的 Termianl 介面了，隨時可以用 &lt;code&gt;p10k configure&lt;/code&gt; 變更 Termianl 主題&lt;/p&gt;
+&lt;h2 id=&#34;hint&#34;&gt;Hint&lt;/h2&gt;
+&lt;p&gt;在尚未設定 powerlevel10k 時，每次開啟 iTerm2 都會要求設定樣式，若要關閉此提示，可以輸入下方指令關閉&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt;! ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub - romkatv/powerlevel10k: A Zsh theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ohmyz.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Oh My Zsh - a delightful &amp;amp; open source framework for Zsh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ryanoasis/nerd-fonts&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub - ryanoasis/nerd-fonts: Iconic font aggregator, collection, &amp;amp; patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp;amp; more&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://holychung.medium.com/%E5%88%86%E4%BA%AB-oh-my-zsh-powerlevel10k-%E5%BF%AB%E9%80%9F%E6%89%93%E9%80%A0%E5%A5%BD%E7%9C%8B%E5%A5%BD%E7%94%A8%E7%9A%84-command-line-%E7%92%B0%E5%A2%83-f66846117921&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【分享】Oh My Zsh + powerlevel10k 快速打造好看好用的 command line 環境 | by Holy | Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟</title>
+        <link>https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/</link>
+        <pubDate>Mon, 16 Aug 2021 08:50:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/cover.png" alt="Featured image of post Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟" /&gt;&lt;p&gt;Ubuntu 16.04 一開機時，突然出現了下面的訊息，再次重新開機也沒用一樣卡住無限鬼打牆&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Welcome to emergency mode! After logging in, type “journalctl -xb” to view system logs, “systemctl reboot” to reboot, “systemctl default” or ^D to try again boot into default mode.
+Give root password for maintained (or press Control-D to continue).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;輸入 root 密碼登入打入 &lt;code&gt;journalctl -xb&lt;/code&gt; 檢查開機訊息時，發現在 mount 硬碟時整個卡住，導致系統無法順利啟動&lt;/p&gt;
+&lt;p&gt;這個錯誤訊息常發生在載入 &lt;code&gt;外部硬碟&lt;/code&gt;、&lt;code&gt;網路硬碟&lt;/code&gt; 等沒有載入導致&lt;/p&gt;
+&lt;h2 id=&#34;解決方式&#34;&gt;解決方式&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;emergency mode&lt;/code&gt; 登入 root 帳號後輸入下列指令讓 &lt;code&gt;/etc/fstab&lt;/code&gt; 檔案有被寫入的權限&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ mount -n -o remount,rw /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;/etc/fstab&lt;/code&gt; 是自動 mount 的設定檔案，使用 &lt;code&gt;vi&lt;/code&gt; 或 &lt;code&gt;vim&lt;/code&gt; 編輯此檔案&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo vim /etc/fstab
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 &lt;code&gt;/etc/fstab&lt;/code&gt; 檔案中將卡住的 mount 硬碟輸入 &lt;code&gt;# &lt;/code&gt; 註解掉&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 註解前&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d /data           ext4    &lt;span class=&#34;nv&#34;&gt;errors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;remount-ro &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 註解後&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 這一行掛載出現問題，在前方加入註解取消掛載&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# UUID=bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d /data           ext4    errors=remount-ro 0      0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;註解掛載指令後 &lt;code&gt;/etc/fstab&lt;/code&gt; 檔案會長的像這樣&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/fstab: static file system information.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Use &amp;#39;blkid&amp;#39; to print the universally unique identifier for a&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# device; this may be used with UUID= as a more robust way to name devices&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# that works even if disks are added and removed. See fstab(5).&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# &amp;lt;file system&amp;gt; &amp;lt;mount point&amp;gt;   &amp;lt;type&amp;gt;  &amp;lt;options&amp;gt;       &amp;lt;dump&amp;gt;  &amp;lt;pass&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# / was on /dev/sda2 during installation&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;4fb9f563-7ae4-4df9-a028-fdc6b9e4f1a5 /               ext4    &lt;span class=&#34;nv&#34;&gt;errors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;remount-ro &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# swap was on /dev/sda3 during installation&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;cf0cf85a-6fed-4c43-901d-c946d6e1c5fa none            swap    sw              &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 這一行掛載出現問題，在前方加入註解取消掛載&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# UUID=bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d /data           ext4    errors=remount-ro 0      0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;輸入指令切換成預設模式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ systemctl default
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重新開機後就可以正常進入系統了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ostechnix.com/how-to-boot-into-rescue-mode-or-emergency-mode-in-ubuntu-18-04/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Boot Into Rescue Mode Or Emergency Mode In Ubuntu 20.04 / 18.04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velaninfo.com/rs/techtips/emergency-mode-in-linux/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How to exit emergency mode and boot to default mode in Linux | Velan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/488360/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu啟動出現welcome to emergency mode! Press Enter for maintenance 的檔案。 | 程式前沿&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.itread01.com/content/1541219343.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linux出現welcome to emergency mode! 解決方法 - IT閱讀&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://2formosa.blogspot.com/2018/01/linuxe-mergency-mode-when-booting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;阿就操場啊~: Linux開機進入emergency mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/chenyiyue/article/details/51705972&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux 开机显示：welcome to emergency mode 的解决方法_Lance的博客-CSDN博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://2formosa.blogspot.com/2018/07/fstab-dump-pass.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;阿就操場啊~: /etc/fstab的dump與pass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL Replica master&#39;s binary log is corrupted</title>
+        <link>https://dev.kejyun.com/article/2021/08/mysql-replica-master-binary-log-is-corrupted/</link>
+        <pubDate>Thu, 05 Aug 2021 08:50:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/08/mysql-replica-master-binary-log-is-corrupted/</guid>
+        <description>&lt;h2 id=&#34;狀況&#34;&gt;狀況&lt;/h2&gt;
+&lt;p&gt;使用管理者帳號登入 MySQL&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mysql -h localhost -u root -p
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 MySQL Master 機器中輸入 &lt;code&gt;show slave status\G&lt;/code&gt; 檢查 Slave 機器狀態&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;show&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slave&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;G&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;***************************&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;***************************&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Slave_IO_State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_Host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;168&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_User&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rep&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_Port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3306&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Connect_Retry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Master_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;155171&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Read_Master_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;71744684&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Relay_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;089272&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Relay_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;63995870&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Relay_Master_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;155169&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Slave_IO_Running&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Slave_SQL_Running&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Replicate_Do_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Replicate_Do_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;Replicate_Wild_Do_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;Replicate_Wild_Ignore_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;Last_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1594&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;Last_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;failure&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Could&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parse&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;entry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;The&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;possible&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reasons&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;are&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s binary log is corrupted (you can check this by running &amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mysqlbinlog&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; on the binary log), the slave&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;corrupted&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;can&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;by&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;running&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;mysqlbinlog&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;network&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;problem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bug&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s or slave&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MySQL&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;want&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s binary log or slave&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;will&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;be&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;able&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;know&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;their&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;names&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;by&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;issuing&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;SHOW SLAVE STATUS&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slave&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Skip_Counter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Exec_Master_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;63995665&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Relay_Log_Space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;182256807&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Until_Condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;None&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Until_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Until_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_Allowed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_CA_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_CA_Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Master_SSL_Cert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Master_SSL_Cipher&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Master_SSL_Key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Seconds_Behind_Master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;NULL&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Master_SSL_Verify_Server_Cert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Last_IO_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Last_IO_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Last_SQL_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1594&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Last_SQL_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;failure&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Could&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parse&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;entry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;The&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;possible&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reasons&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;are&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s binary log is corrupted (you can check this by running &amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mysqlbinlog&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; on the binary log), the slave&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;corrupted&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;can&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;by&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;running&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;mysqlbinlog&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;network&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;problem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bug&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s or slave&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MySQL&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;want&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s binary log or slave&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;will&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;be&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;able&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;know&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;their&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;names&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;by&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;issuing&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;SHOW SLAVE STATUS&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slave&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_Server_Ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Master_Server_Id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_UUID&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;910223&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bfbc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a5cc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f23c91e0377d&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Master_Info_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;SQL_Delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;SQL_Remaining_Delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;NULL&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;Slave_SQL_Running_State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_Retry_Count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;86400&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_Bind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;Last_IO_Error_Timestamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;Last_SQL_Error_Timestamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;210806&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;39&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Master_SSL_Crl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_Crlpath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Retrieved_Gtid_Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Executed_Gtid_Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Auto_Position&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;Replicate_Rewrite_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Channel_Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_TLS_Version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在狀態中發現 &lt;code&gt;Last_SQL_Error&lt;/code&gt; 出現以下訊息&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Relay log read failure: Could not parse relay log event entry. The possible reasons are: the master&amp;rsquo;s binary log is corrupted (you can check this by running &amp;lsquo;mysqlbinlog&amp;rsquo; on the binary log), the slave&amp;rsquo;s relay log is corrupted (you can check this by running &amp;lsquo;mysqlbinlog&amp;rsquo; on the relay log), a network problem, or a bug in the master&amp;rsquo;s or slave&amp;rsquo;s MySQL code. If you want to check the master&amp;rsquo;s binary log or slave&amp;rsquo;s relay log, you will be able to know their names by issuing &amp;lsquo;SHOW SLAVE STATUS&amp;rsquo; on this slave.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;造成錯誤可能原因&#34;&gt;造成錯誤可能原因&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;網路連線問題&lt;/li&gt;
+&lt;li&gt;Slave 主機負載過大導致 &lt;code&gt;relay-log&lt;/code&gt; 格式錯誤&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;解決方式&#34;&gt;解決方式&lt;/h2&gt;
+&lt;h3 id=&#34;1-找出已執行的同步節點資訊&#34;&gt;1. 找出已執行的同步節點資訊&lt;/h3&gt;
+&lt;p&gt;在 &lt;code&gt;show  slave  status\G&lt;/code&gt; 指令中的訊息找到下方資訊&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Relay_Master_Log_File: mysql-bin.155169 &lt;span class=&#34;c1&#34;&gt;# Master 已讀取 Slave 的 binlog 檔案&lt;/span&gt;
+Exec_Master_Log_Pos: &lt;span class=&#34;m&#34;&gt;63995665&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# 已執行的指令位置&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-停止目前-slave-同步&#34;&gt;2. 停止目前 Slave 同步&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mysql&amp;gt;stop slave&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-重新設定同步位置為上次已執行的節點&#34;&gt;3. 重新設定同步位置為上次已執行的節點&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mysql&amp;gt;change master to &lt;span class=&#34;nv&#34;&gt;master_log_file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mysql-bin.155169&amp;#39;&lt;/span&gt; , &lt;span class=&#34;nv&#34;&gt;master_log_pos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;63995665&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-重新啟動-slave-同步&#34;&gt;4. 重新啟動 Slave 同步&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mysql&amp;gt;start slave&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重新啟動後，MySQL Slave 的同步會從上次已成功執行的節點重新開始同步，會產生新的 binlog，將此節點後續的資料繼續完成同步&lt;/p&gt;
+&lt;!--adsense--&gt;
+&lt;h3 id=&#34;5-重新確認目前同步狀況&#34;&gt;5. 重新確認目前同步狀況&lt;/h3&gt;
+&lt;p&gt;再一次執行 &lt;code&gt;show slave status\G&lt;/code&gt; 確認同步狀況，在狀態中發現 &lt;code&gt;Last_SQL_Error&lt;/code&gt; 已經沒有之前的同步問題了&lt;/p&gt;
+&lt;p&gt;然後會看到 &lt;code&gt;Seconds_Behind_Master: 13798&lt;/code&gt; 有延遲同步的秒數，表示目前正在同步中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;show&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slave&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;G&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;***************************&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;***************************&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Slave_IO_State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Waiting&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Master_Host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;168&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Master_User&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rep&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Master_Port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3306&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Connect_Retry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Master_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;155171&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;Read_Master_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;72276030&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Relay_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;000006&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Relay_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1180855&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Relay_Master_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;155171&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Slave_IO_Running&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Yes&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Slave_SQL_Running&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Yes&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Replicate_Do_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Replicate_Do_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;Replicate_Wild_Do_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+ &lt;span class=&#34;n&#34;&gt;Replicate_Wild_Ignore_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Last_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Last_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Skip_Counter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;Exec_Master_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1180650&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Relay_Log_Space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;72276478&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Until_Condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;None&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Until_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Until_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Master_SSL_Allowed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Master_SSL_CA_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Master_SSL_CA_Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Master_SSL_Cert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_Cipher&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Master_SSL_Key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Seconds_Behind_Master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;13798&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Master_SSL_Verify_Server_Cert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Last_IO_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Last_IO_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Last_SQL_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Last_SQL_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+ &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_Server_Ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Master_Server_Id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Master_UUID&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;910223&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bfbc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a5cc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f23c91e0377d&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Master_Info_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;SQL_Delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;SQL_Remaining_Delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;NULL&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;Slave_SQL_Running_State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Reading&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Master_Retry_Count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;86400&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Master_Bind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;Last_IO_Error_Timestamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;Last_SQL_Error_Timestamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Master_SSL_Crl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Master_SSL_Crlpath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Retrieved_Gtid_Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Executed_Gtid_Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Auto_Position&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Replicate_Rewrite_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Channel_Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Master_TLS_Version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在執行一段時間後，可以看到 &lt;code&gt;Seconds_Behind_Master&lt;/code&gt; 的延遲秒數變成 &lt;code&gt;0&lt;/code&gt; 了，表示同步資料已經完成&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;show&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slave&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;G&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;ERROR&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2006&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HY000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MySQL&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;has&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gone&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;away&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;No&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;connection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Trying&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reconnect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Connection&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;2589010&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Current&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;***&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NONE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;***&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;***************************&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;***************************&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Slave_IO_State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Waiting&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_Host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;168&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_User&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rep&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_Port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3306&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Connect_Retry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Master_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;155171&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Read_Master_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;97568199&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Relay_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;000006&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Relay_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;97568404&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Relay_Master_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;155171&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Slave_IO_Running&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Yes&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Slave_SQL_Running&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Yes&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Replicate_Do_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Replicate_Do_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;Replicate_Wild_Do_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;Replicate_Wild_Ignore_Table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;Last_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;Last_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Skip_Counter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;Exec_Master_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;97568199&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Relay_Log_Space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;97568647&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Until_Condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;None&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Until_Log_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Until_Log_Pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_Allowed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_CA_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_CA_Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;Master_SSL_Cert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Master_SSL_Cipher&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Master_SSL_Key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Seconds_Behind_Master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Master_SSL_Verify_Server_Cert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Last_IO_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Last_IO_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Last_SQL_Errno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Last_SQL_Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;Replicate_Ignore_Server_Ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Master_Server_Id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_UUID&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;910223&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bfbc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a5cc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f23c91e0377d&lt;/span&gt;
+             &lt;span class=&#34;n&#34;&gt;Master_Info_File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;SQL_Delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;SQL_Remaining_Delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;NULL&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;Slave_SQL_Running_State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Slave&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;has&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;read&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;all&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;relay&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;waiting&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;more&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;updates&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_Retry_Count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;86400&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;Master_Bind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;Last_IO_Error_Timestamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;Last_SQL_Error_Timestamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;Master_SSL_Crl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_SSL_Crlpath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Retrieved_Gtid_Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Executed_Gtid_Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;Auto_Position&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;Replicate_Rewrite_DB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;Channel_Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;Master_TLS_Version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/wuwei5460/1552798&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;解决Mysql复制Relay log read failure 的问题_雨中行走的技术博客_51CTO博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.percona.com/blog/2008/08/02/troubleshooting-relay-log-corruption-in-mysql/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Troubleshooting Relay Log Corruption in MySQL - Percona Database Performance Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_42867972/article/details/107613171&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;解决Mysql replication error 1594 - Relay log read failure - Could not parse relay log event entry_叫我酋长好吧-CSDN博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://support.qualityunit.com/847986-Mysql-replication-error-1594---Relay-log-read-failure---Could-not-parse-relay-log-event-entry&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mysql replication error 1594 - Relay log read failure - Could not parse relay log event entry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

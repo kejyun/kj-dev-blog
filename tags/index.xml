@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/</link>
+    <description>Recent content in Tags on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 16 Aug 2021 09:50:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>powerlevel10k</title>
+      <link>https://dev.kejyun.com/tags/powerlevel10k/</link>
+      <pubDate>Mon, 16 Aug 2021 09:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/powerlevel10k/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terminal</title>
+      <link>https://dev.kejyun.com/tags/terminal/</link>
+      <pubDate>Mon, 16 Aug 2021 09:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emergency mode</title>
+      <link>https://dev.kejyun.com/tags/emergency-mode/</link>
+      <pubDate>Mon, 16 Aug 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/emergency-mode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://dev.kejyun.com/tags/ubuntu/</link>
+      <pubDate>Mon, 16 Aug 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://dev.kejyun.com/tags/mysql/</link>
+      <pubDate>Thu, 05 Aug 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Replica</title>
+      <link>https://dev.kejyun.com/tags/replica/</link>
+      <pubDate>Thu, 05 Aug 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/replica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://dev.kejyun.com/tags/about/</link>
+      <pubDate>Thu, 20 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

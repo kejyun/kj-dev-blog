@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 16 Aug 2021 08:50:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟</title>
+      <link>https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/</link>
+      <pubDate>Mon, 16 Aug 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/</guid>
+      <description>Ubuntu 16.04 一開機時，突然出現了下面的訊息，再次重新開機也沒用一樣卡住無限鬼打牆
+ Welcome to emergency mode! After logging in, type “journalctl -xb” to view system logs, “systemctl reboot” to reboot, “systemctl default” or ^D to try again boot into default mode. Give root password for maintained (or press Control-D to continue).
+ 輸入 root 密碼登入打入 journalctl -xb 檢查開機訊息時，發現在 mount 硬碟時整個卡住，導致系統無法順利啟動
+這個錯誤訊息常發生在載入 外部硬碟、網路硬碟 等沒有載入導致
+解決方式 在 emergency mode 登入 root 帳號後輸入下列指令讓 /etc/fstab 檔案有被寫入的權限
+$ mount -n -o remount,rw / /etc/fstab 是自動 mount 的設定檔案，使用 vi 或 vim 編輯此檔案</description>
+    </item>
+    
+  </channel>
+</rss>

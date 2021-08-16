@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replica on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/replica/</link>
+    <description>Recent content in Replica on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 05 Aug 2021 08:50:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/replica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL Replica master&#39;s binary log is corrupted</title>
+      <link>https://dev.kejyun.com/article/2021/08/mysql-replica-master-binary-log-is-corrupted/</link>
+      <pubDate>Thu, 05 Aug 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/08/mysql-replica-master-binary-log-is-corrupted/</guid>
+      <description>狀況 使用管理者帳號登入 MySQL
+mysql -h localhost -u root -p 在 MySQL Master 機器中輸入 show slave status\G 檢查 Slave 機器狀態
+mysql&amp;gt; show slave status\G *************************** 1. row *************************** Slave_IO_State: Master_Host: 192.168.1.2 Master_User: rep Master_Port: 3306 Connect_Retry: 60 Master_Log_File: mysql-bin.155171 Read_Master_Log_Pos: 71744684 Relay_Log_File: master-relay-bin.089272 Relay_Log_Pos: 63995870 Relay_Master_Log_File: mysql-bin.155169 Slave_IO_Running: No Slave_SQL_Running: No Replicate_Do_DB: Replicate_Ignore_DB: mysql Replicate_Do_Table: Replicate_Ignore_Table: Replicate_Wild_Do_Table: Replicate_Wild_Ignore_Table: mysql.% Last_Errno: 1594 Last_Error: Relay log read failure: Could not parse relay log event entry.</description>
+    </item>
+    
+  </channel>
+</rss>

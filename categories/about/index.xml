@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on KJ Dev</title>
+    <link>https://dev.kejyun.com/categories/about/</link>
+    <description>Recent content in About on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 20 May 2021 08:50:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://dev.kejyun.com/about/</link>
+      <pubDate>Thu, 20 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/about/</guid>
+      <description>聯絡作者    項目 資訊     作者 KJ   email kj@kejyun.com   Github https://github.com/kejyun   Linkedin https://tw.linkedin.com/in/kejyun    </description>
+    </item>
+    
+  </channel>
+</rss>

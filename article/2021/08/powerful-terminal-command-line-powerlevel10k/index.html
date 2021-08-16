@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Terminal 是工程師開發常常用的介面，不管是檔案版本控制，連線主機等等指令大部分都在 Terminal，一個好用的 Terminal 可以讓整個工作的效率大大提高'><title>打造漂亮好用的 Terminal by powerlevel10k</title>
+
+<link rel='canonical' href='https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='打造漂亮好用的 Terminal by powerlevel10k'>
+<meta property='og:description' content='Terminal 是工程師開發常常用的介面，不管是檔案版本控制，連線主機等等指令大部分都在 Terminal，一個好用的 Terminal 可以讓整個工作的效率大大提高'>
+<meta property='og:url' content='https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/'>
+<meta property='og:site_name' content='KJ Dev'>
+<meta property='og:type' content='article'><meta property='article:section' content='Article' /><meta property='article:tag' content='Terminal' /><meta property='article:tag' content='powerlevel10k' /><meta property='article:published_time' content='2021-08-16T09:50:29&#43;08:00'/><meta property='article:modified_time' content='2021-08-16T09:50:29&#43;08:00'/><meta property='og:image' content='https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/cover.png' />
+<meta name="twitter:title" content="打造漂亮好用的 Terminal by powerlevel10k">
+<meta name="twitter:description" content="Terminal 是工程師開發常常用的介面，不管是檔案版本控制，連線主機等等指令大部分都在 Terminal，一個好用的 Terminal 可以讓整個工作的效率大大提高"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/cover.png' />
+    <link rel="shortcut icon" href="images/observe-universe.png" />
+
+
+
+
+  
+    
+
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type":"Article",
+    "headline":"打造漂亮好用的 Terminal by powerlevel10k",
+    "url":"https:\/\/dev.kejyun.com\/article\/2021\/08\/powerful-terminal-command-line-powerlevel10k\/",
+    "keywords":[
+    
+        
+          
+          "Terminal"
+        
+          , 
+          "powerlevel10k"
+        
+    
+    ],
+    "image":{
+        "@type":"ImageObject",
+        "url" :
+        
+          "https:\/\/dev.kejyun.com",
+        
+        "width":"1200",
+        "height":"627"
+    },
+    "mainEntityOfPage":"True",
+    "publisher":{
+        "@type":"Organization",
+        "name":"",
+        "url":"https:\/\/dev.kejyun.com",
+        "logo":{
+            "@type":"ImageObject",
+            "url":"https:\/\/dev.kejyun.com",
+            "width":"357",
+            "height":"60"
+        }
+    },
+    "dateCreated":"2021-08-16T09:50:29\u002b08:00",
+    "datePublished":"2021-08-16T09:50:29\u002b08:00",
+    
+    
+    "author":"KeJyun",
+    "creator":"KeJyun",
+    
+    "dateModified":"2021-08-16T09:50:29\u002b08:00",
+    "articleSection":"TechArticle"
+}
+</script>
+
+  
+
+  
+    
+<script type="application/ld+json">
+	{
+		"@context":"http://schema.org",
+		"@type": "BlogPosting",
+		"image":
+		
+			"https:\/\/dev.kejyun.com",
+		
+		"url": "https:\/\/dev.kejyun.com\/article\/2021\/08\/powerful-terminal-command-line-powerlevel10k\/",
+		"headline": "打造漂亮好用的 Terminal by powerlevel10k",
+		"alternativeHeadline": "打造漂亮好用的 Terminal by powerlevel10k",
+		"dateCreated": "2021-08-16T09:50:29\u002b08:00",
+		"datePublished": "2021-08-16T09:50:29\u002b08:00",
+		"dateModified": "2021-08-16T09:50:29\u002b08:00",
+		"inLanguage": "zh-tw",
+		"isFamilyFriendly": "true",
+		"copyrightYear": "2021",
+		"copyrightHolder": "",
+		"contentLocation": {
+			"@type": "Place",
+			"name": "Taipei City"
+		},
+		
+		"accountablePerson": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"author": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"creator": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		
+		"publisher": {
+			"@type": "Organization",
+			"name": "",
+			"url": "https:\/\/dev.kejyun.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https:\/\/dev.kejyun.com",
+				"width":"357",
+				"height":"60"
+			}
+		},
+		"mainEntityOfPage": "True",
+		"keywords": [ 
+			"Terminal", "powerlevel10k"
+		
+		],
+		"genre":[""],
+		"articleSection": "",
+		"articleBody": "安裝 Oh My Zsh $ sh -c \u0026#34;$(curl -fsSL https:\/\/raw.github.com\/ohmyzsh\/ohmyzsh\/master\/tools\/install.sh)\u0026#34; 安裝 Nerd 字型 可以使用 powerlevel10k 推薦的 MesloLGS NF 字型\n MesloLGS NF Regular.ttf MesloLGS NF Bold.ttf MesloLGS NF Italic.ttf MesloLGS NF Bold Italic.ttf  在 Mac 環境將字體下載後，點開檔案按右下方的 Install Font 即可安裝字型\n powerful-terminal-command-line-powerlevel10k \n設定 iTerm2 字形 在 iTerm2 的 preference 中，點選 Profile \u0026gt; Text 頁籤，修改下方的 Font 設定為剛剛安裝的 MesloLGS NF 字型\n powerful-terminal-command-line-powerlevel10k \n下載 powerlevel10k 到 Oh My Zsh 主題中 git clone --depth=1 https:\/\/github.com\/romkatv\/powerlevel10k.git ${ZSH_CUSTOM:-$HOME\/.oh-my-zsh\/custom}\/themes\/powerlevel10k 設定 ZSH 主題為 powerlevel10k\/powerlevel10k 修改 ~\/.zshrc 檔案，將 ZSH_THEME 改為 powerlevel10k\/powerlevel10k\nZSH_THEME=\u0026#34;powerlevel10k\/powerlevel10k\u0026#34; 設定 powerlevel10k 在命令列輸入 p10k configure 即可設定您要的主題樣式\np10k configure  powerful-terminal-command-line-powerlevel10k \n設定完成後就可以開始用漂亮的 Termianl 介面了，隨時可以用 p10k configure 變更 Termianl 主題\nHint 在尚未設定 powerlevel10k 時，每次開啟 iTerm2 都會要求設定樣式，若要關閉此提示，可以輸入下方指令關閉\necho \u0026#39;POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true\u0026#39; \u0026gt;\u0026gt;! ~\/.zshrc 參考資料  GitHub - romkatv\/powerlevel10k: A Zsh theme Oh My Zsh - a delightful \u0026amp; open source framework for Zsh GitHub - ryanoasis\/nerd-fonts: Iconic font aggregator, collection, \u0026amp; patcher. 3,600\u002b icons, 50\u002b patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, \u0026amp; more 【分享】Oh My Zsh \u002b powerlevel10k 快速打造好看好用的 command line 環境 | by Holy | Medium  "
+	}
+</script>
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+
+
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement":
+		[{
+			"@type": "ListItem",
+				"position": 1,
+				"item": {
+					"@id": "https:\/\/dev.kejyun.com",
+					"name": "Home"
+				}
+		},
+		
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  2 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article",
+						"name": "Article"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  3 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2021",
+						"name": "2021st"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  4 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2021\/08",
+						"name": "8th"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  5 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2021\/08\/powerful-terminal-command-line-powerlevel10k",
+						"name": "Powerful terminal command line powerlevel10k"
+					}
+				}
+				, 
+			
+		
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+<script type="application/ld+json">
+{
+"@context": "http://www.schema.org",
+"@type": "Person",
+"@id": "https:\/\/dev.kejyun.com\/article\/2021\/08\/powerful-terminal-command-line-powerlevel10k\/",
+"name": "KeJyun",
+"alternateName": "KeJyun",
+"nationality": "Taiwan",
+
+"affiliation": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\n"
+		]
+  	}
+],
+
+"gender": "male",
+"Description": "IT Manager",
+"disambiguatingDescription": "Hi I\u0027m Web Developer in Taiwan",
+
+"worksFor": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\n"
+		]
+	}
+],
+"url": "https:\/\/dev.kejyun.com",
+"image": "https:\/\/dev.kejyun.com\/company\/team\/KeJyun.png",
+
+"sameAs": [ "\n\n\n\n\n\n\"https://ca.linkedin.com/in/kejyun/en\",\n\n\n\"https://github.com/kejyun\",\n\n\n\n\n\n\n\n\n\n\n\n\"\"\n"
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+<script type="application/ld+json">
+[
+	{
+		"@context": "http://schema.org",
+		"@type": "Webpage",
+		"specialty": "",
+		"mainContentOfPage": {
+			"@context": "http://schema.org/",
+			"@type": "WebPageElement",
+			"cssSelector": ".body-content"
+		},
+		"primaryImageOfPage": "https:\/\/dev.kejyun.com"
+	},
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"@id": "https:\/\/dev.kejyun.com",
+		"additionalType": ["CreativeWork", "Person"],
+		"url": "https:\/\/dev.kejyun.com",
+		"name": "KJ Dev",
+		"alternateName": "KJ Dev",
+		"headline": "",
+		"image": "https:\/\/dev.kejyun.com",
+		"inLanguage": "zh-tw",
+		"author": "",
+		"description": "",
+		"disambiguatingDescription": "",
+		"isFamilyFriendly": "http://schema.org/True",
+		"contentRating": "NR",
+		"sourceOrganization": "KJ Dev",
+		"publisher": {
+		  "@type": "Organization",
+		  "name": "KJ Dev",
+		  "logo": {
+		    "@type": "ImageObject",
+		    "url": "https:\/\/dev.kejyun.com",
+		    "height": 60,
+		    "width": 107
+		  }
+		},
+		"mainEntity": {
+			"@context": "http://schema.org",
+			"@type": "localBusiness",
+			"name": "KJ Dev",
+			"image":"https:\/\/dev.kejyun.com",
+			
+
+			
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Taipei street",
+				"addressLocality": "Taipei City",
+				"addressRegion": "Taipei",
+				"addressCountry": "Taiwan",
+				"postalCode": "100"
+			},
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.5",
+				"reviewCount": "50"
+			}
+		},
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https:\/\/dev.kejyun.com?search={search_term}",
+			"query-input": "required name=search_term"
+		},
+		"keywords":[
+			
+		],
+		"hasPart": [
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPHeader",
+				"@id": "#header",
+				"headline": "",
+				"cssSelector": "#header",
+				"potentialAction": [],
+				"@graph":
+				[
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "",
+						"url": "https:\/\/dev.kejyun.com\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "About",
+						"url": "https:\/\/dev.kejyun.com\/about\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Archives",
+						"url": "https:\/\/dev.kejyun.com\/archives\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Search",
+						"url": "https:\/\/dev.kejyun.com\/search\/"
+					}]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPSidebar",
+				"cssSelector": "#sidebar",
+				"citation": [
+				"https:\/\/dev.kejyun.com\/", "https:\/\/dev.kejyun.com\/about\/", "https:\/\/dev.kejyun.com\/archives\/", "https:\/\/dev.kejyun.com\/search\/"
+				]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPFooter",
+				"cssSelector": ".footer",
+				"@id": "#footer",
+				"copyrightHolder":"KJ Dev",
+				"publisher": "KJ Dev",
+				"copyrightYear":"2021"
+			}
+		]
+	}
+]
+</script>
+
+  
+
+  
+
+<link rel="canonical" href="https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/" />
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZQ2D0XJX3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RZQ2D0XJX3', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/observe-universe_hua7e3d7bd738448651eaa0b1d778255e2_652378_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://dev.kejyun.com">KJ Dev</a></h1>
+        <h2 class="site-description">KJ 開發日誌</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/article/2021/08/powerful-terminal-command-line-powerlevel10k/">
+                <img src="/article/2021/08/powerful-terminal-command-line-powerlevel10k/cover_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_800x0_resize_box_2.png"
+                        srcset="/article/2021/08/powerful-terminal-command-line-powerlevel10k/cover_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_800x0_resize_box_2.png 800w, /article/2021/08/powerful-terminal-command-line-powerlevel10k/cover_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="540" 
+                        loading="lazy"
+                        alt="Featured image of post 打造漂亮好用的 Terminal by powerlevel10k" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/termianl/" >
+                Termianl
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/article/2021/08/powerful-terminal-command-line-powerlevel10k/">打造漂亮好用的 Terminal by powerlevel10k</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        Terminal 是工程師開發常常用的介面，不管是檔案版本控制，連線主機等等指令大部分都在 Terminal，一個好用的 Terminal 可以讓整個工作的效率大大提高
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 16, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+  
+  
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1990193713845546"
+     data-ad-slot="5417606383"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+  
+  
+  <h2 id="安裝-oh-my-zsh">安裝 Oh My Zsh</h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</code></pre></div><h2 id="安裝-nerd-字型">安裝 Nerd 字型</h2>
+<p>可以使用 powerlevel10k 推薦的 MesloLGS NF 字型</p>
+<ul>
+<li><a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf"  target="_blank" rel="noopener"
+    >MesloLGS NF Regular.ttf</a></li>
+<li><a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf"  target="_blank" rel="noopener"
+    >MesloLGS NF Bold.ttf</a></li>
+<li><a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf"  target="_blank" rel="noopener"
+    >MesloLGS NF Italic.ttf</a></li>
+<li><a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"  target="_blank" rel="noopener"
+    >MesloLGS NF Bold Italic.ttf</a></li>
+</ul>
+<p>在 Mac 環境將字體下載後，點開檔案按右下方的 <code>Install Font</code> 即可安裝字型</p>
+<p><figure style="flex-grow: 106; flex-basis: 256px">
+		<a href="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1.png" data-size="512x480"><img src="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1.png"
+				srcset="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1_hucb1ae2dc795abe3867819129f7e1bc33_93616_480x0_resize_box_2.png 480w, /article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-1_hucb1ae2dc795abe3867819129f7e1bc33_93616_1024x0_resize_box_2.png 1024w"
+				width="512"
+				height="480"
+				loading="lazy"
+				alt="powerful-terminal-command-line-powerlevel10k">
+		</a>
+		
+		<figcaption>powerful-terminal-command-line-powerlevel10k</figcaption>
+		
+	</figure></p>
+<h2 id="設定-iterm2-字形">設定 iTerm2 字形</h2>
+<p>在 <code>iTerm2</code> 的 <code>preference</code> 中，點選 <code>Profile</code> &gt; <code>Text</code> 頁籤，修改下方的 Font 設定為剛剛安裝的 <code>MesloLGS NF</code> 字型</p>
+<p><figure style="flex-grow: 195; flex-basis: 470px">
+		<a href="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2.png" data-size="942x481"><img src="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2.png"
+				srcset="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2_huc1dc84971d598a50d09500b972fd0c53_107536_480x0_resize_box_2.png 480w, /article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-2_huc1dc84971d598a50d09500b972fd0c53_107536_1024x0_resize_box_2.png 1024w"
+				width="942"
+				height="481"
+				loading="lazy"
+				alt="powerful-terminal-command-line-powerlevel10k">
+		</a>
+		
+		<figcaption>powerful-terminal-command-line-powerlevel10k</figcaption>
+		
+	</figure></p>
+<h2 id="下載-powerlevel10k-到-oh-my-zsh-主題中">下載 powerlevel10k 到 Oh My Zsh 主題中</h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/romkatv/powerlevel10k.git <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.oh-my-zsh/custom</span><span class="si">}</span>/themes/powerlevel10k
+</code></pre></div><h2 id="設定-zsh-主題為-powerlevel10kpowerlevel10k">設定 ZSH 主題為 <code>powerlevel10k/powerlevel10k</code></h2>
+<p>修改 <code>~/.zshrc</code> 檔案，將 <code>ZSH_THEME</code> 改為 <code>powerlevel10k/powerlevel10k</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&#34;powerlevel10k/powerlevel10k&#34;</span>
+</code></pre></div><h2 id="設定-powerlevel10k">設定 powerlevel10k</h2>
+<p>在命令列輸入 <code>p10k configure</code> 即可設定您要的主題樣式</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">p10k configure
+</code></pre></div><p><figure style="flex-grow: 150; flex-basis: 360px">
+		<a href="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3.png" data-size="709x472"><img src="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3.png"
+				srcset="/article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3_hu0d340dd47d6c247ccc3b7014eed107c2_37561_480x0_resize_box_2.png 480w, /article/2021/08/powerful-terminal-command-line-powerlevel10k/images/powerful-terminal-command-line-powerlevel10k-3_hu0d340dd47d6c247ccc3b7014eed107c2_37561_1024x0_resize_box_2.png 1024w"
+				width="709"
+				height="472"
+				loading="lazy"
+				alt="powerful-terminal-command-line-powerlevel10k">
+		</a>
+		
+		<figcaption>powerful-terminal-command-line-powerlevel10k</figcaption>
+		
+	</figure></p>
+<p>設定完成後就可以開始用漂亮的 Termianl 介面了，隨時可以用 <code>p10k configure</code> 變更 Termianl 主題</p>
+<h2 id="hint">Hint</h2>
+<p>在尚未設定 powerlevel10k 時，每次開啟 iTerm2 都會要求設定樣式，若要關閉此提示，可以輸入下方指令關閉</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s1">&#39;POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true&#39;</span> &gt;&gt;! ~/.zshrc
+</code></pre></div><h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a class="link" href="https://github.com/romkatv/powerlevel10k"  target="_blank" rel="noopener"
+    >GitHub - romkatv/powerlevel10k: A Zsh theme</a></li>
+<li><a class="link" href="https://ohmyz.sh/"  target="_blank" rel="noopener"
+    >Oh My Zsh - a delightful &amp; open source framework for Zsh</a></li>
+<li><a class="link" href="https://github.com/ryanoasis/nerd-fonts"  target="_blank" rel="noopener"
+    >GitHub - ryanoasis/nerd-fonts: Iconic font aggregator, collection, &amp; patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more</a></li>
+<li><a class="link" href="https://holychung.medium.com/%E5%88%86%E4%BA%AB-oh-my-zsh-powerlevel10k-%E5%BF%AB%E9%80%9F%E6%89%93%E9%80%A0%E5%A5%BD%E7%9C%8B%E5%A5%BD%E7%94%A8%E7%9A%84-command-line-%E7%92%B0%E5%A2%83-f66846117921"  target="_blank" rel="noopener"
+    >【分享】Oh My Zsh + powerlevel10k 快速打造好看好用的 command line 環境 | by Holy | Medium</a></li>
+</ul>
+
+
+  
+  
+
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="8247872484"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+
+  
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="3237080773"></ins>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/terminal/">Terminal</a>
+        
+            <a href="/tags/powerlevel10k/">powerlevel10k</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kj-dev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+        2021 KJ Dev
+    </section>
+
+    <section class="powerby">
+        
+            All rights reserved，未經允許不得隨意轉載 <br/>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

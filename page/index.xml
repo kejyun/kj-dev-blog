@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on KJ Dev</title>
+    <link>https://dev.kejyun.com/page/</link>
+    <description>Recent content in Pages on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 20 May 2021 08:50:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://dev.kejyun.com/about/</link>
+      <pubDate>Thu, 20 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/about/</guid>
+      <description>聯絡作者    項目 資訊     作者 KJ   email kj@kejyun.com   Github https://github.com/kejyun   Linkedin https://tw.linkedin.com/in/kejyun    </description>
+    </item>
+    
+    <item>
+      <title>Archives</title>
+      <link>https://dev.kejyun.com/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev.kejyun.com/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://dev.kejyun.com/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev.kejyun.com/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

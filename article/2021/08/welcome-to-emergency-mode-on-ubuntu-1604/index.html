@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在 Ubuntu 開機時畫面顯示 After logging in, type &#34;journalctl -xb&#34; to view system log，無法正確 mount 硬碟'><title>Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟</title>
+
+<link rel='canonical' href='https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟'>
+<meta property='og:description' content='在 Ubuntu 開機時畫面顯示 After logging in, type &#34;journalctl -xb&#34; to view system log，無法正確 mount 硬碟'>
+<meta property='og:url' content='https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/'>
+<meta property='og:site_name' content='KJ Dev'>
+<meta property='og:type' content='article'><meta property='article:section' content='Article' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='emergency mode' /><meta property='article:published_time' content='2021-08-16T08:50:29&#43;08:00'/><meta property='article:modified_time' content='2021-08-16T08:50:29&#43;08:00'/><meta property='og:image' content='https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/cover.png' />
+<meta name="twitter:title" content="Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟">
+<meta name="twitter:description" content="在 Ubuntu 開機時畫面顯示 After logging in, type &#34;journalctl -xb&#34; to view system log，無法正確 mount 硬碟"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/cover.png' />
+    <link rel="shortcut icon" href="images/observe-universe.png" />
+
+
+
+
+  
+    
+
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type":"Article",
+    "headline":"Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟",
+    "url":"https:\/\/dev.kejyun.com\/article\/2021\/08\/welcome-to-emergency-mode-on-ubuntu-1604\/",
+    "keywords":[
+    
+        
+          
+          "Ubuntu"
+        
+          , 
+          "emergency mode"
+        
+    
+    ],
+    "image":{
+        "@type":"ImageObject",
+        "url" :
+        
+          "https:\/\/dev.kejyun.com",
+        
+        "width":"1200",
+        "height":"627"
+    },
+    "mainEntityOfPage":"True",
+    "publisher":{
+        "@type":"Organization",
+        "name":"",
+        "url":"https:\/\/dev.kejyun.com",
+        "logo":{
+            "@type":"ImageObject",
+            "url":"https:\/\/dev.kejyun.com",
+            "width":"357",
+            "height":"60"
+        }
+    },
+    "dateCreated":"2021-08-16T08:50:29\u002b08:00",
+    "datePublished":"2021-08-16T08:50:29\u002b08:00",
+    
+    
+    "author":"KeJyun",
+    "creator":"KeJyun",
+    
+    "dateModified":"2021-08-16T08:50:29\u002b08:00",
+    "articleSection":"TechArticle"
+}
+</script>
+
+  
+
+  
+    
+<script type="application/ld+json">
+	{
+		"@context":"http://schema.org",
+		"@type": "BlogPosting",
+		"image":
+		
+			"https:\/\/dev.kejyun.com",
+		
+		"url": "https:\/\/dev.kejyun.com\/article\/2021\/08\/welcome-to-emergency-mode-on-ubuntu-1604\/",
+		"headline": "Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟",
+		"alternativeHeadline": "Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟",
+		"dateCreated": "2021-08-16T08:50:29\u002b08:00",
+		"datePublished": "2021-08-16T08:50:29\u002b08:00",
+		"dateModified": "2021-08-16T08:50:29\u002b08:00",
+		"inLanguage": "zh-tw",
+		"isFamilyFriendly": "true",
+		"copyrightYear": "2021",
+		"copyrightHolder": "",
+		"contentLocation": {
+			"@type": "Place",
+			"name": "Taipei City"
+		},
+		
+		"accountablePerson": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"author": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"creator": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		
+		"publisher": {
+			"@type": "Organization",
+			"name": "",
+			"url": "https:\/\/dev.kejyun.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https:\/\/dev.kejyun.com",
+				"width":"357",
+				"height":"60"
+			}
+		},
+		"mainEntityOfPage": "True",
+		"keywords": [ 
+			"Ubuntu", "emergency mode"
+		
+		],
+		"genre":[""],
+		"articleSection": "",
+		"articleBody": "Ubuntu 16.04 一開機時，突然出現了下面的訊息，再次重新開機也沒用一樣卡住無限鬼打牆\n Welcome to emergency mode! After logging in, type “journalctl -xb” to view system logs, “systemctl reboot” to reboot, “systemctl default” or ^D to try again boot into default mode. Give root password for maintained (or press Control-D to continue).\n 輸入 root 密碼登入打入 journalctl -xb 檢查開機訊息時，發現在 mount 硬碟時整個卡住，導致系統無法順利啟動\n這個錯誤訊息常發生在載入 外部硬碟、網路硬碟 等沒有載入導致\n解決方式 在 emergency mode 登入 root 帳號後輸入下列指令讓 \/etc\/fstab 檔案有被寫入的權限\n$ mount -n -o remount,rw \/ \/etc\/fstab 是自動 mount 的設定檔案，使用 vi 或 vim 編輯此檔案\n$ sudo vim \/etc\/fstab 在 \/etc\/fstab 檔案中將卡住的 mount 硬碟輸入 #  註解掉\n# 註解前 UUID=bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d \/data ext4 errors=remount-ro 0 0 # 註解後 # 這一行掛載出現問題，在前方加入註解取消掛載 # UUID=bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d \/data ext4 errors=remount-ro 0 0 註解掛載指令後 \/etc\/fstab 檔案會長的像這樣\n# \/etc\/fstab: static file system information. # # Use \u0026#39;blkid\u0026#39; to print the universally unique identifier for a # device; this may be used with UUID= as a more robust way to name devices # that works even if disks are added and removed. See fstab(5). # # \u0026lt;file system\u0026gt; \u0026lt;mount point\u0026gt; \u0026lt;type\u0026gt; \u0026lt;options\u0026gt; \u0026lt;dump\u0026gt; \u0026lt;pass\u0026gt; # \/ was on \/dev\/sda2 during installation UUID=4fb9f563-7ae4-4df9-a028-fdc6b9e4f1a5 \/ ext4 errors=remount-ro 0 1 # swap was on \/dev\/sda3 during installation UUID=cf0cf85a-6fed-4c43-901d-c946d6e1c5fa none swap sw 0 0 # 這一行掛載出現問題，在前方加入註解取消掛載 # UUID=bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d \/data ext4 errors=remount-ro 0 0 輸入指令切換成預設模式\n$ systemctl default 重新開機後就可以正常進入系統了\nsystemctl reboot 參考資料  Boot Into Rescue Mode Or Emergency Mode In Ubuntu 20.04 \/ 18.04 How to exit emergency mode and boot to default mode in Linux | Velan ubuntu啟動出現welcome to emergency mode! Press Enter for maintenance 的檔案。 | 程式前沿 linux出現welcome to emergency mode! 解決方法 - IT閱讀 阿就操場啊~: Linux開機進入emergency mode Linux 开机显示：welcome to emergency mode 的解决方法_Lance的博客-CSDN博客 阿就操場啊~: \/etc\/fstab的dump與pass  "
+	}
+</script>
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+
+
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement":
+		[{
+			"@type": "ListItem",
+				"position": 1,
+				"item": {
+					"@id": "https:\/\/dev.kejyun.com",
+					"name": "Home"
+				}
+		},
+		
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  2 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article",
+						"name": "Article"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  3 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2021",
+						"name": "2021st"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  4 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2021\/08",
+						"name": "8th"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  5 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2021\/08\/welcome-to-emergency-mode-on-ubuntu-1604",
+						"name": "Welcome to emergency mode on ubuntu 1604"
+					}
+				}
+				, 
+			
+		
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+<script type="application/ld+json">
+{
+"@context": "http://www.schema.org",
+"@type": "Person",
+"@id": "https:\/\/dev.kejyun.com\/article\/2021\/08\/welcome-to-emergency-mode-on-ubuntu-1604\/",
+"name": "KeJyun",
+"alternateName": "KeJyun",
+"nationality": "Taiwan",
+
+"affiliation": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\n"
+		]
+  	}
+],
+
+"gender": "male",
+"Description": "IT Manager",
+"disambiguatingDescription": "Hi I\u0027m Web Developer in Taiwan",
+
+"worksFor": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\n"
+		]
+	}
+],
+"url": "https:\/\/dev.kejyun.com",
+"image": "https:\/\/dev.kejyun.com\/company\/team\/KeJyun.png",
+
+"sameAs": [ "\n\n\n\n\n\n\"https://ca.linkedin.com/in/kejyun/en\",\n\n\n\"https://github.com/kejyun\",\n\n\n\n\n\n\n\n\n\n\n\n\"\"\n"
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+<script type="application/ld+json">
+[
+	{
+		"@context": "http://schema.org",
+		"@type": "Webpage",
+		"specialty": "",
+		"mainContentOfPage": {
+			"@context": "http://schema.org/",
+			"@type": "WebPageElement",
+			"cssSelector": ".body-content"
+		},
+		"primaryImageOfPage": "https:\/\/dev.kejyun.com"
+	},
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"@id": "https:\/\/dev.kejyun.com",
+		"additionalType": ["CreativeWork", "Person"],
+		"url": "https:\/\/dev.kejyun.com",
+		"name": "KJ Dev",
+		"alternateName": "KJ Dev",
+		"headline": "",
+		"image": "https:\/\/dev.kejyun.com",
+		"inLanguage": "zh-tw",
+		"author": "",
+		"description": "",
+		"disambiguatingDescription": "",
+		"isFamilyFriendly": "http://schema.org/True",
+		"contentRating": "NR",
+		"sourceOrganization": "KJ Dev",
+		"publisher": {
+		  "@type": "Organization",
+		  "name": "KJ Dev",
+		  "logo": {
+		    "@type": "ImageObject",
+		    "url": "https:\/\/dev.kejyun.com",
+		    "height": 60,
+		    "width": 107
+		  }
+		},
+		"mainEntity": {
+			"@context": "http://schema.org",
+			"@type": "localBusiness",
+			"name": "KJ Dev",
+			"image":"https:\/\/dev.kejyun.com",
+			
+
+			
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Taipei street",
+				"addressLocality": "Taipei City",
+				"addressRegion": "Taipei",
+				"addressCountry": "Taiwan",
+				"postalCode": "100"
+			},
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.5",
+				"reviewCount": "50"
+			}
+		},
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https:\/\/dev.kejyun.com?search={search_term}",
+			"query-input": "required name=search_term"
+		},
+		"keywords":[
+			
+		],
+		"hasPart": [
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPHeader",
+				"@id": "#header",
+				"headline": "",
+				"cssSelector": "#header",
+				"potentialAction": [],
+				"@graph":
+				[
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "",
+						"url": "https:\/\/dev.kejyun.com\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "About",
+						"url": "https:\/\/dev.kejyun.com\/about\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Archives",
+						"url": "https:\/\/dev.kejyun.com\/archives\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Search",
+						"url": "https:\/\/dev.kejyun.com\/search\/"
+					}]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPSidebar",
+				"cssSelector": "#sidebar",
+				"citation": [
+				"https:\/\/dev.kejyun.com\/", "https:\/\/dev.kejyun.com\/about\/", "https:\/\/dev.kejyun.com\/archives\/", "https:\/\/dev.kejyun.com\/search\/"
+				]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPFooter",
+				"cssSelector": ".footer",
+				"@id": "#footer",
+				"copyrightHolder":"KJ Dev",
+				"publisher": "KJ Dev",
+				"copyrightYear":"2021"
+			}
+		]
+	}
+]
+</script>
+
+  
+
+  
+
+<link rel="canonical" href="https://dev.kejyun.com/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/" />
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZQ2D0XJX3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RZQ2D0XJX3', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/observe-universe_hua7e3d7bd738448651eaa0b1d778255e2_652378_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://dev.kejyun.com">KJ Dev</a></h1>
+        <h2 class="site-description">KJ 開發日誌</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/">
+                <img src="/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/cover_hua4338aefb32c666dd4cd0550f2c46c4a_1031986_800x0_resize_box_2.png"
+                        srcset="/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/cover_hua4338aefb32c666dd4cd0550f2c46c4a_1031986_800x0_resize_box_2.png 800w, /article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/cover_hua4338aefb32c666dd4cd0550f2c46c4a_1031986_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="427" 
+                        loading="lazy"
+                        alt="Featured image of post Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ubuntu/" >
+                Ubuntu
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/article/2021/08/welcome-to-emergency-mode-on-ubuntu-1604/">Welcome to emergency mode on Ubuntu 16.04，無法正確 mount 硬碟</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        在 Ubuntu 開機時畫面顯示 After logging in, type &#34;journalctl -xb&#34; to view system log，無法正確 mount 硬碟
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 16, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+  
+  
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1990193713845546"
+     data-ad-slot="5417606383"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+  
+  
+  <p>Ubuntu 16.04 一開機時，突然出現了下面的訊息，再次重新開機也沒用一樣卡住無限鬼打牆</p>
+<blockquote>
+<p>Welcome to emergency mode! After logging in, type “journalctl -xb” to view system logs, “systemctl reboot” to reboot, “systemctl default” or ^D to try again boot into default mode.
+Give root password for maintained (or press Control-D to continue).</p>
+</blockquote>
+<p>輸入 root 密碼登入打入 <code>journalctl -xb</code> 檢查開機訊息時，發現在 mount 硬碟時整個卡住，導致系統無法順利啟動</p>
+<p>這個錯誤訊息常發生在載入 <code>外部硬碟</code>、<code>網路硬碟</code> 等沒有載入導致</p>
+<h2 id="解決方式">解決方式</h2>
+<p>在 <code>emergency mode</code> 登入 root 帳號後輸入下列指令讓 <code>/etc/fstab</code> 檔案有被寫入的權限</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ mount -n -o remount,rw /
+</code></pre></div><p><code>/etc/fstab</code> 是自動 mount 的設定檔案，使用 <code>vi</code> 或 <code>vim</code> 編輯此檔案</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo vim /etc/fstab
+</code></pre></div><p>在 <code>/etc/fstab</code> 檔案中將卡住的 mount 硬碟輸入 <code># </code> 註解掉</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 註解前</span>
+<span class="nv">UUID</span><span class="o">=</span>bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d /data           ext4    <span class="nv">errors</span><span class="o">=</span>remount-ro <span class="m">0</span>      <span class="m">0</span>
+
+<span class="c1"># 註解後</span>
+<span class="c1"># 這一行掛載出現問題，在前方加入註解取消掛載</span>
+<span class="c1"># UUID=bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d /data           ext4    errors=remount-ro 0      0</span>
+</code></pre></div><p>註解掛載指令後 <code>/etc/fstab</code> 檔案會長的像這樣</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># /etc/fstab: static file system information.</span>
+<span class="c1">#</span>
+<span class="c1"># Use &#39;blkid&#39; to print the universally unique identifier for a</span>
+<span class="c1"># device; this may be used with UUID= as a more robust way to name devices</span>
+<span class="c1"># that works even if disks are added and removed. See fstab(5).</span>
+<span class="c1">#</span>
+<span class="c1"># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;</span>
+<span class="c1"># / was on /dev/sda2 during installation</span>
+<span class="nv">UUID</span><span class="o">=</span>4fb9f563-7ae4-4df9-a028-fdc6b9e4f1a5 /               ext4    <span class="nv">errors</span><span class="o">=</span>remount-ro <span class="m">0</span>       <span class="m">1</span>
+<span class="c1"># swap was on /dev/sda3 during installation</span>
+<span class="nv">UUID</span><span class="o">=</span>cf0cf85a-6fed-4c43-901d-c946d6e1c5fa none            swap    sw              <span class="m">0</span>       <span class="m">0</span>
+<span class="c1"># 這一行掛載出現問題，在前方加入註解取消掛載</span>
+<span class="c1"># UUID=bcb03e9a-fa15-4a6d-a8ea-ac2c8180654d /data           ext4    errors=remount-ro 0      0</span>
+</code></pre></div><p>輸入指令切換成預設模式</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ systemctl default
+</code></pre></div><p>重新開機後就可以正常進入系統了</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">systemctl reboot
+</code></pre></div><h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a class="link" href="https://ostechnix.com/how-to-boot-into-rescue-mode-or-emergency-mode-in-ubuntu-18-04/"  target="_blank" rel="noopener"
+    >Boot Into Rescue Mode Or Emergency Mode In Ubuntu 20.04 / 18.04</a></li>
+<li><a class="link" href="https://velaninfo.com/rs/techtips/emergency-mode-in-linux/"  target="_blank" rel="noopener"
+    >How to exit emergency mode and boot to default mode in Linux | Velan</a></li>
+<li><a class="link" href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/488360/"  target="_blank" rel="noopener"
+    >ubuntu啟動出現welcome to emergency mode! Press Enter for maintenance 的檔案。 | 程式前沿</a></li>
+<li><a class="link" href="https://www.itread01.com/content/1541219343.html"  target="_blank" rel="noopener"
+    >linux出現welcome to emergency mode! 解決方法 - IT閱讀</a></li>
+<li><a class="link" href="https://2formosa.blogspot.com/2018/01/linuxe-mergency-mode-when-booting.html"  target="_blank" rel="noopener"
+    >阿就操場啊~: Linux開機進入emergency mode</a></li>
+<li><a class="link" href="https://blog.csdn.net/chenyiyue/article/details/51705972"  target="_blank" rel="noopener"
+    >Linux 开机显示：welcome to emergency mode 的解决方法_Lance的博客-CSDN博客</a></li>
+<li><a class="link" href="https://2formosa.blogspot.com/2018/07/fstab-dump-pass.html"  target="_blank" rel="noopener"
+    >阿就操場啊~: /etc/fstab的dump與pass</a></li>
+</ul>
+
+
+  
+  
+
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="8247872484"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+
+  
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="3237080773"></ins>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ubuntu/">Ubuntu</a>
+        
+            <a href="/tags/emergency-mode/">emergency mode</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kj-dev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+        2021 KJ Dev
+    </section>
+
+    <section class="powerby">
+        
+            All rights reserved，未經允許不得隨意轉載 <br/>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
