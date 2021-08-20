@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>排程 on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/%E6%8E%92%E7%A8%8B/</link>
+    <description>Recent content in 排程 on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 20 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/%E6%8E%92%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker crontab 定期排程執行程式</title>
+      <link>https://dev.kejyun.com/article/2021/08/docker-crontab/</link>
+      <pubDate>Fri, 20 Aug 2021 09:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/08/docker-crontab/</guid>
+      <description>在 docker 我們會建立自己專案的環境，讓他可以運行我們的專案、看是 php、python、golang &amp;hellip; 之類的運行環境，而專案會需要定期排程去執行指定的程式，以下以 php 為例
+建立自訂 crontab 檔案 在專案下會建立一個 crontab 指令的檔案 my_docker_crontab
+# my_docker_crontab # m h dom mon dow command * * * * * /app/job.php 環境安裝 cron 映像檔通常是最小單位的檔案，所以不會有 cron 的排程程式，所以在建立 Docker 環境時必須要自己指定去安裝 cron 軟體，這樣就可以在我們自己自定義的環境去跑 cron 定期排程去執行程式
+RUN apt-get update &amp;amp;&amp;amp; apt-get install -y cron加入自訂的 crontab 檔案 在 docker 專案下將 crontab 指令的檔案 my_docker_crontab 複製到 docker 的目錄下，並指定 crontab 去執行此 crontab 檔案
+# 加入 docker 專案的自訂 crontabADD my_docker_crontab /etc/cron.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker images name on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/docker-images-name/</link>
+    <description>Recent content in docker images name on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 20 Aug 2021 09:50:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/docker-images-name/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker compose build 映像檔名稱</title>
+      <link>https://dev.kejyun.com/article/2021/08/docker-compose-build-images-name/</link>
+      <pubDate>Fri, 20 Aug 2021 09:50:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/08/docker-compose-build-images-name/</guid>
+      <description>在使用 docker-compose 建立 Docker 時，會去使用 Dockerfile 去建立自己想要的環境，但建立完成後 docker 會自行命名這個 Dockerfile 的 images
+version:&amp;#39;3&amp;#39;services:cronjob:container_name:dev_cronjobbuild:cron.Dockerfilevolumes:- /web/:/var/webrestart:always$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE dev_cronjob latest 91e20032b3ff 23 minutes ago 502MB 若想要有自己指定的 images 名稱讓我們方便管理的話，可以在 docker-compose.yml 檔案中加入 images 去指定建立完成後的映像檔名稱
+ images: &amp;lt;images-name&amp;gt;:&amp;lt;images-version&amp;gt;
+ version:&amp;#39;3&amp;#39;services:cronjob:container_name:dev_cronjobbuild:cron.Dockerfileimages:my_cron_image:v1.0volumes:- /web/:/var/webrestart:always這樣使用 docker-compose build 後，就可以在 docker images 看到這個映像檔有他自己的命名了
+$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE my_cron_image v1.0 91e20032b3ff 23 minutes ago 502MB 參考資料  Compose file version 3 reference | Docker Documentation  </description>
+    </item>
+    
+  </channel>
+</rss>
