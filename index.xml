@@ -6,7 +6,134 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Fri, 20 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 20 Aug 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用 Gitlab page 建立私密的靜態部落格網站</title>
+        <link>https://dev.kejyun.com/article/2021/08/gitlab-page-2021/</link>
+        <pubDate>Fri, 20 Aug 2021 11:51:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/08/gitlab-page-2021/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/08/gitlab-page-2021/cover.png" alt="Featured image of post 使用 Gitlab page 建立私密的靜態部落格網站" /&gt;&lt;p&gt;Gitlab 與 Github 都有提供靜態空間頁面給我們放上靜態的 html, css, js 檔案，可以變成一個靜態頁面供網友存取，但 Github pages 的空間如果要變成私密的方式，不想要讓其他人可以直接下載你整包的網站 html 的話，只能 &lt;code&gt;付費&lt;/code&gt; 才能夠有這個功能，Gitlab pages 則是免費就可以使用私密的方式架設你的網站，&lt;code&gt;不需要額外付費&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;建立-gitlab-pages-目錄&#34;&gt;建立 Gitlab Pages 目錄&lt;/h2&gt;
+&lt;p&gt;在你的專案中建立 &lt;code&gt;public&lt;/code&gt; 目錄，並將你要部署到 GitLab Pages 的檔案全部放在這個 &lt;code&gt;public&lt;/code&gt; 目錄中，這個目錄的 &lt;code&gt;index.html&lt;/code&gt; 是網站的進入點&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 150; flex-basis: 360px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-1.png&#34; data-size=&#34;1166x776&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-1_hu5c785936725d82f0c0c88a598dfbaf5a_79733_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-1_hu5c785936725d82f0c0c88a598dfbaf5a_79733_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1166&#34;
+				height=&#34;776&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;GitLab Pages&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;GitLab Pages&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;設定-gitlab-pages-部署方式&#34;&gt;設定 Gitlab Pages 部署方式&lt;/h2&gt;
+&lt;p&gt;建立 &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; 檔案，在 &lt;code&gt;artifacts&lt;/code&gt; 設定 Gitlab pages 的目錄，並設定只有在 &lt;code&gt;main&lt;/code&gt; 的分支才會部署&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# .gitlab-ci.yml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;alpine:latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;stage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;echo &amp;#39;Do nothing&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# gitlab page 目錄&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;artifacts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;paths&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 只有在 main 分支的 public 目錄才會被部署&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;only&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;部署-gitlab-pages&#34;&gt;部署 Gitlab Pages&lt;/h2&gt;
+&lt;p&gt;將建立的網站 &lt;code&gt;public&lt;/code&gt; 目錄及 &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; 檔案 push 到 Gitlab，然後到 Repo 的 &lt;code&gt;CI/CD &amp;gt; Piplines&lt;/code&gt; 可以看到會立即執行部署的指令，看到狀態變更為 &lt;code&gt;passed&lt;/code&gt; 就表示執行成功了&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 320; flex-basis: 770px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-2.png&#34; data-size=&#34;1566x488&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-2_hu7a39532170175333cdc30c94e0300617_129853_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-2_hu7a39532170175333cdc30c94e0300617_129853_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1566&#34;
+				height=&#34;488&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;GitLab Pages&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;GitLab Pages&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;檢視部署的-gitlab-pages&#34;&gt;檢視部署的 Gitlab Pages&lt;/h2&gt;
+&lt;p&gt;在 Repo 的 &lt;code&gt;Settings &amp;gt; Pages&lt;/code&gt; 那邊可以看到你的 Gitlab Pages 的網址，預設是 &lt;code&gt;https://&amp;lt;帳號&amp;gt;.gitlab.io/&amp;lt;專案位置&amp;gt;&lt;/code&gt;，從這裡就可以看到你部署上去的頁面了&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 288; flex-basis: 691px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-3.png&#34; data-size=&#34;2542x882&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-3.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-3_hu4d67e8029ca896a189cff7e49a5b0574_269469_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-3_hu4d67e8029ca896a189cff7e49a5b0574_269469_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;2542&#34;
+				height=&#34;882&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;GitLab Pages&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;GitLab Pages&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;自訂網址--ssl-憑證&#34;&gt;自訂網址 &amp;amp; SSL 憑證&lt;/h2&gt;
+&lt;p&gt;如果你要自訂你網站的網址，可以點選右上方的 &lt;code&gt;New Domain&lt;/code&gt; 按鈕，建立頁面網址，在頁面中輸入你要的網址，並請 Gitlab 幫您申請免費的 Let&amp;rsquo;s Encrypt SSL 憑證&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 288; flex-basis: 691px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-4.png&#34; data-size=&#34;2542x882&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-4.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-4_hu4d67e8029ca896a189cff7e49a5b0574_217516_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-4_hu4d67e8029ca896a189cff7e49a5b0574_217516_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;2542&#34;
+				height=&#34;882&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;GitLab Pages&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;GitLab Pages&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;
+&lt;figure style=&#34;flex-grow: 200; flex-basis: 480px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-5.png&#34; data-size=&#34;2042x1020&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-5.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-5_hu80b3c61ba5e096af24cbd4f66aec9f4b_182494_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-5_hu80b3c61ba5e096af24cbd4f66aec9f4b_182494_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;2042&#34;
+				height=&#34;1020&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;GitLab Pages&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;GitLab Pages&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;建立完成後將 DNS 設定至您的設定內，並做驗證即可，驗證完成後就可以看到您的頁面可以透過自己的網址去連線了&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 200; flex-basis: 480px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-6.png&#34; data-size=&#34;2042x1020&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-6.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-6_hu80b3c61ba5e096af24cbd4f66aec9f4b_195202_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-6_hu80b3c61ba5e096af24cbd4f66aec9f4b_195202_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;2042&#34;
+				height=&#34;1020&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;GitLab Pages&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;GitLab Pages&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cloudflare-dns-ssl-憑證&#34;&gt;Cloudflare DNS SSL 憑證&lt;/h2&gt;
+&lt;p&gt;若你使用 Cloudflare 做你的 DNS 管理，必須要在 SSL 設定設定為 &lt;code&gt;full&lt;/code&gt; 才能夠正確的取得 Gitlab Pages 的免費自訂網址 SSL 網址憑證&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 146; flex-basis: 351px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-7.png&#34; data-size=&#34;1045x713&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-7.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-7_hu6880c83324d4852b3a267639ce53a747_127991_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/gitlab-page-2021/images/gitlab-pages-7_hu6880c83324d4852b3a267639ce53a747_127991_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1045&#34;
+				height=&#34;713&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;GitLab Pages&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;GitLab Pages&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.gitlab.com/ee/user/project/pages/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitLab Pages | GitLab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_from_scratch.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tutorial: Create a GitLab Pages website from scratch | GitLab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>docker crontab 定期排程執行程式</title>
         <link>https://dev.kejyun.com/article/2021/08/docker-crontab/</link>
         <pubDate>Fri, 20 Aug 2021 09:51:29 +0800</pubDate>
@@ -53,6 +180,8 @@
     &gt;laravel-docker-cron/Dockerfile at master · yupmin/laravel-docker-cron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=2UTHJpBRGpY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Task Scheduling - Laravel - The PHP Framework For Web Artisans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://learnku.com/articles/7022/using-laravel-schedule-in-docker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在 Docker 中使用 Laravel schedule | Laravel China 社区&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>

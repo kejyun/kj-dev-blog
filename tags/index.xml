@@ -6,7 +6,34 @@
     <description>Recent content in Tags on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 20 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Aug 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitlab</title>
+      <link>https://dev.kejyun.com/tags/gitlab/</link>
+      <pubDate>Fri, 20 Aug 2021 11:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pages</title>
+      <link>https://dev.kejyun.com/tags/pages/</link>
+      <pubDate>Fri, 20 Aug 2021 11:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>靜態頁面</title>
+      <link>https://dev.kejyun.com/tags/%E9%9D%9C%E6%85%8B%E9%A0%81%E9%9D%A2/</link>
+      <pubDate>Fri, 20 Aug 2021 11:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E9%9D%9C%E6%85%8B%E9%A0%81%E9%9D%A2/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>crontab</title>
       <link>https://dev.kejyun.com/tags/crontab/</link>

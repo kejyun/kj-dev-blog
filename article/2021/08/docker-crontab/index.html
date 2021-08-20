@@ -135,7 +135,7 @@
 		],
 		"genre":[""],
 		"articleSection": "",
-		"articleBody": "在 docker 我們會建立自己專案的環境，讓他可以運行我們的專案、看是 php、python、golang \u0026hellip; 之類的運行環境，而專案會需要定期排程去執行指定的程式，以下以 php 為例\n建立自訂 crontab 檔案 在專案下會建立一個 crontab 指令的檔案 my_docker_crontab\n# my_docker_crontab # m h dom mon dow command * * * * * \/app\/job.php 環境安裝 cron 映像檔通常是最小單位的檔案，所以不會有 cron 的排程程式，所以在建立 Docker 環境時必須要自己指定去安裝 cron 軟體，這樣就可以在我們自己自定義的環境去跑 cron 定期排程去執行程式\nRUN apt-get update \u0026amp;\u0026amp; apt-get install -y cron加入自訂的 crontab 檔案 在 docker 專案下將 crontab 指令的檔案 my_docker_crontab 複製到 docker 的目錄下，並指定 crontab 去執行此 crontab 檔案\n# 加入 docker 專案的自訂 crontabADD my_docker_crontab \/etc\/cron.d\/my_docker_crontab# 指定 crontab 檔案RUN crontab \/etc\/cron.d\/my_docker_crontab執行 crontab 在最後使用指令執行 crontab，這樣就可以開始每分鐘定期執行程式了\n# 執行 crontabCMD [\u0026#34;cron\u0026#34;, \u0026#34;-f\u0026#34;]以下是完整的 Dockerfile 檔案\nFROMphp:7.4-fpmWORKDIR\/varRUN apt-get update \u0026amp;\u0026amp; apt-get install -y cron libpq-dev libpng-dev libzip-dev zipRUN docker-php-ext-install pgsql pdo_pgsql gd zip\\ \u0026amp;\u0026amp; docker-php-ext-enable opcache# 加入 docker 專案的自訂 crontabADD my_docker_crontab \/etc\/cron.d\/my_docker_crontab# 指定 crontab 檔案RUN crontab \/etc\/cron.d\/my_docker_crontab# 執行 crontabCMD [\u0026#34;cron\u0026#34;, \u0026#34;-f\u0026#34;]參考資料  cron - docker root crontab job not executing - Stack Overflow laravel-docker-cron\/Dockerfile at master · yupmin\/laravel-docker-cron Task Scheduling - Laravel - The PHP Framework For Web Artisans  "
+		"articleBody": "在 docker 我們會建立自己專案的環境，讓他可以運行我們的專案、看是 php、python、golang \u0026hellip; 之類的運行環境，而專案會需要定期排程去執行指定的程式，以下以 php 為例\n建立自訂 crontab 檔案 在專案下會建立一個 crontab 指令的檔案 my_docker_crontab\n# my_docker_crontab # m h dom mon dow command * * * * * \/app\/job.php 環境安裝 cron 映像檔通常是最小單位的檔案，所以不會有 cron 的排程程式，所以在建立 Docker 環境時必須要自己指定去安裝 cron 軟體，這樣就可以在我們自己自定義的環境去跑 cron 定期排程去執行程式\nRUN apt-get update \u0026amp;\u0026amp; apt-get install -y cron加入自訂的 crontab 檔案 在 docker 專案下將 crontab 指令的檔案 my_docker_crontab 複製到 docker 的目錄下，並指定 crontab 去執行此 crontab 檔案\n# 加入 docker 專案的自訂 crontabADD my_docker_crontab \/etc\/cron.d\/my_docker_crontab# 指定 crontab 檔案RUN crontab \/etc\/cron.d\/my_docker_crontab執行 crontab 在最後使用指令執行 crontab，這樣就可以開始每分鐘定期執行程式了\n# 執行 crontabCMD [\u0026#34;cron\u0026#34;, \u0026#34;-f\u0026#34;]以下是完整的 Dockerfile 檔案\nFROMphp:7.4-fpmWORKDIR\/varRUN apt-get update \u0026amp;\u0026amp; apt-get install -y cron libpq-dev libpng-dev libzip-dev zipRUN docker-php-ext-install pgsql pdo_pgsql gd zip\\ \u0026amp;\u0026amp; docker-php-ext-enable opcache# 加入 docker 專案的自訂 crontabADD my_docker_crontab \/etc\/cron.d\/my_docker_crontab# 指定 crontab 檔案RUN crontab \/etc\/cron.d\/my_docker_crontab# 執行 crontabCMD [\u0026#34;cron\u0026#34;, \u0026#34;-f\u0026#34;]參考資料  cron - docker root crontab job not executing - Stack Overflow laravel-docker-cron\/Dockerfile at master · yupmin\/laravel-docker-cron Task Scheduling - Laravel - The PHP Framework For Web Artisans 在 Docker 中使用 Laravel schedule | Laravel China 社区  "
 	}
 </script>
 
@@ -774,6 +774,8 @@ if (!doNotTrack) {
     >laravel-docker-cron/Dockerfile at master · yupmin/laravel-docker-cron</a></li>
 <li><a class="link" href="https://www.youtube.com/watch?v=2UTHJpBRGpY"  target="_blank" rel="noopener"
     >Task Scheduling - Laravel - The PHP Framework For Web Artisans</a></li>
+<li><a class="link" href="https://learnku.com/articles/7022/using-laravel-schedule-in-docker"  target="_blank" rel="noopener"
+    >在 Docker 中使用 Laravel schedule | Laravel China 社区</a></li>
 </ul>
 
 
