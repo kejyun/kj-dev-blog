@@ -6,7 +6,169 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Fri, 20 Aug 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在 Windows 使用 nvm 安裝 Node 環境</title>
+        <link>https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/</link>
+        <pubDate>Sun, 22 Aug 2021 09:51:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/cover.png" alt="Featured image of post 在 Windows 使用 nvm 安裝 Node 環境" /&gt;&lt;p&gt;在 Mac 開發 Node.js 軟體通常支援性是比較好的，但如果想在 Windows 開發 Node.js 的話，也可以用 NVM 來管理 Node.js 的版本，可以針對不同的專案需求去做簡單的 Node.js 版本切換&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;環境&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Windows 10 x64
+node.js 14.17.5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安裝-windows-版本的-nvm-windows&#34;&gt;安裝 Windows 版本的 nvm-windows&lt;/h2&gt;
+&lt;p&gt;到 GitHub &lt;a class=&#34;link&#34; href=&#34;https://github.com/coreybutler/nvm-windows/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;coreybutler/nvm-windows&lt;/a&gt; 的 Repo 下載 &lt;a class=&#34;link&#34; href=&#34;https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nvm-setup.zip&lt;/a&gt; 檔案並進行安裝，檔案解壓所後照正常的安裝步驟安裝即可&lt;/p&gt;
+&lt;p&gt;我這邊使用的是 &lt;code&gt;Windows PowerShell&lt;/code&gt;，如果安裝完成後必須要完整的重開 &lt;code&gt;Windows PowerShell&lt;/code&gt;，這樣才能夠讓 &lt;code&gt;Windows PowerShell&lt;/code&gt; 讀取到對的 NVM 環境變數&lt;/p&gt;
+&lt;p&gt;如果是要讓 &lt;code&gt;VS Code&lt;/code&gt; 的 Terminal 能夠吃到 NVM 的環境變數，則需要整台電腦重開機才吃的到設定，只重開 &lt;code&gt;VS Code&lt;/code&gt; 是沒有用的&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 149; flex-basis: 358px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1.png&#34; data-size=&#34;1257x841&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1_hud9ddb32d76d093a2ae61c6f8189a30d1_79708_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1_hud9ddb32d76d093a2ae61c6f8189a30d1_79708_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1257&#34;
+				height=&#34;841&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;NVM on Windows 10&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;NVM on Windows 10&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;列出可以安裝的-nodejs-版本&#34;&gt;列出可以安裝的 Node.js 版本&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nvm list available&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這邊指令跟 Mac 有點不一樣，不是使用 &lt;code&gt;nvm ls-remote&lt;/code&gt; 去列出遠端可以安裝的 Node.js 版本，而是用 &lt;code&gt;nvm list available&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;PS C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\K&lt;/span&gt;J&amp;gt; nvm list available
+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   CURRENT    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     LTS      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  OLD STABLE  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; OLD UNSTABLE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--------------&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--------------&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--------------&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--------------&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.7.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.17.5    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.18    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.11.16    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.6.2    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.17.4    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.17    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.11.15    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.6.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.17.3    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.16    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.11.14    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.6.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.17.2    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.15    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.11.13    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.5.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.17.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.14    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.11.12    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.4.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.16.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.12    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.11.10    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.4.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.16.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.11    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.9    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.3.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.15.5    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   0.12.10    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.8    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.2.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.15.4    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.9    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.7    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.1.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.15.3    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.8    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.6    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    16.0.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.15.2    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.7    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.5    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   15.14.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.15.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.6    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.4    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   15.13.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   14.15.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.5    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.3    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   15.12.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   12.22.5    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.4    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.2    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   15.11.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   12.22.4    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.3    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.11.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    15.9.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   12.22.2    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.9.12    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    15.8.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   12.22.1    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.12.0    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    0.9.11    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+
+This is a partial list. For a &lt;span class=&#34;nb&#34;&gt;complete&lt;/span&gt; list, visit https://nodejs.org/download/release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果沒有看到自己想要安裝的版本，可以到 &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/download/release&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Node.js Release&lt;/a&gt; 去找自己需要的 Node.js 版本&lt;/p&gt;
+&lt;h2 id=&#34;安裝-nodejs-14175&#34;&gt;安裝 Node.js 14.17.5&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nvm install&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用 &lt;code&gt;nvm install&lt;/code&gt; 去安裝 Node.js 後會出現作業系統版本不符合，我系統是使用 Windows 10 64 bits 的系統，預設安裝的版本是 32 bits 的版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;PS C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\K&lt;/span&gt;J&amp;gt; nvm install 14.17.5
+nvm.0.0
+Node.js vnvm.0.0 is only available in 32-bit.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;要使用 64 bits 版本時，在指令最後方加入 &lt;code&gt;64&lt;/code&gt; 的字樣，就可以指定 64 bits 的版本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nvm install  14.17.5 64&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;PS C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\K&lt;/span&gt;J&amp;gt; nvm install  14.17.5 &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt;
+Downloading node.js version 14.17.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;64-bit&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;...
+Complete
+Creating C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\K&lt;/span&gt;J&lt;span class=&#34;se&#34;&gt;\A&lt;/span&gt;ppData&lt;span class=&#34;se&#34;&gt;\R&lt;/span&gt;oaming&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;vm&lt;span class=&#34;se&#34;&gt;\t&lt;/span&gt;emp
+
+Downloading npm version 6.14.14... Complete
+Installing npm v6.14.14...
+
+Installation complete. If you want to use this version, &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt;
+
+nvm use 14.17.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;指定使用-nodejs-版本&#34;&gt;指定使用 Node.js 版本&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nvm use 14.17.5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安裝完成後可以使用 &lt;code&gt;nvm use&lt;/code&gt; 去指定要使用的 Node.js 版本，在過程中會要求管理者權限去做處理&lt;/p&gt;
+&lt;p&gt;NVM 會在環境變數設定 2 個變數 &lt;code&gt;NVM_HOME&lt;/code&gt; 及 &lt;code&gt;NVM_SYMLINK&lt;/code&gt;，在使用 &lt;code&gt;nvm use&lt;/code&gt; 時 NVM 會將指定的 Node.js 版本關連到 &lt;code&gt;NVM_SYMLINK&lt;/code&gt; 路徑下，所以需要管理者權限去做關聯存取&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名稱&lt;/th&gt;
+&lt;th&gt;設定&lt;/th&gt;
+&lt;th&gt;說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;NVM_HOME&lt;/td&gt;
+&lt;td&gt;C:\Users\KJ\AppData\Roaming\nvm&lt;/td&gt;
+&lt;td&gt;NVM 存放目錄&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NVM_SYMLINK&lt;/td&gt;
+&lt;td&gt;C:\Program Files\nodejs&lt;/td&gt;
+&lt;td&gt;NVM 軟連結路徑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;這樣我們就可以開始在 Windows 10 使用 NVM 去管理 Node.js 版本了&lt;/p&gt;
+&lt;h2 id=&#34;列出已安裝的-nodejs-版本&#34;&gt;列出已安裝的 Node.js 版本&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nvm list&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;PS C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\K&lt;/span&gt;J&amp;gt;nvm list
+
+    16.7.0
+  * 14.17.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Currently using 64-bit executable&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nvm-指令清單&#34;&gt;nvm 指令清單&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nvm     
+Running version 1.1.7.
+
+Usage:
+
+  nvm arch                     : Show &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; node is running in &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; or &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; bit mode.
+  nvm install &amp;lt;version&amp;gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;arch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; : The version can be a node.js version or &lt;span class=&#34;s2&#34;&gt;&amp;#34;latest&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; the latest stable version.
+                                 Optionally specify whether to install the &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; or &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; bit version &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;defaults to system arch&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+                                 Set &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;arch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; to &lt;span class=&#34;s2&#34;&gt;&amp;#34;all&amp;#34;&lt;/span&gt; to install &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; AND &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; bit versions.
+                                 Add --insecure to the end of this &lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; to bypass SSL validation of the remote download server.
+  nvm list &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;available&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;         : List the node.js installations. Type &lt;span class=&#34;s2&#34;&gt;&amp;#34;available&amp;#34;&lt;/span&gt; at the end to see what can be installed. Aliased as ls.
+  nvm on                       : Enable node.js version management.
+  nvm off                      : Disable node.js version management.
+  nvm proxy &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;              : Set a proxy to use &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; downloads. Leave &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; blank to see the current proxy.
+                                 Set &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; to &lt;span class=&#34;s2&#34;&gt;&amp;#34;none&amp;#34;&lt;/span&gt; to remove the proxy.
+  nvm node_mirror &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;        : Set the node mirror. Defaults to https://nodejs.org/dist/. Leave &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; blank to use default url.
+  nvm npm_mirror &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;         : Set the npm mirror. Defaults to https://github.com/npm/cli/archive/. Leave &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; blank to default url.
+  nvm uninstall &amp;lt;version&amp;gt;      : The version must be a specific version.
+  nvm use &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;version&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;arch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;     : Switch to use the specified version. Optionally specify 32/64bit architecture.
+                                 nvm use &amp;lt;arch&amp;gt; will &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt; using the selected version, but switch to 32/64 bit mode.
+  nvm root &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;path&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;              : Set the directory where nvm should store different versions of node.js.
+                                 If &amp;lt;path&amp;gt; is not set, the current root will be displayed.
+  nvm version                  : Displays the current running version of nvm &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; Windows. Aliased as v.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coreybutler/nvm-windows/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases · coreybutler/nvm-windows · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hsiangfeng.github.io/nodejs/20200107/3738078915/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows 10 安裝並使用 nvm 切換 NodeJS 版本 | Welcome.Web.World&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coreybutler/nvm-windows/issues/130&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Node.js v5.4.0 is only available in 32-bit. · Issue #130 · coreybutler/nvm-windows · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/zh-tw/windows/dev-environment/javascript/nodejs-on-windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在原生 Windows 上設定 NodeJS | Microsoft Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://oranwind.org/nvm-windows/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[Node.JS] 在 Windows 下使用 nvm 切換 Node 版本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/20992723/npm-is-not-recognized-as-internal-or-external-command-operable-program-or-bat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;windows - &amp;lsquo;npm&amp;rsquo; is not recognized as internal or external command, operable program or batch file - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.c-sharpcorner.com/blogs/npm-is-not-recognized-from-visual-studio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Npm Is Not Recognized By Visual Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>使用 Gitlab page 建立私密的靜態部落格網站</title>
         <link>https://dev.kejyun.com/article/2021/08/gitlab-page-2021/</link>
         <pubDate>Fri, 20 Aug 2021 11:51:29 +0800</pubDate>
