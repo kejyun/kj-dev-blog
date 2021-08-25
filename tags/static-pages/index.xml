@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Static Pages on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/static-pages/</link>
+    <description>Recent content in Static Pages on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 25 Aug 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/static-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Gitlab page to build your static pages via private repository</title>
+      <link>https://dev.kejyun.com/en/article/2021/08/gitlab-page-2021/</link>
+      <pubDate>Wed, 25 Aug 2021 11:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/en/article/2021/08/gitlab-page-2021/</guid>
+      <description>Gitlab and Github provide the static website spaces for us. We can upload the static file, such as html, css, js file to the git repository. But if you don&amp;rsquo;t want to let everyone can download your full static files via git directly on Github. You must pay for this private repository feature. But private repository for static pages on Gitlab is free.
+Create Gitlab Pages directory You can create public directory on your gitlab repository.</description>
+    </item>
+    
+  </channel>
+</rss>

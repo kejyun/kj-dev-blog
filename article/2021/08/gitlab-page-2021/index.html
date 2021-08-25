@@ -135,7 +135,7 @@
 		],
 		"genre":[""],
 		"articleSection": "",
-		"articleBody": "Gitlab 與 Github 都有提供靜態空間頁面給我們放上靜態的 html, css, js 檔案，可以變成一個靜態頁面供網友存取，但 Github pages 的空間如果要變成私密的方式，不想要讓其他人可以直接下載你整包的網站 html 的話，只能 付費 才能夠有這個功能，Gitlab pages 則是免費就可以使用私密的方式架設你的網站，不需要額外付費\n建立 Gitlab Pages 目錄 在你的專案中建立 public 目錄，並將你要部署到 GitLab Pages 的檔案全部放在這個 public 目錄中，這個目錄的 index.html 是網站的進入點\n\rGitLab Pages\r\n設定 Gitlab Pages 部署方式 建立 .gitlab-ci.yml 檔案，在 artifacts 設定 Gitlab pages 的目錄，並設定只有在 main 的分支才會部署\n# .gitlab-ci.ymlimage:alpine:latestpages:stage:deployscript:- echo \u0026#39;Do nothing\u0026#39;# gitlab page 目錄artifacts:paths:- public# 只有在 main 分支的 public 目錄才會被部署only:- main部署 Gitlab Pages 將建立的網站 public 目錄及 .gitlab-ci.yml 檔案 push 到 Gitlab，然後到 Repo 的 CI\/CD \u0026gt; Piplines 可以看到會立即執行部署的指令，看到狀態變更為 passed 就表示執行成功了\n\rGitLab Pages\r\n檢視部署的 Gitlab Pages 在 Repo 的 Settings \u0026gt; Pages 那邊可以看到你的 Gitlab Pages 的網址，預設是 https:\/\/\u0026lt;帳號\u0026gt;.gitlab.io\/\u0026lt;專案位置\u0026gt;，從這裡就可以看到你部署上去的頁面了\n\rGitLab Pages\r\n自訂網址 \u0026amp; SSL 憑證 如果你要自訂你網站的網址，可以點選右上方的 New Domain 按鈕，建立頁面網址，在頁面中輸入你要的網址，並請 Gitlab 幫您申請免費的 Let\u0026rsquo;s Encrypt SSL 憑證\n\rGitLab Pages\r \rGitLab Pages\r\n建立完成後將 DNS 設定至您的設定內，並做驗證即可，驗證完成後就可以看到您的頁面可以透過自己的網址去連線了\n\rGitLab Pages\r\nCloudflare DNS SSL 憑證 若你使用 Cloudflare 做你的 DNS 管理，必須要在 SSL 設定設定為 full 才能夠正確的取得 Gitlab Pages 的免費自訂網址 SSL 網址憑證\n\rGitLab Pages\r\n參考資料  GitLab Pages | GitLab Tutorial: Create a GitLab Pages website from scratch | GitLab  "
+		"articleBody": "Gitlab 與 Github 都有提供靜態空間頁面給我們放上靜態的 html, css, js 檔案，可以變成一個靜態頁面供網友存取，但 Github pages 的空間如果要變成私密的方式，不想要讓其他人可以直接下載你整包的網站 html 的話，只能 付費 才能夠有這個功能，Gitlab pages 則是免費就可以使用私密的方式架設你的網站，不需要額外付費\n建立 Gitlab Pages 目錄 在你的專案中建立 public 目錄，並將你要部署到 GitLab Pages 的檔案全部放在這個 public 目錄中，這個目錄的 index.html 是網站的進入點\n GitLab Pages \n設定 Gitlab Pages 部署方式 建立 .gitlab-ci.yml 檔案，在 artifacts 設定 Gitlab pages 的目錄，並設定只有在 main 的分支才會部署\n# .gitlab-ci.ymlimage:alpine:latestpages:stage:deployscript:- echo \u0026#39;Do nothing\u0026#39;# gitlab page 目錄artifacts:paths:- public# 只有在 main 分支的 public 目錄才會被部署only:- main部署 Gitlab Pages 將建立的網站 public 目錄及 .gitlab-ci.yml 檔案 push 到 Gitlab，然後到 Repo 的 CI\/CD \u0026gt; Piplines 可以看到會立即執行部署的指令，看到狀態變更為 passed 就表示執行成功了\n GitLab Pages \n檢視部署的 Gitlab Pages 在 Repo 的 Settings \u0026gt; Pages 那邊可以看到你的 Gitlab Pages 的網址，預設是 https:\/\/\u0026lt;帳號\u0026gt;.gitlab.io\/\u0026lt;專案位置\u0026gt;，從這裡就可以看到你部署上去的頁面了\n GitLab Pages \n設定 Gitlab Pages 存取權限 Gitlab Pages 可以做存取的限制\n Repo 的成員才可以看到此頁面 每個人都可以看到此頁面  GitLab Pages 預設是「Repo 的成員才可以看到此頁面」，若你想要設定 Gitlab 存取權限的話，可以到 Setting \u0026gt; General 頁面，然後在頁面下方的 Visibility, project features, permissions 區塊點選 Expand 展開權限設定\n GitLab Pages   GitLab Pages \n在 Visibility, project features, permissions 下方找到 Pages 區塊，選擇存取的權限按下儲存即可\n Only Project Members Everyone  這樣就可以公開您的 Gitlab Pages 在網路上給大家存取了\n GitLab Pages \n自訂網址 \u0026amp; SSL 憑證 如果你要自訂你網站的網址，可以點選右上方的 New Domain 按鈕，建立頁面網址，在頁面中輸入你要的網址，並請 Gitlab 幫您申請免費的 Let\u0026rsquo;s Encrypt SSL 憑證\n GitLab Pages   GitLab Pages \n建立完成後將 DNS 設定至您的設定內，並做驗證即可，驗證完成後就可以看到您的頁面可以透過自己的網址去連線了\n GitLab Pages \nCloudflare DNS SSL 憑證 若你使用 Cloudflare 做你的 DNS 管理，必須要在 SSL 設定設定為 full 才能夠正確的取得 Gitlab Pages 的免費自訂網址 SSL 網址憑證\n GitLab Pages \n參考資料  GitLab Pages | GitLab Tutorial: Create a GitLab Pages website from scratch | GitLab Exploring GitLab Pages | GitLab  "
 	}
 </script>
 
@@ -315,7 +315,7 @@
 	{
 		"@type": "Organization",
 		"name": "",
-		"sameAs": [ "\r\n"
+		"sameAs": [ "\n"
 		]
   	}
 ],
@@ -328,14 +328,14 @@
 	{
 		"@type": "Organization",
 		"name": "",
-		"sameAs": [ "\r\n"
+		"sameAs": [ "\n"
 		]
 	}
 ],
 "url": "https:\/\/dev.kejyun.com",
 "image": "https:\/\/dev.kejyun.com\/company\/team\/KeJyun.png",
 
-"sameAs": [ "\r\n\r\n\r\n\r\n\r\n\r\n\"https://ca.linkedin.com/in/kejyun/en\",\r\n\r\n\r\n\"https://github.com/kejyun\",\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\"\"\r\n"
+"sameAs": [ "\n\n\n\n\n\n\"https://ca.linkedin.com/in/kejyun/en\",\n\n\n\"https://github.com/kejyun\",\n\n\n\n\n\n\n\n\n\n\n\n\"\"\n"
 	]
 }
 </script>
@@ -792,11 +792,60 @@ if (!doNotTrack) {
 		<figcaption>GitLab Pages</figcaption>
 		
 	</figure></p>
+<h2 id="設定-gitlab-pages-存取權限">設定 Gitlab Pages 存取權限</h2>
+<p>Gitlab Pages 可以做存取的限制</p>
+<ol>
+<li>Repo 的成員才可以看到此頁面</li>
+<li>每個人都可以看到此頁面</li>
+</ol>
+<p>GitLab Pages 預設是「Repo 的成員才可以看到此頁面」，若你想要設定 Gitlab 存取權限的話，可以到 <code>Setting</code> &gt; <code>General</code> 頁面，然後在頁面下方的 <code>Visibility, project features, permissions</code> 區塊點選 <code>Expand</code> 展開權限設定</p>
+<p><figure style="flex-grow: 214; flex-basis: 514px">
+		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-4.png" data-size="1218x568"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-4.png"
+				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-4_hufb0c0b84344f40f6b9ef17f1d78c3c06_148203_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-4_hufb0c0b84344f40f6b9ef17f1d78c3c06_148203_1024x0_resize_box_2.png 1024w"
+				width="1218"
+				height="568"
+				loading="lazy"
+				alt="GitLab Pages">
+		</a>
+		
+		<figcaption>GitLab Pages</figcaption>
+		
+	</figure>
+<figure style="flex-grow: 214; flex-basis: 514px">
+		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-5.png" data-size="1218x568"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-5.png"
+				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-5_hu3bf72a32e778caaa976b08c566ca9050_104197_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-5_hu3bf72a32e778caaa976b08c566ca9050_104197_1024x0_resize_box_2.png 1024w"
+				width="1218"
+				height="568"
+				loading="lazy"
+				alt="GitLab Pages">
+		</a>
+		
+		<figcaption>GitLab Pages</figcaption>
+		
+	</figure></p>
+<p>在 <code>Visibility, project features, permissions</code> 下方找到 <code>Pages</code> 區塊，選擇存取的權限按下儲存即可</p>
+<ul>
+<li>Only Project Members</li>
+<li>Everyone</li>
+</ul>
+<p>這樣就可以公開您的 Gitlab Pages 在網路上給大家存取了</p>
+<p><figure style="flex-grow: 214; flex-basis: 514px">
+		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-6.png" data-size="1218x568"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-6.png"
+				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-6_hud46db71a7a7a1fdead38ddfbac356a74_148074_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-6_hud46db71a7a7a1fdead38ddfbac356a74_148074_1024x0_resize_box_2.png 1024w"
+				width="1218"
+				height="568"
+				loading="lazy"
+				alt="GitLab Pages">
+		</a>
+		
+		<figcaption>GitLab Pages</figcaption>
+		
+	</figure></p>
 <h2 id="自訂網址--ssl-憑證">自訂網址 &amp; SSL 憑證</h2>
 <p>如果你要自訂你網站的網址，可以點選右上方的 <code>New Domain</code> 按鈕，建立頁面網址，在頁面中輸入你要的網址，並請 Gitlab 幫您申請免費的 Let&rsquo;s Encrypt SSL 憑證</p>
 <p><figure style="flex-grow: 288; flex-basis: 691px">
-		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-4.png" data-size="2542x882"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-4.png"
-				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-4_hu4d67e8029ca896a189cff7e49a5b0574_217516_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-4_hu4d67e8029ca896a189cff7e49a5b0574_217516_1024x0_resize_box_2.png 1024w"
+		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-7.png" data-size="2542x882"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-7.png"
+				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-7_hu4d67e8029ca896a189cff7e49a5b0574_217516_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-7_hu4d67e8029ca896a189cff7e49a5b0574_217516_1024x0_resize_box_2.png 1024w"
 				width="2542"
 				height="882"
 				loading="lazy"
@@ -807,8 +856,8 @@ if (!doNotTrack) {
 		
 	</figure>
 <figure style="flex-grow: 200; flex-basis: 480px">
-		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-5.png" data-size="2042x1020"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-5.png"
-				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-5_hu80b3c61ba5e096af24cbd4f66aec9f4b_182494_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-5_hu80b3c61ba5e096af24cbd4f66aec9f4b_182494_1024x0_resize_box_2.png 1024w"
+		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-8.png" data-size="2042x1020"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-8.png"
+				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-8_hu80b3c61ba5e096af24cbd4f66aec9f4b_182494_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-8_hu80b3c61ba5e096af24cbd4f66aec9f4b_182494_1024x0_resize_box_2.png 1024w"
 				width="2042"
 				height="1020"
 				loading="lazy"
@@ -820,8 +869,8 @@ if (!doNotTrack) {
 	</figure></p>
 <p>建立完成後將 DNS 設定至您的設定內，並做驗證即可，驗證完成後就可以看到您的頁面可以透過自己的網址去連線了</p>
 <p><figure style="flex-grow: 200; flex-basis: 480px">
-		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-6.png" data-size="2042x1020"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-6.png"
-				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-6_hu80b3c61ba5e096af24cbd4f66aec9f4b_195202_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-6_hu80b3c61ba5e096af24cbd4f66aec9f4b_195202_1024x0_resize_box_2.png 1024w"
+		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-9.png" data-size="2042x1020"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-9.png"
+				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-9_hu80b3c61ba5e096af24cbd4f66aec9f4b_195202_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-9_hu80b3c61ba5e096af24cbd4f66aec9f4b_195202_1024x0_resize_box_2.png 1024w"
 				width="2042"
 				height="1020"
 				loading="lazy"
@@ -833,11 +882,11 @@ if (!doNotTrack) {
 	</figure></p>
 <h2 id="cloudflare-dns-ssl-憑證">Cloudflare DNS SSL 憑證</h2>
 <p>若你使用 Cloudflare 做你的 DNS 管理，必須要在 SSL 設定設定為 <code>full</code> 才能夠正確的取得 Gitlab Pages 的免費自訂網址 SSL 網址憑證</p>
-<p><figure style="flex-grow: 146; flex-basis: 351px">
-		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-7.png" data-size="1045x713"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-7.png"
-				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-7_hu6880c83324d4852b3a267639ce53a747_127991_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-7_hu6880c83324d4852b3a267639ce53a747_127991_1024x0_resize_box_2.png 1024w"
-				width="1045"
-				height="713"
+<p><figure style="flex-grow: 145; flex-basis: 348px">
+		<a href="/article/2021/08/gitlab-page-2021/images/gitlab-pages-10.png" data-size="1054x725"><img src="/article/2021/08/gitlab-page-2021/images/gitlab-pages-10.png"
+				srcset="/article/2021/08/gitlab-page-2021/images/gitlab-pages-10_huba6246d8134832cec8e078976e26e816_127941_480x0_resize_box_2.png 480w, /article/2021/08/gitlab-page-2021/images/gitlab-pages-10_huba6246d8134832cec8e078976e26e816_127941_1024x0_resize_box_2.png 1024w"
+				width="1054"
+				height="725"
 				loading="lazy"
 				alt="GitLab Pages">
 		</a>
@@ -851,6 +900,8 @@ if (!doNotTrack) {
     >GitLab Pages | GitLab</a></li>
 <li><a class="link" href="https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_from_scratch.html"  target="_blank" rel="noopener"
     >Tutorial: Create a GitLab Pages website from scratch | GitLab</a></li>
+<li><a class="link" href="https://docs.gitlab.com/ee/user/project/pages/introduction.html#gitlab-pages-access-control"  target="_blank" rel="noopener"
+    >Exploring GitLab Pages | GitLab</a></li>
 </ul>
 
 

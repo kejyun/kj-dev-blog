@@ -6,7 +6,17 @@
     <description>Recent content in Gitlab on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 20 Aug 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Aug 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Gitlab page to build your static pages via private repository</title>
+      <link>https://dev.kejyun.com/en/article/2021/08/gitlab-page-2021/</link>
+      <pubDate>Wed, 25 Aug 2021 11:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/en/article/2021/08/gitlab-page-2021/</guid>
+      <description>Gitlab and Github provide the static website spaces for us. We can upload the static file, such as html, css, js file to the git repository. But if you don&amp;rsquo;t want to let everyone can download your full static files via git directly on Github. You must pay for this private repository feature. But private repository for static pages on Gitlab is free.
+Create Gitlab Pages directory You can create public directory on your gitlab repository.</description>
+    </item>
+    
     <item>
       <title>使用 Gitlab page 建立私密的靜態部落格網站</title>
       <link>https://dev.kejyun.com/article/2021/08/gitlab-page-2021/</link>
@@ -15,7 +25,7 @@
       <guid>https://dev.kejyun.com/article/2021/08/gitlab-page-2021/</guid>
       <description>Gitlab 與 Github 都有提供靜態空間頁面給我們放上靜態的 html, css, js 檔案，可以變成一個靜態頁面供網友存取，但 Github pages 的空間如果要變成私密的方式，不想要讓其他人可以直接下載你整包的網站 html 的話，只能 付費 才能夠有這個功能，Gitlab pages 則是免費就可以使用私密的方式架設你的網站，不需要額外付費
 建立 Gitlab Pages 目錄 在你的專案中建立 public 目錄，並將你要部署到 GitLab Pages 的檔案全部放在這個 public 目錄中，這個目錄的 index.html 是網站的進入點
-GitLab Pages
+ GitLab Pages 
 設定 Gitlab Pages 部署方式 建立 .gitlab-ci.yml 檔案，在 artifacts 設定 Gitlab pages 的目錄，並設定只有在 main 的分支才會部署
 # .gitlab-ci.ymlimage:alpine:latestpages:stage:deployscript:- echo &amp;#39;Do nothing&amp;#39;# gitlab page 目錄artifacts:paths:- public# 只有在 main 分支的 public 目錄才會被部署only:- main部署 Gitlab Pages 將建立的網站 public 目錄及 .gitlab-ci.yml 檔案 push 到 Gitlab，然後到 Repo 的 CI/CD &amp;gt; Piplines 可以看到會立即執行部署的指令，看到狀態變更為 passed 就表示執行成功了</description>
     </item>

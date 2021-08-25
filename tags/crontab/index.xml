@@ -6,7 +6,17 @@
     <description>Recent content in crontab on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 20 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/crontab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/crontab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker crontab for scheduling running program</title>
+      <link>https://dev.kejyun.com/en/article/2021/08/docker-crontab/</link>
+      <pubDate>Tue, 24 Aug 2021 09:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/en/article/2021/08/docker-crontab/</guid>
+      <description>We will build the specific environment for running our projects in docker. Such as using PHP, Python, Golang. But sometimes we need to run the specific tasks at a specific time regularly and automatically. We will use crontab to achieve our goal. But what if we want to get the same result on docker? Here is the example by using PHP.
+Create custom crontab file Create the custom crontab file in the project that names my_docker_crontab</description>
+    </item>
+    
     <item>
       <title>docker crontab 定期排程執行程式</title>
       <link>https://dev.kejyun.com/article/2021/08/docker-crontab/</link>
