@@ -6,7 +6,19 @@
     <description>Recent content in node.js on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 22 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NVM install node.js on Windows 10</title>
+      <link>https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/</link>
+      <pubDate>Thu, 26 Aug 2021 09:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/</guid>
+      <description>It&amp;rsquo;s very convenient to develop node.js applications on Mac by using NVM to manage our node.js version. But if your want to develop node.js application on Windows, you still can use NVM to manage your node.js version. Then we can switch node.js version anytime on any project.
+Environment
+ Windows 10 x64 node.js 14.17.5
+ Install Windows version of NVM, nvm-windows Goto Github coreybutler/nvm-windows Repository to download nvm-setup.zip file, and install it step by step.</description>
+    </item>
+    
     <item>
       <title>在 Windows 使用 nvm 安裝 Node 環境</title>
       <link>https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/</link>

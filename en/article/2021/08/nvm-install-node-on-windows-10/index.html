@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='How to use NVM to manage your node.js version on Windows 10'><title>NVM install node.js on Windows 10</title>
+
+<link rel='canonical' href='https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='NVM install node.js on Windows 10'>
+<meta property='og:description' content='How to use NVM to manage your node.js version on Windows 10'>
+<meta property='og:url' content='https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/'>
+<meta property='og:site_name' content='KJ Dev'>
+<meta property='og:type' content='article'><meta property='article:section' content='En' /><meta property='article:tag' content='nvm' /><meta property='article:tag' content='node.js' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2021-08-26T09:51:29&#43;08:00'/><meta property='article:modified_time' content='2021-08-26T09:51:29&#43;08:00'/><meta property='og:image' content='https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/cover.png' />
+<meta name="twitter:title" content="NVM install node.js on Windows 10">
+<meta name="twitter:description" content="How to use NVM to manage your node.js version on Windows 10"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/cover.png' />
+    <link rel="shortcut icon" href="images/observe-universe.png" />
+
+
+
+
+  
+    
+
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type":"Article",
+    "headline":"NVM install node.js on Windows 10",
+    "url":"https:\/\/dev.kejyun.com\/en\/article\/2021\/08\/nvm-install-node-on-windows-10\/",
+    "keywords":[
+    
+        
+          
+          "nvm"
+        
+          , 
+          "node.js"
+        
+          , 
+          "Windows"
+        
+    
+    ],
+    "image":{
+        "@type":"ImageObject",
+        "url" :
+        
+          "https:\/\/dev.kejyun.com",
+        
+        "width":"1200",
+        "height":"627"
+    },
+    "mainEntityOfPage":"True",
+    "publisher":{
+        "@type":"Organization",
+        "name":"",
+        "url":"https:\/\/dev.kejyun.com",
+        "logo":{
+            "@type":"ImageObject",
+            "url":"https:\/\/dev.kejyun.com",
+            "width":"357",
+            "height":"60"
+        }
+    },
+    "dateCreated":"2021-08-26T09:51:29\u002b08:00",
+    "datePublished":"2021-08-26T09:51:29\u002b08:00",
+    
+    
+    "author":"KeJyun",
+    "creator":"KeJyun",
+    
+    "dateModified":"2021-08-26T09:51:29\u002b08:00",
+    "articleSection":"TechArticle"
+}
+</script>
+
+  
+
+  
+    
+<script type="application/ld+json">
+	{
+		"@context":"http://schema.org",
+		"@type": "BlogPosting",
+		"image":
+		
+			"https:\/\/dev.kejyun.com",
+		
+		"url": "https:\/\/dev.kejyun.com\/en\/article\/2021\/08\/nvm-install-node-on-windows-10\/",
+		"headline": "NVM install node.js on Windows 10",
+		"alternativeHeadline": "NVM install node.js on Windows 10",
+		"dateCreated": "2021-08-26T09:51:29\u002b08:00",
+		"datePublished": "2021-08-26T09:51:29\u002b08:00",
+		"dateModified": "2021-08-26T09:51:29\u002b08:00",
+		"inLanguage": "zh-tw",
+		"isFamilyFriendly": "true",
+		"copyrightYear": "2021",
+		"copyrightHolder": "",
+		"contentLocation": {
+			"@type": "Place",
+			"name": "Taipei City"
+		},
+		
+		"accountablePerson": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"author": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"creator": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		
+		"publisher": {
+			"@type": "Organization",
+			"name": "",
+			"url": "https:\/\/dev.kejyun.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https:\/\/dev.kejyun.com",
+				"width":"357",
+				"height":"60"
+			}
+		},
+		"mainEntityOfPage": "True",
+		"keywords": [ 
+			"nvm", "node.js", "Windows"
+		
+		],
+		"genre":[""],
+		"articleSection": "",
+		"articleBody": "It\u0026rsquo;s very convenient to develop node.js applications on Mac by using NVM to manage our node.js version. But if your want to develop node.js application on Windows, you still can use NVM to manage your node.js version. Then we can switch node.js version anytime on any project.\nEnvironment\n Windows 10 x64 node.js 14.17.5\n Install Windows version of NVM, nvm-windows Goto Github coreybutler\/nvm-windows Repository to download nvm-setup.zip file, and install it step by step.\nI\u0026rsquo;m using Windows PowerShell to access NPM command. You have to close the entire Windows PowerShell, not just tab, to get the NVM environment setting after install nvm-setup.zip finished.\nIf you want to let VS Code terminal to get the NVM environment, then you have to restart your computer. It is not working when I just restart the VS Code.\n NVM on Windows 10 \nList the available Node.js version  nvm list available\n The Windows Node.js version list command in NVM is different from Mac. It\u0026rsquo;s using nvm list available command instead of using nvm ls-remote\nPS C:\\Users\\KJ\u0026gt; nvm list available | CURRENT | LTS | OLD STABLE | OLD UNSTABLE | |--------------|--------------|--------------|--------------| | 16.7.0 | 14.17.5 | 0.12.18 | 0.11.16 | | 16.6.2 | 14.17.4 | 0.12.17 | 0.11.15 | | 16.6.1 | 14.17.3 | 0.12.16 | 0.11.14 | | 16.6.0 | 14.17.2 | 0.12.15 | 0.11.13 | | 16.5.0 | 14.17.1 | 0.12.14 | 0.11.12 | | 16.4.1 | 14.16.1 | 0.12.12 | 0.11.10 | | 16.4.0 | 14.16.0 | 0.12.11 | 0.11.9 | | 16.3.0 | 14.15.5 | 0.12.10 | 0.11.8 | | 16.2.0 | 14.15.4 | 0.12.9 | 0.11.7 | | 16.1.0 | 14.15.3 | 0.12.8 | 0.11.6 | | 16.0.0 | 14.15.2 | 0.12.7 | 0.11.5 | | 15.14.0 | 14.15.1 | 0.12.6 | 0.11.4 | | 15.13.0 | 14.15.0 | 0.12.5 | 0.11.3 | | 15.12.0 | 12.22.5 | 0.12.4 | 0.11.2 | | 15.11.0 | 12.22.4 | 0.12.3 | 0.11.1 | | 15.9.0 | 12.22.2 | 0.12.1 | 0.9.12 | | 15.8.0 | 12.22.1 | 0.12.0 | 0.9.11 | This is a partial list. For a complete list, visit https:\/\/nodejs.org\/download\/release If you can\u0026rsquo;t see the version that you want to install on the list, you can visit Node.js Release site to find the version that you want.\nInstall Node.js 14.17.5  nvm install\n Install Node.js by just using the nvm install command will come out that Node.js version is only available in 32-bit Windows OS. The default version of NVM installations is the 32-bit version, but my Windows is 64-bit.\nPS C:\\Users\\KJ\u0026gt; nvm install 14.17.5 nvm.0.0 Node.js vnvm.0.0 is only available in 32-bit. If you want to change Node.js install version, then just simply add 64 behind the install command. Then you can specify the install version is changing to the 64-bit.\n nvm install 14.17.5 64\n PS C:\\Users\\KJ\u0026gt; nvm install 14.17.5 64 Downloading node.js version 14.17.5 (64-bit)... Complete Creating C:\\Users\\KJ\\AppData\\Roaming\\nvm\\temp Downloading npm version 6.14.14... Complete Installing npm v6.14.14... Installation complete. If you want to use this version, type nvm use 14.17.5 Specify Node.js version  nvm use 14.17.5\n You can use nvm use command to specify the Node.js version, it will need admin permission to change Node.js version in processing.\nNVM will add 2 variables, NVM_HOME and NVM_SYMLINK, in the OS environment variable behind the scenes. NVM will associate your Node.js version to the path of the NVM_SYMLINK when you run nvm use command. So it needs admin permission to change the association of the Node.js version.\n   Name Setting Description     NVM_HOME C:\\Users\\KJ\\AppData\\Roaming\\nvm NVM install directory   NVM_SYMLINK C:\\Program Files\\nodejs NVM soft link directory    Now we can start using NVM to manage our Node.js version in Windows 10 !!\nList all installed Node.js version  nvm list\n PS C:\\Users\\KJ\u0026gt;nvm list 16.7.0 * 14.17.5 (Currently using 64-bit executable) nvm command nvm Running version 1.1.7. Usage: nvm arch : Show if node is running in 32 or 64 bit mode. nvm install \u0026lt;version\u0026gt; [arch] : The version can be a node.js version or \u0026#34;latest\u0026#34; for the latest stable version. Optionally specify whether to install the 32 or 64 bit version (defaults to system arch). Set [arch] to \u0026#34;all\u0026#34; to install 32 AND 64 bit versions. Add --insecure to the end of this command to bypass SSL validation of the remote download server. nvm list [available] : List the node.js installations. Type \u0026#34;available\u0026#34; at the end to see what can be installed. Aliased as ls. nvm on : Enable node.js version management. nvm off : Disable node.js version management. nvm proxy [url] : Set a proxy to use for downloads. Leave [url] blank to see the current proxy. Set [url] to \u0026#34;none\u0026#34; to remove the proxy. nvm node_mirror [url] : Set the node mirror. Defaults to https:\/\/nodejs.org\/dist\/. Leave [url] blank to use default url. nvm npm_mirror [url] : Set the npm mirror. Defaults to https:\/\/github.com\/npm\/cli\/archive\/. Leave [url] blank to default url. nvm uninstall \u0026lt;version\u0026gt; : The version must be a specific version. nvm use [version] [arch] : Switch to use the specified version. Optionally specify 32\/64bit architecture. nvm use \u0026lt;arch\u0026gt; will continue using the selected version, but switch to 32\/64 bit mode. nvm root [path] : Set the directory where nvm should store different versions of node.js. If \u0026lt;path\u0026gt; is not set, the current root will be displayed. nvm version : Displays the current running version of nvm for Windows. Aliased as v. Reference  Releases · coreybutler\/nvm-windows · GitHub Windows 10 安裝並使用 nvm 切換 NodeJS 版本 | Welcome.Web.World Node.js v5.4.0 is only available in 32-bit. · Issue #130 · coreybutler\/nvm-windows · GitHub 在原生 Windows 上設定 NodeJS | Microsoft Docs [Node.JS] 在 Windows 下使用 nvm 切換 Node 版本 windows - \u0026lsquo;npm\u0026rsquo; is not recognized as internal or external command, operable program or batch file - Stack Overflow Npm Is Not Recognized By Visual Studio  "
+	}
+</script>
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+
+
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement":
+		[{
+			"@type": "ListItem",
+				"position": 1,
+				"item": {
+					"@id": "https:\/\/dev.kejyun.com",
+					"name": "Home"
+				}
+		},
+		
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  2 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/en",
+						"name": "En"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  3 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/en\/article",
+						"name": "Article"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  4 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/en\/article\/2021",
+						"name": "2021st"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  5 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/en\/article\/2021\/08",
+						"name": "8th"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  6 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/en\/article\/2021\/08\/nvm-install-node-on-windows-10",
+						"name": "Nvm install node on windows 10"
+					}
+				}
+				, 
+			
+		
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+<script type="application/ld+json">
+{
+"@context": "http://www.schema.org",
+"@type": "Person",
+"@id": "https:\/\/dev.kejyun.com\/en\/article\/2021\/08\/nvm-install-node-on-windows-10\/",
+"name": "KeJyun",
+"alternateName": "KeJyun",
+"nationality": "Taiwan",
+
+"affiliation": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\n"
+		]
+  	}
+],
+
+"gender": "male",
+"Description": "IT Manager",
+"disambiguatingDescription": "Hi I\u0027m Web Developer in Taiwan",
+
+"worksFor": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\n"
+		]
+	}
+],
+"url": "https:\/\/dev.kejyun.com",
+"image": "https:\/\/dev.kejyun.com\/company\/team\/KeJyun.png",
+
+"sameAs": [ "\n\n\n\n\n\n\"https://ca.linkedin.com/in/kejyun/en\",\n\n\n\"https://github.com/kejyun\",\n\n\n\n\n\n\n\n\n\n\n\n\"\"\n"
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+<script type="application/ld+json">
+[
+	{
+		"@context": "http://schema.org",
+		"@type": "Webpage",
+		"specialty": "",
+		"mainContentOfPage": {
+			"@context": "http://schema.org/",
+			"@type": "WebPageElement",
+			"cssSelector": ".body-content"
+		},
+		"primaryImageOfPage": "https:\/\/dev.kejyun.com"
+	},
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"@id": "https:\/\/dev.kejyun.com",
+		"additionalType": ["CreativeWork", "Person"],
+		"url": "https:\/\/dev.kejyun.com",
+		"name": "KJ Dev",
+		"alternateName": "KJ Dev",
+		"headline": "",
+		"image": "https:\/\/dev.kejyun.com",
+		"inLanguage": "zh-tw",
+		"author": "",
+		"description": "",
+		"disambiguatingDescription": "",
+		"isFamilyFriendly": "http://schema.org/True",
+		"contentRating": "NR",
+		"sourceOrganization": "KJ Dev",
+		"publisher": {
+		  "@type": "Organization",
+		  "name": "KJ Dev",
+		  "logo": {
+		    "@type": "ImageObject",
+		    "url": "https:\/\/dev.kejyun.com",
+		    "height": 60,
+		    "width": 107
+		  }
+		},
+		"mainEntity": {
+			"@context": "http://schema.org",
+			"@type": "localBusiness",
+			"name": "KJ Dev",
+			"image":"https:\/\/dev.kejyun.com",
+			
+
+			
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Taipei street",
+				"addressLocality": "Taipei City",
+				"addressRegion": "Taipei",
+				"addressCountry": "Taiwan",
+				"postalCode": "100"
+			},
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.5",
+				"reviewCount": "50"
+			}
+		},
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https:\/\/dev.kejyun.com?search={search_term}",
+			"query-input": "required name=search_term"
+		},
+		"keywords":[
+			
+		],
+		"hasPart": [
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPHeader",
+				"@id": "#header",
+				"headline": "",
+				"cssSelector": "#header",
+				"potentialAction": [],
+				"@graph":
+				[
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "",
+						"url": "https:\/\/dev.kejyun.com\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "About",
+						"url": "https:\/\/dev.kejyun.com\/about\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Archives",
+						"url": "https:\/\/dev.kejyun.com\/archives\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Search",
+						"url": "https:\/\/dev.kejyun.com\/search\/"
+					}]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPSidebar",
+				"cssSelector": "#sidebar",
+				"citation": [
+				"https:\/\/dev.kejyun.com\/", "https:\/\/dev.kejyun.com\/about\/", "https:\/\/dev.kejyun.com\/archives\/", "https:\/\/dev.kejyun.com\/search\/"
+				]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPFooter",
+				"cssSelector": ".footer",
+				"@id": "#footer",
+				"copyrightHolder":"KJ Dev",
+				"publisher": "KJ Dev",
+				"copyrightYear":"2021"
+			}
+		]
+	}
+]
+</script>
+
+  
+
+  
+
+<link rel="canonical" href="https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/" />
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZQ2D0XJX3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RZQ2D0XJX3', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/observe-universe_hua7e3d7bd738448651eaa0b1d778255e2_652378_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://dev.kejyun.com">KJ Dev</a></h1>
+        <h2 class="site-description">KJ 開發日誌</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/en/article/2021/08/nvm-install-node-on-windows-10/">
+                <img src="/en/article/2021/08/nvm-install-node-on-windows-10/cover_huc9235ed498fbb6363f3687f1288de870_86277_800x0_resize_box_2.png"
+                        srcset="/en/article/2021/08/nvm-install-node-on-windows-10/cover_huc9235ed498fbb6363f3687f1288de870_86277_800x0_resize_box_2.png 800w, /en/article/2021/08/nvm-install-node-on-windows-10/cover_huc9235ed498fbb6363f3687f1288de870_86277_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="516" 
+                        loading="lazy"
+                        alt="Featured image of post NVM install node.js on Windows 10" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/node.js/" >
+                Node.js
+            </a>
+        
+            <a href="/categories/windows/" >
+                Windows
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/en/article/2021/08/nvm-install-node-on-windows-10/">NVM install node.js on Windows 10</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        How to use NVM to manage your node.js version on Windows 10
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 26, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+  
+  
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1990193713845546"
+     data-ad-slot="5417606383"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+  
+  
+  <p>It&rsquo;s very convenient to develop node.js applications on Mac by using NVM to manage our node.js version. But if your want to develop node.js application on Windows, you still can use NVM to manage your node.js version. Then we can switch node.js version anytime on any project.</p>
+<p><em>Environment</em></p>
+<blockquote>
+<p>Windows 10 x64
+node.js 14.17.5</p>
+</blockquote>
+<h2 id="install-windows-version-of-nvm-nvm-windows">Install Windows version of NVM, nvm-windows</h2>
+<p>Goto Github <a class="link" href="https://github.com/coreybutler/nvm-windows/releases"  target="_blank" rel="noopener"
+    >coreybutler/nvm-windows</a> Repository to download <a class="link" href="https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip"  target="_blank" rel="noopener"
+    >nvm-setup.zip</a> file, and install it step by step.</p>
+<p>I&rsquo;m using <code>Windows PowerShell</code> to access NPM command. You have to close the entire <code>Windows PowerShell</code>, not just tab, to get the NVM environment setting after install <a class="link" href="https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip"  target="_blank" rel="noopener"
+    >nvm-setup.zip</a> finished.</p>
+<p>If you want to let <code>VS Code</code> terminal to get the NVM environment, then you have to restart your computer. It is not working when I just restart the <code>VS Code</code>.</p>
+<p><figure style="flex-grow: 149; flex-basis: 358px">
+		<a href="/en/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1.png" data-size="1257x841"><img src="/en/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1.png"
+				srcset="/en/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1_hud9ddb32d76d093a2ae61c6f8189a30d1_79708_480x0_resize_box_2.png 480w, /en/article/2021/08/nvm-install-node-on-windows-10/images/nvm-install-node-on-windows-10-1_hud9ddb32d76d093a2ae61c6f8189a30d1_79708_1024x0_resize_box_2.png 1024w"
+				width="1257"
+				height="841"
+				loading="lazy"
+				alt="NVM on Windows 10">
+		</a>
+		
+		<figcaption>NVM on Windows 10</figcaption>
+		
+	</figure></p>
+<h2 id="list-the-available-nodejs-version">List the available Node.js version</h2>
+<blockquote>
+<p>nvm list available</p>
+</blockquote>
+<p>The Windows Node.js version list command in NVM is different from Mac. It&rsquo;s using <code>nvm list available</code> command instead of using <code>nvm ls-remote</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">PS C:<span class="se">\U</span>sers<span class="se">\K</span>J&gt; nvm list available
+
+<span class="p">|</span>   CURRENT    <span class="p">|</span>     LTS      <span class="p">|</span>  OLD STABLE  <span class="p">|</span> OLD UNSTABLE <span class="p">|</span>
+<span class="p">|</span>--------------<span class="p">|</span>--------------<span class="p">|</span>--------------<span class="p">|</span>--------------<span class="p">|</span>
+<span class="p">|</span>    16.7.0    <span class="p">|</span>   14.17.5    <span class="p">|</span>   0.12.18    <span class="p">|</span>   0.11.16    <span class="p">|</span>
+<span class="p">|</span>    16.6.2    <span class="p">|</span>   14.17.4    <span class="p">|</span>   0.12.17    <span class="p">|</span>   0.11.15    <span class="p">|</span>
+<span class="p">|</span>    16.6.1    <span class="p">|</span>   14.17.3    <span class="p">|</span>   0.12.16    <span class="p">|</span>   0.11.14    <span class="p">|</span>
+<span class="p">|</span>    16.6.0    <span class="p">|</span>   14.17.2    <span class="p">|</span>   0.12.15    <span class="p">|</span>   0.11.13    <span class="p">|</span>
+<span class="p">|</span>    16.5.0    <span class="p">|</span>   14.17.1    <span class="p">|</span>   0.12.14    <span class="p">|</span>   0.11.12    <span class="p">|</span>
+<span class="p">|</span>    16.4.1    <span class="p">|</span>   14.16.1    <span class="p">|</span>   0.12.12    <span class="p">|</span>   0.11.10    <span class="p">|</span>
+<span class="p">|</span>    16.4.0    <span class="p">|</span>   14.16.0    <span class="p">|</span>   0.12.11    <span class="p">|</span>    0.11.9    <span class="p">|</span>
+<span class="p">|</span>    16.3.0    <span class="p">|</span>   14.15.5    <span class="p">|</span>   0.12.10    <span class="p">|</span>    0.11.8    <span class="p">|</span>
+<span class="p">|</span>    16.2.0    <span class="p">|</span>   14.15.4    <span class="p">|</span>    0.12.9    <span class="p">|</span>    0.11.7    <span class="p">|</span>
+<span class="p">|</span>    16.1.0    <span class="p">|</span>   14.15.3    <span class="p">|</span>    0.12.8    <span class="p">|</span>    0.11.6    <span class="p">|</span>
+<span class="p">|</span>    16.0.0    <span class="p">|</span>   14.15.2    <span class="p">|</span>    0.12.7    <span class="p">|</span>    0.11.5    <span class="p">|</span>
+<span class="p">|</span>   15.14.0    <span class="p">|</span>   14.15.1    <span class="p">|</span>    0.12.6    <span class="p">|</span>    0.11.4    <span class="p">|</span>
+<span class="p">|</span>   15.13.0    <span class="p">|</span>   14.15.0    <span class="p">|</span>    0.12.5    <span class="p">|</span>    0.11.3    <span class="p">|</span>
+<span class="p">|</span>   15.12.0    <span class="p">|</span>   12.22.5    <span class="p">|</span>    0.12.4    <span class="p">|</span>    0.11.2    <span class="p">|</span>
+<span class="p">|</span>   15.11.0    <span class="p">|</span>   12.22.4    <span class="p">|</span>    0.12.3    <span class="p">|</span>    0.11.1    <span class="p">|</span>
+<span class="p">|</span>    15.9.0    <span class="p">|</span>   12.22.2    <span class="p">|</span>    0.12.1    <span class="p">|</span>    0.9.12    <span class="p">|</span>
+<span class="p">|</span>    15.8.0    <span class="p">|</span>   12.22.1    <span class="p">|</span>    0.12.0    <span class="p">|</span>    0.9.11    <span class="p">|</span>
+
+This is a partial list. For a <span class="nb">complete</span> list, visit https://nodejs.org/download/release
+</code></pre></div><p>If you can&rsquo;t see the version that you want to install on the list, you can visit <a class="link" href="https://nodejs.org/download/release"  target="_blank" rel="noopener"
+    >Node.js Release</a> site to find the version that you want.</p>
+<h2 id="install-nodejs-14175">Install Node.js 14.17.5</h2>
+<blockquote>
+<p>nvm install</p>
+</blockquote>
+<p>Install Node.js by just using the <code>nvm install</code> command will come out that Node.js version is only available in 32-bit Windows OS. The default version of NVM installations is the 32-bit version, but my Windows is 64-bit.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">PS C:<span class="se">\U</span>sers<span class="se">\K</span>J&gt; nvm install 14.17.5
+nvm.0.0
+Node.js vnvm.0.0 is only available in 32-bit.
+</code></pre></div><p>If you want to change Node.js install version, then just simply add <code>64</code> behind the install command. Then you can specify the install version is changing to the 64-bit.</p>
+<blockquote>
+<p>nvm install  14.17.5 64</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">PS C:<span class="se">\U</span>sers<span class="se">\K</span>J&gt; nvm install  14.17.5 <span class="m">64</span>
+Downloading node.js version 14.17.5 <span class="o">(</span>64-bit<span class="o">)</span>...
+Complete
+Creating C:<span class="se">\U</span>sers<span class="se">\K</span>J<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\n</span>vm<span class="se">\t</span>emp
+
+Downloading npm version 6.14.14... Complete
+Installing npm v6.14.14...
+
+Installation complete. If you want to use this version, <span class="nb">type</span>
+
+nvm use 14.17.5
+</code></pre></div><h2 id="specify-nodejs-version">Specify Node.js version</h2>
+<blockquote>
+<p>nvm use 14.17.5</p>
+</blockquote>
+<p>You can use <code>nvm use</code> command to specify the Node.js version, it will need admin permission to change Node.js version in processing.</p>
+<p>NVM will add 2 variables, <code>NVM_HOME</code> and <code>NVM_SYMLINK</code>, in the OS environment variable behind the scenes. NVM will associate your Node.js version to the path of the <code>NVM_SYMLINK</code> when you run <code>nvm use</code> command. So it needs admin permission to change the association of the Node.js version.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVM_HOME</td>
+<td>C:\Users\KJ\AppData\Roaming\nvm</td>
+<td>NVM install directory</td>
+</tr>
+<tr>
+<td>NVM_SYMLINK</td>
+<td>C:\Program Files\nodejs</td>
+<td>NVM soft link directory</td>
+</tr>
+</tbody>
+</table>
+<p>Now we can start using NVM to manage our Node.js version in Windows 10 !!</p>
+<h2 id="list-all-installed-nodejs-version">List all installed Node.js version</h2>
+<blockquote>
+<p>nvm list</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">PS C:<span class="se">\U</span>sers<span class="se">\K</span>J&gt;nvm list
+
+    16.7.0
+  * 14.17.5 <span class="o">(</span>Currently using 64-bit executable<span class="o">)</span>
+</code></pre></div><h2 id="nvm-command">nvm command</h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">nvm     
+Running version 1.1.7.
+
+Usage:
+
+  nvm arch                     : Show <span class="k">if</span> node is running in <span class="m">32</span> or <span class="m">64</span> bit mode.
+  nvm install &lt;version&gt; <span class="o">[</span>arch<span class="o">]</span> : The version can be a node.js version or <span class="s2">&#34;latest&#34;</span> <span class="k">for</span> the latest stable version.
+                                 Optionally specify whether to install the <span class="m">32</span> or <span class="m">64</span> bit version <span class="o">(</span>defaults to system arch<span class="o">)</span>.
+                                 Set <span class="o">[</span>arch<span class="o">]</span> to <span class="s2">&#34;all&#34;</span> to install <span class="m">32</span> AND <span class="m">64</span> bit versions.
+                                 Add --insecure to the end of this <span class="nb">command</span> to bypass SSL validation of the remote download server.
+  nvm list <span class="o">[</span>available<span class="o">]</span>         : List the node.js installations. Type <span class="s2">&#34;available&#34;</span> at the end to see what can be installed. Aliased as ls.
+  nvm on                       : Enable node.js version management.
+  nvm off                      : Disable node.js version management.
+  nvm proxy <span class="o">[</span>url<span class="o">]</span>              : Set a proxy to use <span class="k">for</span> downloads. Leave <span class="o">[</span>url<span class="o">]</span> blank to see the current proxy.
+                                 Set <span class="o">[</span>url<span class="o">]</span> to <span class="s2">&#34;none&#34;</span> to remove the proxy.
+  nvm node_mirror <span class="o">[</span>url<span class="o">]</span>        : Set the node mirror. Defaults to https://nodejs.org/dist/. Leave <span class="o">[</span>url<span class="o">]</span> blank to use default url.
+  nvm npm_mirror <span class="o">[</span>url<span class="o">]</span>         : Set the npm mirror. Defaults to https://github.com/npm/cli/archive/. Leave <span class="o">[</span>url<span class="o">]</span> blank to default url.
+  nvm uninstall &lt;version&gt;      : The version must be a specific version.
+  nvm use <span class="o">[</span>version<span class="o">]</span> <span class="o">[</span>arch<span class="o">]</span>     : Switch to use the specified version. Optionally specify 32/64bit architecture.
+                                 nvm use &lt;arch&gt; will <span class="k">continue</span> using the selected version, but switch to 32/64 bit mode.
+  nvm root <span class="o">[</span>path<span class="o">]</span>              : Set the directory where nvm should store different versions of node.js.
+                                 If &lt;path&gt; is not set, the current root will be displayed.
+  nvm version                  : Displays the current running version of nvm <span class="k">for</span> Windows. Aliased as v.
+</code></pre></div><h2 id="reference">Reference</h2>
+<ul>
+<li><a class="link" href="https://github.com/coreybutler/nvm-windows/releases"  target="_blank" rel="noopener"
+    >Releases · coreybutler/nvm-windows · GitHub</a></li>
+<li><a class="link" href="https://hsiangfeng.github.io/nodejs/20200107/3738078915/"  target="_blank" rel="noopener"
+    >Windows 10 安裝並使用 nvm 切換 NodeJS 版本 | Welcome.Web.World</a></li>
+<li><a class="link" href="https://github.com/coreybutler/nvm-windows/issues/130"  target="_blank" rel="noopener"
+    >Node.js v5.4.0 is only available in 32-bit. · Issue #130 · coreybutler/nvm-windows · GitHub</a></li>
+<li><a class="link" href="https://docs.microsoft.com/zh-tw/windows/dev-environment/javascript/nodejs-on-windows"  target="_blank" rel="noopener"
+    >在原生 Windows 上設定 NodeJS | Microsoft Docs</a></li>
+<li><a class="link" href="https://oranwind.org/nvm-windows/"  target="_blank" rel="noopener"
+    >[Node.JS] 在 Windows 下使用 nvm 切換 Node 版本</a></li>
+<li><a class="link" href="https://stackoverflow.com/questions/20992723/npm-is-not-recognized-as-internal-or-external-command-operable-program-or-bat"  target="_blank" rel="noopener"
+    >windows - &lsquo;npm&rsquo; is not recognized as internal or external command, operable program or batch file - Stack Overflow</a></li>
+<li><a class="link" href="https://www.c-sharpcorner.com/blogs/npm-is-not-recognized-from-visual-studio"  target="_blank" rel="noopener"
+    >Npm Is Not Recognized By Visual Studio</a></li>
+</ul>
+
+
+  
+  
+
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="8247872484"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+
+  
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="3237080773"></ins>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/nvm/">nvm</a>
+        
+            <a href="/tags/node.js/">node.js</a>
+        
+            <a href="/tags/windows/">Windows</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kj-dev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+        2021 KJ Dev
+    </section>
+
+    <section class="powerby">
+        
+            All rights reserved，未經允許不得隨意轉載 <br/>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
