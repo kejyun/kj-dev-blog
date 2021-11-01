@@ -6,11 +6,20 @@
     <description>Recent content in Categories on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 26 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Nov 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS</title>
+      <link>https://dev.kejyun.com/categories/macos/</link>
+      <pubDate>Mon, 01 Nov 2021 09:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/categories/macos/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Node.js</title>
       <link>https://dev.kejyun.com/categories/node.js/</link>
-      <pubDate>Thu, 26 Aug 2021 09:51:29 +0800</pubDate>
+      <pubDate>Mon, 01 Nov 2021 09:51:29 +0800</pubDate>
       
       <guid>https://dev.kejyun.com/categories/node.js/</guid>
       <description></description>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacOS on KJ Dev</title>
+    <link>https://dev.kejyun.com/categories/macos/</link>
+    <description>Recent content in MacOS on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 01 Nov 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 MacOS 使用 nvm 安裝 Node 環境</title>
+      <link>https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/</link>
+      <pubDate>Mon, 01 Nov 2021 09:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/</guid>
+      <description>在 Mac 開發 Node.js 程式時可以使用 NVM 來管理 Node.js 的版本，可以針對不同的專案需求去做簡單的 Node.js 版本切換
+安裝 NVM 執行 curl 指令進行安裝
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash 設定 NVM 環境變數 Terminal 的設定檔案通常會放在 ~/.bash_profile、~/.zshrc、~/.profile、~/.bashrc 檔案中，在開啟 Terminal 時會自動載入客製化設定，需要設定開啟時去載入 NVM 的相關設定
+預設在安裝完成後會自動將 NVM 設定檔案自動加入您的設定檔案，若沒有自動加入時則自行手動加入即可
+export NVM_DIR=&amp;#34;$([ -z &amp;#34;${XDG_CONFIG_HOME-}&amp;#34; ] &amp;amp;&amp;amp; printf %s &amp;#34;${HOME}/.nvm&amp;#34; || printf %s &amp;#34;${XDG_CONFIG_HOME}/nvm&amp;#34;)&amp;#34; [ -s &amp;#34;$NVM_DIR/nvm.sh&amp;#34; ] &amp;amp;&amp;amp; \. &amp;#34;$NVM_DIR/nvm.sh&amp;#34; # This loads nvm 安裝時自動加入 NVM 設定檔範例
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash 14:44:48 % Total % Received % Xferd Average Speed Time Time Time Current Dload Upload Total Spent Left Speed 100 14984 100 14984 0 0 75848 0 --:--:-- --:--:-- --:--:-- 81879 =&amp;gt; Downloading nvm from git to &amp;#39;/Users/kj/.</description>
+    </item>
+    
+  </channel>
+</rss>

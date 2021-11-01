@@ -6,7 +6,121 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Thu, 26 Aug 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Nov 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在 MacOS 使用 nvm 安裝 Node 環境</title>
+        <link>https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/</link>
+        <pubDate>Mon, 01 Nov 2021 09:51:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/cover.png" alt="Featured image of post 在 MacOS 使用 nvm 安裝 Node 環境" /&gt;&lt;p&gt;在 Mac 開發 Node.js 程式時可以使用 NVM 來管理 Node.js 的版本，可以針對不同的專案需求去做簡單的 Node.js 版本切換&lt;/p&gt;
+&lt;h2 id=&#34;安裝-nvm&#34;&gt;安裝 NVM&lt;/h2&gt;
+&lt;p&gt;執行 curl 指令進行安裝&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;設定-nvm-環境變數&#34;&gt;設定 NVM 環境變數&lt;/h2&gt;
+&lt;p&gt;Terminal 的設定檔案通常會放在 &lt;code&gt;~/.bash_profile&lt;/code&gt;、&lt;code&gt;~/.zshrc&lt;/code&gt;、&lt;code&gt;~/.profile&lt;/code&gt;、&lt;code&gt;~/.bashrc&lt;/code&gt; 檔案中，在開啟 Terminal 時會自動載入客製化設定，需要設定開啟時去載入 NVM 的相關設定&lt;/p&gt;
+&lt;p&gt;預設在安裝完成後會自動將 NVM 設定檔案自動加入您的設定檔案，若沒有自動加入時則自行手動加入即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;NVM_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -z &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;XDG_CONFIG_HOME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; %s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;HOME&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/.nvm&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; %s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;XDG_CONFIG_HOME&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/nvm&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/nvm.sh&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/nvm.sh&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# This loads nvm&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安裝時自動加入 NVM 設定檔範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash                                                            14:44:48
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14984&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14984&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;75848&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; --:--:-- --:--:-- --:--:-- &lt;span class=&#34;nv&#34;&gt;81879&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt; Downloading nvm from git to &lt;span class=&#34;s1&#34;&gt;&amp;#39;/Users/kj/.nvm&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt; Cloning into &lt;span class=&#34;s1&#34;&gt;&amp;#39;/Users/kj/.nvm&amp;#39;&lt;/span&gt;...
+remote: Enumerating objects: 348, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+remote: Counting objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;348/348&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+remote: Compressing objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;297/297&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+remote: Total &lt;span class=&#34;m&#34;&gt;348&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 39&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, reused &lt;span class=&#34;m&#34;&gt;153&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 26&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, pack-reused &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+Receiving objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;348/348&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 201.00 KiB &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.16 MiB/s, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+Resolving deltas: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;39/39&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt; Compressing and cleaning up git &lt;span class=&#34;nv&#34;&gt;repository&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt; Appending nvm &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; string to /Users/kj/.zshrc
+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt; Appending bash_completion &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; string to /Users/kj/.zshrc
+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt; Close and reopen your terminal to start using nvm or run the following to use it now:
+
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;NVM_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/.nvm&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/nvm.sh&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/nvm.sh&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# This loads nvm&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/bash_completion&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/bash_completion&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# This loads nvm bash_completion&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;列出可安裝的-nodejs-版本&#34;&gt;列出可安裝的 Node.js 版本&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;nvm ls-remote&lt;/code&gt; 即可列出所有目前可安裝的 Node.js 版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nvm ls-remote
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;列出 Node.js 版本範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nvm ls-remote
+        v16.6.2
+        v16.7.0
+        v16.8.0
+        v16.9.0
+        v16.9.1
+       v16.10.0
+       v16.11.0
+       v16.11.1
+       v16.12.0
+-&amp;gt;     v16.13.0   &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Latest LTS: Gallium&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        v17.0.0
+        v17.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安裝指定版本-nodejs&#34;&gt;安裝指定版本 Node.js&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;nvm install&lt;/code&gt; 指令即可指定安裝 node.js 版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nvm install &amp;lt;node-js-version&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NVM 安裝 node.js 範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nvm install v16.13.0
+Downloading and installing node v16.13.0...
+Downloading https://nodejs.org/dist/v16.13.0/node-v16.13.0-darwin-x64.tar.xz...
+&lt;span class=&#34;c1&#34;&gt;####################################################################################### 100.0%&lt;/span&gt;
+Computing checksum with shasum -a &lt;span class=&#34;m&#34;&gt;256&lt;/span&gt;
+Checksums matched!
+Now using node v16.13.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;npm v8.1.0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+Creating default alias: default -&amp;gt; v16.13.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nvm-安裝-nodejs-版本路徑&#34;&gt;NVM 安裝 Node.js 版本路徑&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;node -v&lt;/code&gt;時可以看到已經安裝完成的 &lt;code&gt;v16.13.0&lt;/code&gt; 版本的 Node.js&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ node -v
+v16.13.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用 &lt;code&gt;which node&lt;/code&gt; 可以看到 Node.js 被安裝在家目錄中的 &lt;code&gt;.nvm/versions/node/v16.13.0&lt;/code&gt; 目錄中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ which node
+/Users/kj/.nvm/versions/node/v16.13.0/bin/node
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所以當有不同的版本 Node.js 時，NVM 會將不同版本放到不同的目錄中並作切換&lt;/p&gt;
+&lt;h2 id=&#34;列出目前-nvm-有安裝的-nodejs-版本&#34;&gt;列出目前 NVM 有安裝的 Node.js 版本&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;nvm ls&lt;/code&gt; 指令即可列出目前系統已安裝的所有 node.js 版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nvm ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;列出已安裝已安裝的所有 node.js 版本範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nvm ls
+-&amp;gt;     v16.13.0
+default -&amp;gt; v16.13.0
+iojs -&amp;gt; N/A &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+unstable -&amp;gt; N/A &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+node -&amp;gt; stable &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; v16.13.0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+stable -&amp;gt; 16.13 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; v16.13.0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/* -&amp;gt; lts/gallium &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; v16.13.0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/argon -&amp;gt; v4.9.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; N/A&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/boron -&amp;gt; v6.17.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; N/A&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/carbon -&amp;gt; v8.17.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; N/A&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/dubnium -&amp;gt; v10.24.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; N/A&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/erbium -&amp;gt; v12.22.7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; N/A&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/fermium -&amp;gt; v14.18.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; N/A&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+lts/gallium -&amp;gt; v16.13.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用指定版本-nodejs&#34;&gt;使用指定版本 Node.js&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;nvm use&lt;/code&gt; 指令即可隨時切換想要的 Node.js 版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nvm use &amp;lt;node-js-version&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用 &lt;code&gt;nvm use&lt;/code&gt; 指令切換範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nvm use v16.13.0
+Now using node v16.13.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;npm v8.1.0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;設定預設-nodejs-版本&#34;&gt;設定預設 Node.js 版本&lt;/h2&gt;
+&lt;p&gt;因為透過 nvm 可以同時有多個 Node.js 版本在系統中，若常用的版本我會把他設定為預設使用的版本，若有要使用其他不同的版本時，我再做切換&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;nvm alias default&lt;/code&gt; 指令即可設定預設的 node.js 版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nvm &lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; default &amp;lt;node-js-version&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;設定預設 node.js 版本範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nvm &lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; default v16.13.0
+default -&amp;gt; v16.13.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nvm-sh/nvm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub - nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>在 Windows 使用 nvm 安裝 Node 環境</title>
         <link>https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/</link>
         <pubDate>Sun, 22 Aug 2021 09:51:29 +0800</pubDate>

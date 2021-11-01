@@ -2,28 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dev.kejyun.com/article/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
     <loc>https://dev.kejyun.com/categories/</loc>
-    <lastmod>2021-08-26T09:51:29+08:00</lastmod>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/macos/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/categories/macos/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/categories/node.js/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/node.js/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/nvm/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/</loc>
+    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/en/</loc>
     <lastmod>2021-08-26T09:51:29+08:00</lastmod>
   </url><url>
-    <loc>https://dev.kejyun.com/</loc>
-    <lastmod>2021-08-26T09:51:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/categories/node.js/</loc>
-    <lastmod>2021-08-26T09:51:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/tags/node.js/</loc>
-    <lastmod>2021-08-26T09:51:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/tags/nvm/</loc>
-    <lastmod>2021-08-26T09:51:29+08:00</lastmod>
-  </url><url>
     <loc>https://dev.kejyun.com/en/article/2021/08/nvm-install-node-on-windows-10/</loc>
-    <lastmod>2021-08-26T09:51:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/tags/</loc>
     <lastmod>2021-08-26T09:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/tags/windows/</loc>
@@ -64,9 +76,6 @@
   </url><url>
     <loc>https://dev.kejyun.com/tags/scheduling/</loc>
     <lastmod>2021-08-24T09:51:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/article/</loc>
-    <lastmod>2021-08-22T09:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/article/2021/08/nvm-install-node-on-windows-10/</loc>
     <lastmod>2021-08-22T09:51:29+08:00</lastmod>
