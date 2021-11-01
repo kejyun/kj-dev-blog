@@ -3,13 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dev.kejyun.com/article/</loc>
-    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/categories/</loc>
-    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/code-helper-renderer/</loc>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/cpu-too-high/</loc>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/</loc>
-    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/</loc>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/vscode/</loc>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/categories/vscode/</loc>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/</loc>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/%E9%A2%A8%E6%89%87/</loc>
+    <lastmod>2021-11-01T11:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/tags/macos/</loc>
     <lastmod>2021-11-01T09:51:29+08:00</lastmod>
@@ -24,9 +45,6 @@
     <lastmod>2021-11-01T09:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/tags/nvm/</loc>
-    <lastmod>2021-11-01T09:51:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/tags/</loc>
     <lastmod>2021-11-01T09:51:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/</loc>

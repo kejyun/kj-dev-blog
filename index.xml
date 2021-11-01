@@ -6,7 +6,95 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Mon, 01 Nov 2021 09:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Nov 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VSCode 的 Code Helper (Renderer) 導致 CPU 使用過高，風扇起飛</title>
+        <link>https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/</link>
+        <pubDate>Mon, 01 Nov 2021 11:51:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/cover.png" alt="Featured image of post VSCode 的 Code Helper (Renderer) 導致 CPU 使用過高，風扇起飛" /&gt;&lt;p&gt;在開啟 VSCode 撰寫程式文件時，都還沒開始使用 CPU 已經起飛了，看了 &lt;code&gt;Activity Monitor&lt;/code&gt; 發現 &lt;strong&gt;Code Helper (Renderer)&lt;/strong&gt; 的程序佔滿了整個 CPU 的執行時間&lt;/p&gt;
+&lt;p&gt;這是 VSCode 在對整個專案做索引建立時會跑出來的狀況，可以指定特定目錄不建立索引，提高執行效率&lt;/p&gt;
+&lt;h2 id=&#34;解決方式&#34;&gt;解決方式&lt;/h2&gt;
+&lt;h3 id=&#34;1-開啟-vscode-的設定&#34;&gt;1. 開啟 VSCode 的設定&lt;/h3&gt;
+&lt;p&gt;在上方工具列點選 &lt;code&gt;Code&lt;/code&gt; &amp;gt; &lt;code&gt;Preferences&lt;/code&gt; &amp;gt; &lt;code&gt;Setting&lt;/code&gt; 開啟設定&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 152; flex-basis: 366px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-1.png&#34; data-size=&#34;589x386&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-1_hubbd0b4457c0a4a6e1fabfb8c63f201a1_111047_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-1_hubbd0b4457c0a4a6e1fabfb8c63f201a1_111047_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;589&#34;
+				height=&#34;386&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;VSCode 的 Code Helper (Renderer)&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;VSCode 的 Code Helper (Renderer)&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-點選右上方右邊數來第三個按鈕打開-settingjson&#34;&gt;2. 點選右上方右邊數來第三個按鈕打開 &lt;code&gt;setting.json&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 303; flex-basis: 728px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-2.png&#34; data-size=&#34;1664x548&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-2_hu15f6f2e2daab57dc60b962997a1f2ea0_80126_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-2_hu15f6f2e2daab57dc60b962997a1f2ea0_80126_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1664&#34;
+				height=&#34;548&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;VSCode 的 Code Helper (Renderer)&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;VSCode 的 Code Helper (Renderer)&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-將排除的目錄設定設定到-settingjson&#34;&gt;3. 將排除的目錄設定設定到 &lt;code&gt;setting.json&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;排除的 json 設定會像這樣，可以指定某個目錄下的檔案步要做專案索引設定，可以針對你的專案結構類型去做設定&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;設定完成後若使用 VSCode 在程式碼中進行關聯跳轉，若有關聯到設定的目錄則不會跳轉，所以要設定時要謹慎注意&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;search.followSymlinks&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;files.exclude&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/.git&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/.svn&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/.hg&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/CVS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/.DS_Store&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/tmp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/node_modules&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/bower_components&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/dist&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;files.watcherExclude&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/.git/objects/**&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/.git/subtree-cache/**&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/node_modules/**&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/tmp/**&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/bower_components/**&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;**/dist/**&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; 
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;設定完成後會長得像這樣&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 100; flex-basis: 241px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-3.png&#34; data-size=&#34;851x846&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-3.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-3_hu0f6c9664aa0589672ab0a03414f5bd21_148286_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/images/vscode-code-helper-cpu-too-high-3_hu0f6c9664aa0589672ab0a03414f5bd21_148286_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;851&#34;
+				height=&#34;846&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;VSCode 的 Code Helper (Renderer)&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;VSCode 的 Code Helper (Renderer)&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-重新開啟-vscode-載入最新設定&#34;&gt;4. 重新開啟 VSCode 載入最新設定&lt;/h3&gt;
+&lt;p&gt;在設定完成後需要重新開啟 VSCode 讓設定生效，若重新開啟後還是有看到 &lt;code&gt;Code Helper (Renderer)&lt;/code&gt; 還是佔滿 CPU 資源，建議電腦重開機即可&lt;/p&gt;
+&lt;p&gt;完成後電腦 CPU 過高的問題就解決了，CPU 風扇不再起飛&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/q/1010000014917573&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mac上vscode始终打开code helper这个进程，发热严重 - SegmentFault 思否&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.itread01.com/content/1574874485.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Code Helper佔用大量CPU和記憶體 - IT閱讀&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>在 MacOS 使用 nvm 安裝 Node 環境</title>
         <link>https://dev.kejyun.com/article/2021/11/nvm-install-node-on-mac-os/</link>
         <pubDate>Mon, 01 Nov 2021 09:51:29 +0800</pubDate>

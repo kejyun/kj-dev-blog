@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>風扇 on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/%E9%A2%A8%E6%89%87/</link>
+    <description>Recent content in 風扇 on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 01 Nov 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/%E9%A2%A8%E6%89%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode 的 Code Helper (Renderer) 導致 CPU 使用過高，風扇起飛</title>
+      <link>https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/</link>
+      <pubDate>Mon, 01 Nov 2021 11:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/</guid>
+      <description>在開啟 VSCode 撰寫程式文件時，都還沒開始使用 CPU 已經起飛了，看了 Activity Monitor 發現 Code Helper (Renderer) 的程序佔滿了整個 CPU 的執行時間
+這是 VSCode 在對整個專案做索引建立時會跑出來的狀況，可以指定特定目錄不建立索引，提高執行效率
+解決方式 1. 開啟 VSCode 的設定 在上方工具列點選 Code &amp;gt; Preferences &amp;gt; Setting 開啟設定
+ VSCode 的 Code Helper (Renderer) 
+2. 點選右上方右邊數來第三個按鈕打開 setting.json  VSCode 的 Code Helper (Renderer) 
+3. 將排除的目錄設定設定到 setting.json 排除的 json 設定會像這樣，可以指定某個目錄下的檔案步要做專案索引設定，可以針對你的專案結構類型去做設定
+ 設定完成後若使用 VSCode 在程式碼中進行關聯跳轉，若有關聯到設定的目錄則不會跳轉，所以要設定時要謹慎注意
+ { &amp;#34;search.followSymlinks&amp;#34;: false, &amp;#34;files.exclude&amp;#34;: { &amp;#34;**/.git&amp;#34;: true, &amp;#34;**/.svn&amp;#34;: true, &amp;#34;**/.hg&amp;#34;: true, &amp;#34;**/CVS&amp;#34;: true, &amp;#34;**/.</description>
+    </item>
+    
+  </channel>
+</rss>
