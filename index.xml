@@ -6,7 +6,309 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Mon, 01 Nov 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Nov 2021 03:11:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OBS 提升錄音聲音品質</title>
+        <link>https://dev.kejyun.com/article/2021/11/obs-voice-quality/</link>
+        <pubDate>Thu, 18 Nov 2021 03:11:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/11/obs-voice-quality/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/11/obs-voice-quality/cover.png" alt="Featured image of post OBS 提升錄音聲音品質" /&gt;&lt;p&gt;OBS 是一個開源的影片錄製及直撥軟體，可以支援跨平台系統&lt;/p&gt;
+&lt;h2 id=&#34;支援系統&#34;&gt;支援系統&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows&lt;/li&gt;
+&lt;li&gt;Mac OS&lt;/li&gt;
+&lt;li&gt;Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;錄音雜訊抑制---noise-suppression-雜訊抑制&#34;&gt;錄音雜訊抑制 - Noise Suppression 雜訊抑制&lt;/h2&gt;
+&lt;p&gt;再透過麥克風錄音，難免會錄到一些環境的噪音，像是 &lt;code&gt;冷氣&lt;/code&gt;、&lt;code&gt;電風扇&lt;/code&gt;，&lt;code&gt;CPU 風扇&lt;/code&gt;、&lt;code&gt;馬路上車流聲&lt;/code&gt;等等環境的噪音，可以透過 OBS 降噪過濾功能，將這些噪音過濾掉，讓錄音品質更好&lt;/p&gt;
+&lt;p&gt;在錄音設備點選 &lt;code&gt;齒輪圖示&lt;/code&gt;，然後點選 &lt;code&gt;Filters&lt;/code&gt;，設定過濾功能&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 310; flex-basis: 744px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-1.png&#34; data-size=&#34;859x277&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-1_hu05a7743fd97b0e2d41ef49b41e22aa8d_45619_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-1_hu05a7743fd97b0e2d41ef49b41e22aa8d_45619_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;859&#34;
+				height=&#34;277&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;Filters&lt;/code&gt; 視窗中點選左下角加號，加入 &lt;code&gt;Noise Suppression 雜訊抑制&lt;/code&gt; 選項&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 114; flex-basis: 273px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-1.png&#34; data-size=&#34;859x753&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-1_hudc26b57e7ea4334b9d2956cb747f8f31_26970_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-1_hudc26b57e7ea4334b9d2956cb747f8f31_26970_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;859&#34;
+				height=&#34;753&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;
+&lt;figure style=&#34;flex-grow: 98; flex-basis: 235px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-2.png&#34; data-size=&#34;859x875&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-2_hua345a481ad1461783f719580abb21a7a_69799_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-2-2_hua345a481ad1461783f719580abb21a7a_69799_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;859&#34;
+				height=&#34;875&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;加入降噪選項後，即可在選單左方看到多了降噪的功能，降噪的選項有兩種&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Speex (low CPU usage, low quality)&lt;/li&gt;
+&lt;li&gt;RNNoise (good quality, more CPU usage)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;預設為 &lt;code&gt;RNNoise&lt;/code&gt; 降噪方式&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 536; flex-basis: 1287px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-3.png&#34; data-size=&#34;864x161&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-3.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-3_huac12800793a9e87ac36ce62b26e0e9eb_39122_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-3_huac12800793a9e87ac36ce62b26e0e9eb_39122_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;864&#34;
+				height=&#34;161&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rnnoise-降噪&#34;&gt;RNNoise 降噪&lt;/h3&gt;
+&lt;p&gt;降噪品質較好，但會需要 CPU 去運算需要降噪的聲音，若 CPU 運算能力不錯的話，建議使用這個選項&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 114; flex-basis: 273px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-4.png&#34; data-size=&#34;864x757&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-4.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-4_hu3f0c2ead139275d4741b706b90f29fb1_38608_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-4_hu3f0c2ead139275d4741b706b90f29fb1_38608_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;864&#34;
+				height=&#34;757&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;speex-降噪&#34;&gt;Speex 降噪&lt;/h3&gt;
+&lt;p&gt;指定降噪的分貝數，預設為 &lt;code&gt;-30 dB&lt;/code&gt;，可以測試錄音看看，看看你的環境適合什麼樣的降噪分貝數&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;0 dB&lt;/code&gt; 是沒有降噪，最高降噪分貝數為 &lt;code&gt;-60 dB&lt;/code&gt;，降噪分貝數越多則錄音的聲音會越小聲，要先自行測試自己環境需要降噪的 dB 數為何，避免原本要錄的聲音也被降噪了&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;降噪結果&lt;/th&gt;
+&lt;th&gt;處理方式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0 dB&lt;/td&gt;
+&lt;td&gt;無降噪&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-60 dB&lt;/td&gt;
+&lt;td&gt;最大降噪&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 114; flex-basis: 273px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-5.png&#34; data-size=&#34;864x757&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-5.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-5_huc8ac7b71d35d5ba43c32f58cac50ec05_56337_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-suppression-5_huc8ac7b71d35d5ba43c32f58cac50ec05_56337_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;864&#34;
+				height=&#34;757&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;!--adsense--&gt;
+&lt;h2 id=&#34;提升錄音聲音音量---gain-增益&#34;&gt;提升錄音聲音音量 - Gain 增益&lt;/h2&gt;
+&lt;p&gt;在錄音音量不夠高或過高的時候，可以透過 &lt;code&gt;Gain Filter&lt;/code&gt; 去對音量大小進行處理，看要增大音量還是要降低音量&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;Filters&lt;/code&gt; 視窗中點選左下角加號，加入 &lt;code&gt;Gain 增益&lt;/code&gt; 選項&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 94; flex-basis: 225px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-1.png&#34; data-size=&#34;858x912&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-1_hu8aa04859c5c28168df91db6a42c8d601_85006_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-1_hu8aa04859c5c28168df91db6a42c8d601_85006_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;858&#34;
+				height=&#34;912&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;聲音增益範圍為 &lt;code&gt;-30 dB ~ 30 dB&lt;/code&gt; 可以看你的聲音需要增強或降低多少&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 113; flex-basis: 272px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-2.png&#34; data-size=&#34;858x756&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-2_hu060a7a9f83b10cecd491f7adb556febd_45735_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-gain-2_hu060a7a9f83b10cecd491f7adb556febd_45735_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;858&#34;
+				height=&#34;756&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;!--adsense--&gt;
+&lt;h2 id=&#34;錄音音量狀態控制---noise-gate-噪音閾&#34;&gt;錄音音量狀態控制 - Noise Gate 噪音閾&lt;/h2&gt;
+&lt;p&gt;當有聲音夠大聲的時候才錄音，不夠大聲就不錄音，可以透過 &lt;code&gt;Noise Gate Filter&lt;/code&gt; 對聲音進行偵測，指定音量以上的聲音才會進行收音&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;底噪聲音還是會錄進去，不能取代降噪功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 94; flex-basis: 225px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-gate-1.png&#34; data-size=&#34;858x912&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-gate-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-gate-1_hu8aa04859c5c28168df91db6a42c8d601_84700_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-noise-gate-1_hu8aa04859c5c28168df91db6a42c8d601_84700_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;858&#34;
+				height=&#34;912&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;可以控制音量的 &lt;code&gt;Threshold 閾值&lt;/code&gt; 去設定音量要多少會做錄音與否的控制&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;選項&lt;/th&gt;
+&lt;th&gt;說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Close Threshold 關閉閾值&lt;/td&gt;
+&lt;td&gt;小於指定 dB 數，關閉收音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Open Threshold 開啟閾值&lt;/td&gt;
+&lt;td&gt;大於指定 dB 數，開啟收音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;控制音量不會爆音---compressor-動態壓縮處理器&#34;&gt;控制音量不會爆音 - Compressor 動態壓縮處理器&lt;/h2&gt;
+&lt;p&gt;在錄音時偶爾會音量過大而出現爆音，可以透過 &lt;code&gt;Compressor 動態壓縮處理器&lt;/code&gt; 降低超過指定音量的爆音&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 94; flex-basis: 225px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-1.png&#34; data-size=&#34;858x912&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-1_hu8aa04859c5c28168df91db6a42c8d601_84659_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-1_hu8aa04859c5c28168df91db6a42c8d601_84659_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;858&#34;
+				height=&#34;912&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;只有超過音量的聲音才會被降低，在指定音量範圍內的聲音不會被降低&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;選項&lt;/th&gt;
+&lt;th&gt;說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ratio 比率&lt;/td&gt;
+&lt;td&gt;降低音量的比率，比率範圍為 &lt;code&gt;32 ~ 1&lt;/code&gt;，預設為 &lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Threshold 閾值&lt;/td&gt;
+&lt;td&gt;超過多大的音量會降低，閾值範圍為 &lt;code&gt;-60 dB ~ 0 dB&lt;/code&gt;，預設為 &lt;code&gt;-18 dB&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 113; flex-basis: 272px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-2.png&#34; data-size=&#34;858x756&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-2_hua4889d937c6cae19d4a51c82064b9dcd_63920_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-compressor-2_hua4889d937c6cae19d4a51c82064b9dcd_63920_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;858&#34;
+				height=&#34;756&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;限制聲音最大大小---limiter-限制器&#34;&gt;限制聲音最大大小 - Limiter 限制器&lt;/h2&gt;
+&lt;p&gt;為了避免聲音超過範圍，可以設定聲音不會超過指定分貝數，超過的聲音皆降為 &lt;code&gt;Threshold 臨界值&lt;/code&gt; 設定的分貝數&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 94; flex-basis: 225px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-1.png&#34; data-size=&#34;858x912&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-1_hu8aa04859c5c28168df91db6a42c8d601_84762_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-1_hu8aa04859c5c28168df91db6a42c8d601_84762_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;858&#34;
+				height=&#34;912&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;選項&lt;/th&gt;
+&lt;th&gt;說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Threshold 臨界值&lt;/td&gt;
+&lt;td&gt;聲音限制分貝數，閾值範圍為 &lt;code&gt;-60 dB ~ 0 dB&lt;/code&gt;，預設為 &lt;code&gt;-6 dB&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 113; flex-basis: 272px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-2.png&#34; data-size=&#34;858x756&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-2_huda02aedd7d0b78aaaf7642a0fdc9a796_49887_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/11/obs-voice-quality/images/obs-voice-quality-limiter-2_huda02aedd7d0b78aaaf7642a0fdc9a796_49887_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;858&#34;
+				height=&#34;756&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;OBS 提升錄音聲音品質&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;OBS 提升錄音聲音品質&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;限制結果&lt;/th&gt;
+&lt;th&gt;處理方式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0 dB&lt;/td&gt;
+&lt;td&gt;無限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-60 dB&lt;/td&gt;
+&lt;td&gt;最大限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://obsproject.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open Broadcaster Software | OBS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://obsproject.com/wiki/Filters-Guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wiki - Filters Guide | OBS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/Open_Broadcaster_Software&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open Broadcaster Software - 維基百科，自由的百科全書&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://krisp.ai/blog/obs-remove-background-noise/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How to remove background noise in OBS Studio? (Step-by-step guide)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=hy_2qJHdAqE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OBS分享EP2│讓錄出來的聲音更乾淨，去除背景雜音，限制太大的音量！雜訊抑制、動態壓縮處理器、限制器、增益等內建聲音濾鏡使用分享！ - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>VSCode 的 Code Helper (Renderer) 導致 CPU 使用過高，風扇起飛</title>
         <link>https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/</link>
         <pubDate>Mon, 01 Nov 2021 11:51:29 +0800</pubDate>

@@ -6,7 +6,25 @@
     <description>Recent content in 風扇 on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 01 Nov 2021 11:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/%E9%A2%A8%E6%89%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Nov 2021 03:11:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/%E9%A2%A8%E6%89%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OBS 提升錄音聲音品質</title>
+      <link>https://dev.kejyun.com/article/2021/11/obs-voice-quality/</link>
+      <pubDate>Thu, 18 Nov 2021 03:11:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/11/obs-voice-quality/</guid>
+      <description>OBS 是一個開源的影片錄製及直撥軟體，可以支援跨平台系統
+支援系統  Windows Mac OS Ubuntu  錄音雜訊抑制 - Noise Suppression 雜訊抑制 再透過麥克風錄音，難免會錄到一些環境的噪音，像是 冷氣、電風扇，CPU 風扇、馬路上車流聲等等環境的噪音，可以透過 OBS 降噪過濾功能，將這些噪音過濾掉，讓錄音品質更好
+在錄音設備點選 齒輪圖示，然後點選 Filters，設定過濾功能
+ OBS 提升錄音聲音品質 
+在 Filters 視窗中點選左下角加號，加入 Noise Suppression 雜訊抑制 選項
+ OBS 提升錄音聲音品質   OBS 提升錄音聲音品質 
+加入降噪選項後，即可在選單左方看到多了降噪的功能，降噪的選項有兩種
+ Speex (low CPU usage, low quality) RNNoise (good quality, more CPU usage)  預設為 RNNoise 降噪方式
+ OBS 提升錄音聲音品質 
+RNNoise 降噪 降噪品質較好，但會需要 CPU 去運算需要降噪的聲音，若 CPU 運算能力不錯的話，建議使用這個選項</description>
+    </item>
+    
     <item>
       <title>VSCode 的 Code Helper (Renderer) 導致 CPU 使用過高，風扇起飛</title>
       <link>https://dev.kejyun.com/article/2021/11/vscode-code-helper-cpu-too-high/</link>
