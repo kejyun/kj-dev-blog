@@ -6,7 +6,34 @@
     <description>Recent content in Tags on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 18 Nov 2021 03:11:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Dec 2021 01:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database</title>
+      <link>https://dev.kejyun.com/tags/database/</link>
+      <pubDate>Mon, 13 Dec 2021 01:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://dev.kejyun.com/tags/sql/</link>
+      <pubDate>Mon, 13 Dec 2021 01:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>最佳化</title>
+      <link>https://dev.kejyun.com/tags/%E6%9C%80%E4%BD%B3%E5%8C%96/</link>
+      <pubDate>Mon, 13 Dec 2021 01:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E6%9C%80%E4%BD%B3%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CPU too high</title>
       <link>https://dev.kejyun.com/tags/cpu-too-high/</link>

@@ -6,7 +6,51 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Thu, 18 Nov 2021 03:11:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 13 Dec 2021 01:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SQL Select 撈取順序</title>
+        <link>https://dev.kejyun.com/article/2021/12/sql-select-queries-order-of-execution/</link>
+        <pubDate>Mon, 13 Dec 2021 01:51:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/12/sql-select-queries-order-of-execution/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/12/sql-select-queries-order-of-execution/cover.jpg" alt="Featured image of post SQL Select 撈取順序" /&gt;&lt;blockquote&gt;
+&lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@casparrubin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Caspar Camille Rubin&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/s/photos/sql?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;基本-sql-語法&#34;&gt;基本 SQL 語法&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DISTINCT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;column&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AGG_FUNC&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column_or_expression&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;…&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mytable&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;JOIN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;another_table&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mytable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;column&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;another_table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;column&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;constraint_expression&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;column&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;HAVING&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;constraint_expression&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;column&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ASC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DESC&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;OFFSET&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sql-執行順序&#34;&gt;SQL 執行順序&lt;/h2&gt;
+&lt;h3 id=&#34;1--from-and-joins&#34;&gt;1 . FROM and JOINs&lt;/h3&gt;
+&lt;p&gt;FROM 跟 JOIN 會有先執行，決定所有的資料集有哪些必須要查詢，包含所有的 &lt;code&gt;Sub Query&lt;/code&gt; 及其產生的 &lt;code&gt;暫存表(temporary tables)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-where&#34;&gt;2. WHERE&lt;/h3&gt;
+&lt;p&gt;決定完所有資料範圍後，首先過濾 WHERE 限制的條件，判斷哪些欄位的資料符合限制條件，在請求執行 FROM 條件時，會直接透過 WHERE 條件限制去過濾請求的資料&lt;/p&gt;
+&lt;p&gt;有 Alias 的查詢子條件的 WHERE 限制條件無法馬上執行，因為子條件的資料必須要先撈出來才能夠在做外部的 WHERE 條件過濾&lt;/p&gt;
+&lt;h3 id=&#34;3-group-by&#34;&gt;3. GROUP BY&lt;/h3&gt;
+&lt;p&gt;在透過 WHERE 限制條件過濾完資料後，會將這些資料做 GROUP BY 群組運算，僅會留下唯一的欄位數值，當你需要整合這些資訊時，可以使用 GROUP BY 用在你的查詢 Query 中&lt;/p&gt;
+&lt;h3 id=&#34;4-having&#34;&gt;4. HAVING&lt;/h3&gt;
+&lt;p&gt;假如 Query 有 GROUP BY 的條件，可以使用 HAVING 條件去對 GROUP BY 後的資料去做查詢，使用 HAVING 條件過濾後將不符合條件的欄位資料丟棄，就像 WHERE 條件一樣&lt;/p&gt;
+&lt;h3 id=&#34;5-select&#34;&gt;5. SELECT&lt;/h3&gt;
+&lt;p&gt;任何的 SELECT 欄位會在這個步驟去執行&lt;/p&gt;
+&lt;h3 id=&#34;6-distinct&#34;&gt;6. DISTINCT&lt;/h3&gt;
+&lt;p&gt;剩餘的欄位資料，如果資料列的資料值有重複時，會被使用 DISTINCT 進行過濾，相同的資料將會被丟棄&lt;/p&gt;
+&lt;h3 id=&#34;7-order-by&#34;&gt;7. ORDER BY&lt;/h3&gt;
+&lt;p&gt;若有使用 ORDER BY 條件，資料列會透過指定欄位去進行排序，可以順向或逆向排序，因為要撈出的欄位已經被 SELECT 撈出來了，所以可以透過這些欄位去進行排序&lt;/p&gt;
+&lt;h3 id=&#34;8-limit--offset&#34;&gt;8. LIMIT / OFFSET&lt;/h3&gt;
+&lt;p&gt;最後，資料列會透過 LIMIT 及 OFFSET 條件撈出指定的資料範圍，然後將最後的資料列回傳輸出&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sqlbolt.com/lesson/select_queries_order_of_execution&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SQLBolt - Learn SQL - SQL Lesson 12: Order of execution of a Query&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>OBS 提升錄音聲音品質</title>
         <link>https://dev.kejyun.com/article/2021/11/obs-voice-quality/</link>
         <pubDate>Thu, 18 Nov 2021 03:11:29 +0800</pubDate>

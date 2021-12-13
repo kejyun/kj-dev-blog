@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>最佳化 on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/%E6%9C%80%E4%BD%B3%E5%8C%96/</link>
+    <description>Recent content in 最佳化 on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 13 Dec 2021 01:51:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/%E6%9C%80%E4%BD%B3%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Select 撈取順序</title>
+      <link>https://dev.kejyun.com/article/2021/12/sql-select-queries-order-of-execution/</link>
+      <pubDate>Mon, 13 Dec 2021 01:51:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2021/12/sql-select-queries-order-of-execution/</guid>
+      <description>Photo by Caspar Camille Rubin on Unsplash
+ 基本 SQL 語法 SELECT DISTINCT column, AGG_FUNC(column_or_expression), … FROM mytable JOIN another_table ON mytable.column = another_table.column WHERE constraint_expression GROUP BY column HAVING constraint_expression ORDER BY column ASC/DESC LIMIT count OFFSET COUNT; SQL 執行順序 1 . FROM and JOINs FROM 跟 JOIN 會有先執行，決定所有的資料集有哪些必須要查詢，包含所有的 Sub Query 及其產生的 暫存表(temporary tables)
+2. WHERE 決定完所有資料範圍後，首先過濾 WHERE 限制的條件，判斷哪些欄位的資料符合限制條件，在請求執行 FROM 條件時，會直接透過 WHERE 條件限制去過濾請求的資料
+有 Alias 的查詢子條件的 WHERE 限制條件無法馬上執行，因為子條件的資料必須要先撈出來才能夠在做外部的 WHERE 條件過濾</description>
+    </item>
+    
+  </channel>
+</rss>
