@@ -138,7 +138,7 @@
 		],
 		"genre":[""],
 		"articleSection": "",
-		"articleBody": "Gitlab and Github provide the static website spaces for us. We can upload the static file, such as html, css, js file to the git repository. But if you don\u0026rsquo;t want to let everyone can download your full static files via git directly on Github. You must pay for this private repository feature. But private repository for static pages on Gitlab is free.\nCreate Gitlab Pages directory You can create public directory on your gitlab repository. And put all your static file on this directory. The index.html is the entry point of your Gitlab page.\n\rGitLab Pages\r\nSetting Gitlab pages deployment Create the .gitlab-ci.yml file on the root of the git repository. Set artifacts configuration to your public directory, and only deploy your page on main branch.\n# .gitlab-ci.ymlimage:alpine:latestpages:stage:deployscript:- echo \u0026#39;Do nothing\u0026#39;# gitlab page directoryartifacts:paths:- public# only deploy your page on `main` branch.only:- mainDeploy Gitlab Pages Add the public directory and .gitlab-ci.yml to your git commit and push your repository to Gitlab. Go to CI\/CD \u0026gt; Piplines on GitLab repository setting pages. Then you will see the GitLab Pages deploy CI\/CD is processing. When you see the deploy status change to passed means deploy successfully.\n\rGitLab Pages\r\nView the deployed Gitlab Pages Go to Settings \u0026gt; Pages, then you can see your Gitlab pages URL. The default GitLab pages URL is https:\/\/\u0026lt;account\u0026gt;.gitlab.io\/\u0026lt;repository-path\u0026gt;. You can see your static websites via this link.\n\rGitLab Pages\r\nSetting Gitlab Pages access permissions Gitlab Pages has its access permissions\n Only project member can see your pages Everyone can see your pages  Only project members can see your pages in the Gitlab Pages is the default setting. You can go to Setting \u0026gt; General to change the access permission if you want. Then click Expand button on the Visibility, project features, permissions section.\n\rGitLab Pages\r \rGitLab Pages\r\nYou can find Pages settings below the Visibility, project features, permissions section. Change the access permission as you want. Then save your changes.\n Only Project Members Everyone  Now you can publish your Gitlab pages to everyone.\n\rGitLab Pages\r\nCustomize domain and SSL certificate If you want to customize your GitLab Pages domain name, you can click the New Domain button the create the domain. Then type the domain that you want. And let Gitlab using the free SSL certificate by using Let\u0026rsquo;s Encrypt automatically.\n\rGitLab Pages\r \rGitLab Pages\r\nSetting your DNS Setting to your domain after create your domain. Then verify your domain status. You can see your static pages via your custome domain after your domain is verified.\n\rGitLab Pages\r\nCloudflare DNS SSL certificate If you\u0026rsquo;re using Cloudflare as your DNS management platform. You have to set your SSL encryption mode to full. Then GitLab Page can only get the free SSL certificate after SSL encryption mode is full\n\rGitLab Pages\r\nReference  GitLab Pages | GitLab Tutorial: Create a GitLab Pages website from scratch | GitLab Exploring GitLab Pages | GitLab  "
+		"articleBody": "Gitlab and Github provide the static website spaces for us. We can upload the static file, such as html, css, js file to the git repository. But if you don\u0026rsquo;t want to let everyone can download your full static files via git directly on Github. You must pay for this private repository feature. But private repository for static pages on Gitlab is free.\nCreate Gitlab Pages directory You can create public directory on your gitlab repository. And put all your static file on this directory. The index.html is the entry point of your Gitlab page.\n GitLab Pages \nSetting Gitlab pages deployment Create the .gitlab-ci.yml file on the root of the git repository. Set artifacts configuration to your public directory, and only deploy your page on main branch.\n# .gitlab-ci.ymlimage:alpine:latestpages:stage:deployscript:- echo \u0026#39;Do nothing\u0026#39;# gitlab page directoryartifacts:paths:- public# only deploy your page on `main` branch.only:- mainDeploy Gitlab Pages Add the public directory and .gitlab-ci.yml to your git commit and push your repository to Gitlab. Go to CI\/CD \u0026gt; Piplines on GitLab repository setting pages. Then you will see the GitLab Pages deploy CI\/CD is processing. When you see the deploy status change to passed means deploy successfully.\n GitLab Pages \nView the deployed Gitlab Pages Go to Settings \u0026gt; Pages, then you can see your Gitlab pages URL. The default GitLab pages URL is https:\/\/\u0026lt;account\u0026gt;.gitlab.io\/\u0026lt;repository-path\u0026gt;. You can see your static websites via this link.\n GitLab Pages \nSetting Gitlab Pages access permissions Gitlab Pages has its access permissions\n Only project member can see your pages Everyone can see your pages  Only project members can see your pages in the Gitlab Pages is the default setting. You can go to Setting \u0026gt; General to change the access permission if you want. Then click Expand button on the Visibility, project features, permissions section.\n GitLab Pages   GitLab Pages \nYou can find Pages settings below the Visibility, project features, permissions section. Change the access permission as you want. Then save your changes.\n Only Project Members Everyone  Now you can publish your Gitlab pages to everyone.\n GitLab Pages \nCustomize domain and SSL certificate If you want to customize your GitLab Pages domain name, you can click the New Domain button the create the domain. Then type the domain that you want. And let Gitlab using the free SSL certificate by using Let\u0026rsquo;s Encrypt automatically.\n GitLab Pages   GitLab Pages \nSetting your DNS Setting to your domain after create your domain. Then verify your domain status. You can see your static pages via your custome domain after your domain is verified.\n GitLab Pages \nCloudflare DNS SSL certificate If you\u0026rsquo;re using Cloudflare as your DNS management platform. You have to set your SSL encryption mode to full. Then GitLab Page can only get the free SSL certificate after SSL encryption mode is full\n GitLab Pages \nReference  GitLab Pages | GitLab Tutorial: Create a GitLab Pages website from scratch | GitLab Exploring GitLab Pages | GitLab  "
 	}
 </script>
 
@@ -341,7 +341,7 @@
 	{
 		"@type": "Organization",
 		"name": "",
-		"sameAs": [ "\r\n"
+		"sameAs": [ "\n"
 		]
   	}
 ],
@@ -354,14 +354,14 @@
 	{
 		"@type": "Organization",
 		"name": "",
-		"sameAs": [ "\r\n"
+		"sameAs": [ "\n"
 		]
 	}
 ],
 "url": "https:\/\/dev.kejyun.com",
 "image": "https:\/\/dev.kejyun.com\/company\/team\/KeJyun.png",
 
-"sameAs": [ "\r\n\r\n\r\n\r\n\r\n\r\n\"https://ca.linkedin.com/in/kejyun/en\",\r\n\r\n\r\n\"https://github.com/kejyun\",\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\"\"\r\n"
+"sameAs": [ "\n\n\n\n\n\n\"https://ca.linkedin.com/in/kejyun/en\",\n\n\n\"https://github.com/kejyun\",\n\n\n\n\n\n\n\n\n\n\n\n\"\"\n"
 	]
 }
 </script>
@@ -523,10 +523,7 @@
 <link rel="canonical" href="https://dev.kejyun.com/en/article/2021/08/gitlab-page-2021/" />
 
 
-<script async 
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1990193713845546"
-        crossorigin="anonymous"
-></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZQ2D0XJX3"></script>

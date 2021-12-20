@@ -31,7 +31,7 @@ Environment
  安裝 Windows 版本的 nvm-windows 到 GitHub coreybutler/nvm-windows 的 Repo 下載 nvm-setup.zip 檔案並進行安裝，檔案解壓所後照正常的安裝步驟安裝即可
 我這邊使用的是 Windows PowerShell，如果安裝完成後必須要完整的重開 Windows PowerShell，這樣才能夠讓 Windows PowerShell 讀取到對的 NVM 環境變數
 如果是要讓 VS Code 的 Terminal 能夠吃到 NVM 的環境變數，則需要整台電腦重開機才吃的到設定，只重開 VS Code 是沒有用的
-NVM on Windows 10
+ NVM on Windows 10 
 列出可以安裝的 Node.js 版本  nvm list available
  這邊指令跟 Mac 有點不一樣，不是使用 nvm ls-remote 去列出遠端可以安裝的 Node.</description>
     </item>
