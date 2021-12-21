@@ -6,7 +6,170 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Tue, 21 Dec 2021 00:11:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Dec 2021 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在 iPad 使用 Magic Eraser 替圖片去背</title>
+        <link>https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/</link>
+        <pubDate>Tue, 21 Dec 2021 00:13:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/cover.jpeg" alt="Featured image of post 在 iPad 使用 Magic Eraser 替圖片去背" /&gt;&lt;blockquote&gt;
+&lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@josephtpearson?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Joseph Pearson&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/s/photos/photo-editing?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在 iPad 我們可以用 Magic Eraser 加上 Apple Pencil 快速地替圖片去背，取得我們想要的圖片素材&lt;/p&gt;
+&lt;h2 id=&#34;magic-eraser-去背流程&#34;&gt;Magic Eraser 去背流程&lt;/h2&gt;
+&lt;p&gt;選擇你要去背的照片，這邊以對 Apple Pencil 去做範例&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 101; flex-basis: 244px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-1.jpg&#34; data-size=&#34;1420x1393&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-1.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-1_hub9d102953bb5c15e21e73ea64f84a346_77759_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-1_hub9d102953bb5c15e21e73ea64f84a346_77759_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;1420&#34;
+				height=&#34;1393&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;可以透過四周的移動點，縮小素材範圍&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 143; flex-basis: 343px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-2.jpg&#34; data-size=&#34;2388x1668&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-2.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-2_hu1f4ede35e0e63a3c57d2b9981167e8c1_69700_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-2_hu1f4ede35e0e63a3c57d2b9981167e8c1_69700_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2388&#34;
+				height=&#34;1668&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;
+&lt;figure style=&#34;flex-grow: 143; flex-basis: 343px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-3.png&#34; data-size=&#34;2388x1668&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-3.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-3_hub23983df0effcad5e540da978f04e6ee_50034_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-3_hub23983df0effcad5e540da978f04e6ee_50034_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;2388&#34;
+				height=&#34;1668&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;點選下方第一個 &lt;code&gt;Magic Wand 魔術棒&lt;/code&gt;，然後選擇下方的 &lt;code&gt;相似色&lt;/code&gt; 容許值，若容許值越大，會有越多顏色範圍被選取到&lt;/p&gt;
+&lt;p&gt;因為 Apple Pencil 是白色，背景也是白色，所以我這邊的容許值就不能設定很高，不然會連 Apple Pencil 素材也被選到，這邊是設定為 2%，可以根據自己素材的狀況去做調整&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 169; flex-basis: 406px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-4.jpg&#34; data-size=&#34;2372x1402&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-4.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-4_hu45b6f00fc7702293d11d22bb8f6be0c9_76493_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-4_hu45b6f00fc7702293d11d22bb8f6be0c9_76493_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2372&#34;
+				height=&#34;1402&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;選擇下方第 2 個 &lt;code&gt;Erase 清除&lt;/code&gt; 工具，將 &lt;code&gt;Magic Wand 魔術棒&lt;/code&gt; 沒有選到的去背背景手動清除&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 170; flex-basis: 408px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-5.jpg&#34; data-size=&#34;2377x1395&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-5.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-5_hu45b6f00fc7702293d11d22bb8f6be0c9_82945_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-5_hu45b6f00fc7702293d11d22bb8f6be0c9_82945_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2377&#34;
+				height=&#34;1395&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果有去背錯誤的部分，可以選擇下方第 3 個 &lt;code&gt;Restore 恢復&lt;/code&gt;，點選去背錯誤的部分進行恢復&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 167; flex-basis: 403px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-6.jpg&#34; data-size=&#34;2388x1422&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-6.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-6_hu45b6f00fc7702293d11d22bb8f6be0c9_83355_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-6_hu45b6f00fc7702293d11d22bb8f6be0c9_83355_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2388&#34;
+				height=&#34;1422&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;點選下方第 4 個 &lt;code&gt;Invert Mask 反轉遮罩&lt;/code&gt; 檢查自己去背的部分有沒有去背完全，去背成功的話原本素材的部分會變成去背的形式，而要去背的部分會變成沒有去背的背景&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 168; flex-basis: 405px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-7.jpg&#34; data-size=&#34;2388x1415&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-7.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-7_hu45b6f00fc7702293d11d22bb8f6be0c9_46253_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-7_hu45b6f00fc7702293d11d22bb8f6be0c9_46253_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2388&#34;
+				height=&#34;1415&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;點選下方第 5 個 &lt;code&gt;Red Mask 紅色遮罩&lt;/code&gt;，將原本去背的 &lt;code&gt;灰白相間&lt;/code&gt; 的去背遮罩改為紅色的，讓你更好識別目前去背狀況有沒有完全&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 168; flex-basis: 404px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-8.jpg&#34; data-size=&#34;2388x1416&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-8.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-8_hu45b6f00fc7702293d11d22bb8f6be0c9_44413_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-8_hu45b6f00fc7702293d11d22bb8f6be0c9_44413_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2388&#34;
+				height=&#34;1416&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;若都去背檢查完畢，可以點選右上方分享按鈕，將去背的素材匯出&lt;/p&gt;
+&lt;p&gt;可以選擇要 &lt;code&gt;Save 儲存成圖片&lt;/code&gt; 或是 &lt;code&gt;Other 將圖片匯出做其他處理&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 168; flex-basis: 404px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-9.jpg&#34; data-size=&#34;2388x1417&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-9.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-9_huabf1e052ec9db70a246b63ea0d57efcf_70161_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-9_huabf1e052ec9db70a246b63ea0d57efcf_70161_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2388&#34;
+				height=&#34;1417&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;
+&lt;figure style=&#34;flex-grow: 167; flex-basis: 401px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-10.jpg&#34; data-size=&#34;2388x1428&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-10.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-10_hu5e23edbad3a2f1058e7baaf125dcddbd_97799_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-10_hu5e23edbad3a2f1058e7baaf125dcddbd_97799_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;2388&#34;
+				height=&#34;1428&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下面就是完整去背的 Apple Pencil 素材&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 43; flex-basis: 104px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-11.png&#34; data-size=&#34;400x917&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-11.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-11_hu4dddd171d6ca62f906c332858a8b56b6_7539_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/images/ipad-magic-eraser-remove-background-11_hu4dddd171d6ca62f906c332858a8b56b6_7539_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;400&#34;
+				height=&#34;917&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;Magic Eraser 去背&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Magic Eraser 去背&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apple-for-newbie.kejyun.com/ipad/app/magic-eraser/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Magic Eraser - 圖片去背 - Apple 新手道場&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apps.apple.com/tw/app/magic-eraser-%E8%BC%95%E9%AC%86%E6%91%B3%E5%9C%96-%E5%89%AA%E4%B8%8B%E6%88%96%E7%A7%BB%E9%99%A4%E8%83%8C%E6%99%AF/id989920057&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在 App Store 上的「Magic Eraser - 輕鬆摳圖, 剪下或移除背景」&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>在 iPad 使用 Procreate 替圖片去背</title>
         <link>https://dev.kejyun.com/article/2021/12/ipad-procreate-remove-image-background/</link>
         <pubDate>Tue, 21 Dec 2021 00:11:29 +0800</pubDate>
@@ -215,6 +378,10 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=6_26pf7ys7E&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;【新手的iPad畫畫課】用Procreate 幫你的手繪小圖去背 - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apps.apple.com/tw/app/procreate/id425073498&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在 App Store 上的「Procreate」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apple-for-newbie.kejyun.com/ipad/app/procreate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Procreate - 繪圖修圖 - Apple 新手道場&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
