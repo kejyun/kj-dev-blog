@@ -16,12 +16,12 @@
       <description>OBS 是一個開源的影片錄製及直撥軟體，可以支援跨平台系統
 支援系統  Windows Mac OS Ubuntu  錄音雜訊抑制 - Noise Suppression 雜訊抑制 再透過麥克風錄音，難免會錄到一些環境的噪音，像是 冷氣、電風扇，CPU 風扇、馬路上車流聲等等環境的噪音，可以透過 OBS 降噪過濾功能，將這些噪音過濾掉，讓錄音品質更好
 在錄音設備點選 齒輪圖示，然後點選 Filters，設定過濾功能
- OBS 提升錄音聲音品質 
+OBS 提升錄音聲音品質
 在 Filters 視窗中點選左下角加號，加入 Noise Suppression 雜訊抑制 選項
- OBS 提升錄音聲音品質   OBS 提升錄音聲音品質 
+OBS 提升錄音聲音品質 OBS 提升錄音聲音品質
 加入降噪選項後，即可在選單左方看到多了降噪的功能，降噪的選項有兩種
  Speex (low CPU usage, low quality) RNNoise (good quality, more CPU usage)  預設為 RNNoise 降噪方式
- OBS 提升錄音聲音品質 
+OBS 提升錄音聲音品質
 RNNoise 降噪 降噪品質較好，但會需要 CPU 去運算需要降噪的聲音，若 CPU 運算能力不錯的話，建議使用這個選項</description>
     </item>
     

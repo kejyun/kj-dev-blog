@@ -6,7 +6,109 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Tue, 21 Dec 2021 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 06 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用 PotPlayer 擷取影片中的聲音</title>
+        <link>https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/</link>
+        <pubDate>Thu, 06 Jan 2022 00:13:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/cover.png" alt="Featured image of post 使用 PotPlayer 擷取影片中的聲音" /&gt;&lt;p&gt;在影片中若有哪一段聲音是你想要特別剪輯擷取出來的，可以在使用 Potplayer 播放時順便將聲音剪輯出來&lt;/p&gt;
+&lt;h2 id=&#34;擷取聲音&#34;&gt;擷取聲音&lt;/h2&gt;
+&lt;p&gt;使用 PotPlayer 開啟任一你要剪輯的影片後，按下鍵盤的 &lt;code&gt;Shift + G&lt;/code&gt; 開啟 &lt;code&gt;聲音錄製的視窗&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-設定錄製聲音的目錄&#34;&gt;1. 設定錄製聲音的目錄&lt;/h3&gt;
+&lt;p&gt;在 &lt;code&gt;資料夾設定&lt;/code&gt; 可以設定錄製後影片是要存放到哪&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 109; flex-basis: 262px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-1.jpg&#34; data-size=&#34;413x378&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-1.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-1_hu8f247dc7b2ed912aa7dfae59c851bfd4_148142_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-1_hu8f247dc7b2ed912aa7dfae59c851bfd4_148142_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;413&#34;
+				height=&#34;378&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer 影片聲音擷取&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer 影片聲音擷取&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-設定錄製格式&#34;&gt;2. 設定錄製格式&lt;/h3&gt;
+&lt;p&gt;錄製的格式可以選擇你想要的聲音格式，支援的格式有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WAV&lt;/li&gt;
+&lt;li&gt;OGG&lt;/li&gt;
+&lt;li&gt;FLAC&lt;/li&gt;
+&lt;li&gt;WavPack&lt;/li&gt;
+&lt;li&gt;WMA V1&lt;/li&gt;
+&lt;li&gt;WMA V2&lt;/li&gt;
+&lt;li&gt;MP3&lt;/li&gt;
+&lt;li&gt;MP2&lt;/li&gt;
+&lt;li&gt;ACC&lt;/li&gt;
+&lt;li&gt;ACC+&lt;/li&gt;
+&lt;li&gt;AC3&lt;/li&gt;
+&lt;li&gt;EAC3&lt;/li&gt;
+&lt;li&gt;DTS&lt;/li&gt;
+&lt;li&gt;TTA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我這邊選擇的是 &lt;code&gt;MP3&lt;/code&gt; 格式&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 108; flex-basis: 261px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-2.jpg&#34; data-size=&#34;412x378&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-2.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-2_hu8f247dc7b2ed912aa7dfae59c851bfd4_181392_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-2_hu8f247dc7b2ed912aa7dfae59c851bfd4_181392_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;412&#34;
+				height=&#34;378&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer 影片聲音擷取&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer 影片聲音擷取&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-設定音質&#34;&gt;3. 設定音質&lt;/h3&gt;
+&lt;p&gt;聲音取樣的音質可以選擇的有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;24 kbps&lt;/li&gt;
+&lt;li&gt;48 kbps&lt;/li&gt;
+&lt;li&gt;64 kbps&lt;/li&gt;
+&lt;li&gt;96 kbps&lt;/li&gt;
+&lt;li&gt;128 kbps&lt;/li&gt;
+&lt;li&gt;192 kbps&lt;/li&gt;
+&lt;li&gt;320 kbps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我這邊選擇的是 &lt;code&gt;320 kbps&lt;/code&gt; 音質&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 107; flex-basis: 258px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-3.jpg&#34; data-size=&#34;412x382&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-3.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-3_hu8f247dc7b2ed912aa7dfae59c851bfd4_165195_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-3_hu8f247dc7b2ed912aa7dfae59c851bfd4_165195_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;412&#34;
+				height=&#34;382&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer 影片聲音擷取&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer 影片聲音擷取&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-設定撥放才錄製&#34;&gt;4. 設定撥放才錄製&lt;/h3&gt;
+&lt;p&gt;可以勾選 &lt;code&gt;播放開始時自動錄製&lt;/code&gt;，在影片撥放的時候才會開始錄製聲音，然後點選開始就可以開始錄製了&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 109; flex-basis: 262px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-4.jpg&#34; data-size=&#34;416x380&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-4.jpg&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-4_hu8f247dc7b2ed912aa7dfae59c851bfd4_162348_480x0_resize_q75_box.jpg 480w, https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/images/extract-audio-from-video-via-potplayer-4_hu8f247dc7b2ed912aa7dfae59c851bfd4_162348_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;416&#34;
+				height=&#34;380&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer 影片聲音擷取&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer 影片聲音擷取&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;錄製完後聲音檔會存放到剛剛設定的輸出目錄中，這樣就可以簡單地完成影片中的聲音錄製了&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://potplayer.daum.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Global Potplayer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://monichij2000.pixnet.net/blog/post/136364063-%E7%94%A8potplayer%E5%B0%87%E5%BD%B1%E7%89%87%E7%9A%84%E8%81%B2%E9%9F%B3%E6%93%B7%E5%8F%96%E5%87%BA%E4%BE%86&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用PotPlayer將影片的聲音擷取出來 @ ㄡ邦尬 :: 痞客邦 ::&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>在 iPad 使用 Magic Eraser 替圖片去背</title>
         <link>https://dev.kejyun.com/article/2021/12/ipad-magic-eraser-remove-image-background/</link>
         <pubDate>Tue, 21 Dec 2021 00:13:29 +0800</pubDate>
