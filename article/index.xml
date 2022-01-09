@@ -6,7 +6,34 @@
     <description>Recent content in Articles on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 06 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/article/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/article/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解決 /run/nginx.pid 的 No such file or directory 問題</title>
+      <link>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</link>
+      <pubDate>Sun, 09 Jan 2022 00:13:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</guid>
+      <description>在啟動 Nginx 時會出現找不到 nginx.pid 的訊息
+$ nginx -s reload [error] 13265#13265: open() &amp;#34;/run/nginx.pid&amp;#34; failed (2: No such file or directory) 找到 nginx.pid 設定 在 /etc/nginx/nginx.conf 的 nginx 設定檔案可以看到 pid 的設定，可以確定 pid 檔案的設定是放在哪邊
+可能是設定在 /run/nginx.pid 或 /var/run/nginx.pid，要看看自己的設定 nginx.pid 設定在哪，我這邊是設定在 /run/nginx.pid
+# /etc/nginx/nginx.conf pid /run/nginx.pid; nginx.pid 生命週期 一般狀況在重啟 nginx 就會產生 nginx.pid 的檔案，關閉或刪除 nginx 程序時 nginx.pid 檔案就會不見
+$ cd /run $ find -name nginx.pid 所以在 nginx 服務啟動時理論上應該就會有 nginx.pid 的檔案，但若這個檔案不見的話可能會有幾種原因
+ 誤刪 rm -f nginx.</description>
+    </item>
+    
+    <item>
+      <title>解決 Nginx conflicting server name 問題</title>
+      <link>https://dev.kejyun.com/article/2022/01/nginx-conflicting-server-name/</link>
+      <pubDate>Sun, 09 Jan 2022 00:13:19 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2022/01/nginx-conflicting-server-name/</guid>
+      <description>在執行 nginx 服務時，出現了 conflicting server name on 0.0.0.0:80, ignored 的訊息
+$ nginx -s reload nginx: [warn] conflicting server name &amp;#34;kejyun.com&amp;#34; on 0.0.0.0:80, ignored 通常這個訊息表示，同一個網址或 port 有 2 個以上的設定，通常這樣是不會影響 nginx 的執行，nginx 會以優先載入的設定當作這個網址的設定，後面多餘的設定就會忽略不處理
+但看到這樣的訊息出現還是有點礙眼，可能會導致之後設定錯誤到錯誤的設定檔案，所以儘量還是不要出現錯誤警告訊息比較好
+出現 conflicting server name on 0.0.0.0:80, ignored 可能原因 同一個 server_name 但有相同的 port 像是我們要針對 80 port 的請求都 301 導向至 443 port，所以我們的設定會長得像這樣
+server { listen 80; server_name kejyun.com; return 301 https://$host$request_uri; } 然後在原本的 80 port 設定檔案加入了 listen 443 ssl; 傾聽 443 port 的設定，但忘了把原本的 80 port 設定刪除，這樣就導致有同樣的 80 port 都在等著處理請求</description>
+    </item>
+    
     <item>
       <title>使用 PotPlayer 擷取影片中的聲音</title>
       <link>https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/</link>
@@ -16,10 +43,10 @@
       <description>在影片中若有哪一段聲音是你想要特別剪輯擷取出來的，可以在使用 Potplayer 播放時順便將聲音剪輯出來
 擷取聲音 使用 PotPlayer 開啟任一你要剪輯的影片後，按下鍵盤的 Shift + G 開啟 聲音錄製的視窗
 1. 設定錄製聲音的目錄 在 資料夾設定 可以設定錄製後影片是要存放到哪
-PotPlayer 影片聲音擷取
+ PotPlayer 影片聲音擷取 
 2. 設定錄製格式 錄製的格式可以選擇你想要的聲音格式，支援的格式有
  WAV OGG FLAC WavPack WMA V1 WMA V2 MP3 MP2 ACC ACC+ AC3 EAC3 DTS TTA  我這邊選擇的是 MP3 格式
-PotPlayer 影片聲音擷取
+ PotPlayer 影片聲音擷取 
 3. 設定音質 聲音取樣的音質可以選擇的有
  24 kbps 48 kbps 64 kbps 96 kbps 128 kbps 192 kbps 320 kbps  我這邊選擇的是 320 kbps 音質</description>
     </item>
@@ -33,14 +60,14 @@
       <description>Photo by Joseph Pearson on Unsplash
  在 iPad 我們可以用 Magic Eraser 加上 Apple Pencil 快速地替圖片去背，取得我們想要的圖片素材
 Magic Eraser 去背流程 選擇你要去背的照片，這邊以對 Apple Pencil 去做範例
-Magic Eraser 去背
+ Magic Eraser 去背 
 可以透過四周的移動點，縮小素材範圍
-Magic Eraser 去背 Magic Eraser 去背
+ Magic Eraser 去背   Magic Eraser 去背 
 點選下方第一個 Magic Wand 魔術棒，然後選擇下方的 相似色 容許值，若容許值越大，會有越多顏色範圍被選取到
 因為 Apple Pencil 是白色，背景也是白色，所以我這邊的容許值就不能設定很高，不然會連 Apple Pencil 素材也被選到，這邊是設定為 2%，可以根據自己素材的狀況去做調整
-Magic Eraser 去背
+ Magic Eraser 去背 
 選擇下方第 2 個 Erase 清除 工具，將 Magic Wand 魔術棒 沒有選到的去背背景手動清除
-Magic Eraser 去背</description>
+ Magic Eraser 去背</description>
     </item>
     
     <item>
@@ -52,16 +79,16 @@ Magic Eraser 去背流程 選擇你要去背的照片，這邊以對 Apple Penci
       <description>Photo by Joseph Pearson on Unsplash
  在 iPad 有一個操作簡單的繪圖軟體 Procreate，我們可以用這套軟體加上 Apple Pencil 快速地替圖片去背，取得我們想要的圖片素材
 Procreate 去背流程 選擇上方 選取工具，並選擇 Freehand 模式，將要去被的素材選起來，這邊用 Apple Pencil 當作去背素材範例
-Procreate 去背
+ Procreate 去背 
 素材選取好後，三指在畫面往下滑，可以叫出控制面板，點選 Cut &amp;amp; Paste 將素材剪下貼到新圖層
-Procreate 去背
+ Procreate 去背 
 在圖層選單可以看到剛剛選擇到的素材變成一個新的圖層了
-Procreate 去背
+ Procreate 去背 
 將其他圖層關掉，只留我們要的素材圖層，避免選到錯誤的去背圖層
-Procreate 去背
+ Procreate 去背 
 在選擇上方的選取工具，選擇 Automatic 模式，然後使用 Apple Pencil 點選要去背的背景，按住並往右拉，這樣會自動選取與剛剛點選的背景的相似色，黑底 的部分就是已經被選取的相似色
 往右拉的程度不同會決定 相似色的臨界值 要多大，越往右會越模糊，當往右拉太多，會看到連要去被的 Apple Pencil 素材中間都變成相似色了，這樣就變成素材中間也被去背了，所以要控制好自己的相似色程度，到能夠 剛好把素材包住 就好
-Procreate 去背 Procreate 去背</description>
+ Procreate 去背   Procreate 去背</description>
     </item>
     
     <item>
@@ -85,12 +112,12 @@ Procreate 去背流程 選擇上方 選取工具，並選擇 Freehand 模式，�
       <description>OBS 是一個開源的影片錄製及直撥軟體，可以支援跨平台系統
 支援系統  Windows Mac OS Ubuntu  錄音雜訊抑制 - Noise Suppression 雜訊抑制 再透過麥克風錄音，難免會錄到一些環境的噪音，像是 冷氣、電風扇，CPU 風扇、馬路上車流聲等等環境的噪音，可以透過 OBS 降噪過濾功能，將這些噪音過濾掉，讓錄音品質更好
 在錄音設備點選 齒輪圖示，然後點選 Filters，設定過濾功能
-OBS 提升錄音聲音品質
+ OBS 提升錄音聲音品質 
 在 Filters 視窗中點選左下角加號，加入 Noise Suppression 雜訊抑制 選項
-OBS 提升錄音聲音品質 OBS 提升錄音聲音品質
+ OBS 提升錄音聲音品質   OBS 提升錄音聲音品質 
 加入降噪選項後，即可在選單左方看到多了降噪的功能，降噪的選項有兩種
  Speex (low CPU usage, low quality) RNNoise (good quality, more CPU usage)  預設為 RNNoise 降噪方式
-OBS 提升錄音聲音品質
+ OBS 提升錄音聲音品質 
 RNNoise 降噪 降噪品質較好，但會需要 CPU 去運算需要降噪的聲音，若 CPU 運算能力不錯的話，建議使用這個選項</description>
     </item>
     
@@ -103,8 +130,8 @@ RNNoise 降噪 降噪品質較好，但會需要 CPU 去運算需要降噪的聲
       <description>在開啟 VSCode 撰寫程式文件時，都還沒開始使用 CPU 已經起飛了，看了 Activity Monitor 發現 Code Helper (Renderer) 的程序佔滿了整個 CPU 的執行時間
 這是 VSCode 在對整個專案做索引建立時會跑出來的狀況，可以指定特定目錄不建立索引，提高執行效率
 解決方式 1. 開啟 VSCode 的設定 在上方工具列點選 Code &amp;gt; Preferences &amp;gt; Setting 開啟設定
-VSCode 的 Code Helper (Renderer)
-2. 點選右上方右邊數來第三個按鈕打開 setting.json VSCode 的 Code Helper (Renderer)
+ VSCode 的 Code Helper (Renderer) 
+2. 點選右上方右邊數來第三個按鈕打開 setting.json  VSCode 的 Code Helper (Renderer) 
 3. 將排除的目錄設定設定到 setting.json 排除的 json 設定會像這樣，可以指定某個目錄下的檔案步要做專案索引設定，可以針對你的專案結構類型去做設定
  設定完成後若使用 VSCode 在程式碼中進行關聯跳轉，若有關聯到設定的目錄則不會跳轉，所以要設定時要謹慎注意
  { &amp;#34;search.followSymlinks&amp;#34;: false, &amp;#34;files.exclude&amp;#34;: { &amp;#34;**/.git&amp;#34;: true, &amp;#34;**/.svn&amp;#34;: true, &amp;#34;**/.hg&amp;#34;: true, &amp;#34;**/CVS&amp;#34;: true, &amp;#34;**/.</description>
@@ -136,7 +163,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bas
  安裝 Windows 版本的 nvm-windows 到 GitHub coreybutler/nvm-windows 的 Repo 下載 nvm-setup.zip 檔案並進行安裝，檔案解壓所後照正常的安裝步驟安裝即可
 我這邊使用的是 Windows PowerShell，如果安裝完成後必須要完整的重開 Windows PowerShell，這樣才能夠讓 Windows PowerShell 讀取到對的 NVM 環境變數
 如果是要讓 VS Code 的 Terminal 能夠吃到 NVM 的環境變數，則需要整台電腦重開機才吃的到設定，只重開 VS Code 是沒有用的
-NVM on Windows 10
+ NVM on Windows 10 
 列出可以安裝的 Node.js 版本  nvm list available
  這邊指令跟 Mac 有點不一樣，不是使用 nvm ls-remote 去列出遠端可以安裝的 Node.</description>
     </item>
@@ -149,7 +176,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bas
       <guid>https://dev.kejyun.com/article/2021/08/gitlab-page-2021/</guid>
       <description>Gitlab 與 Github 都有提供靜態空間頁面給我們放上靜態的 html, css, js 檔案，可以變成一個靜態頁面供網友存取，但 Github pages 的空間如果要變成私密的方式，不想要讓其他人可以直接下載你整包的網站 html 的話，只能 付費 才能夠有這個功能，Gitlab pages 則是免費就可以使用私密的方式架設你的網站，不需要額外付費
 建立 Gitlab Pages 目錄 在你的專案中建立 public 目錄，並將你要部署到 GitLab Pages 的檔案全部放在這個 public 目錄中，這個目錄的 index.html 是網站的進入點
-GitLab Pages
+ GitLab Pages 
 設定 Gitlab Pages 部署方式 建立 .gitlab-ci.yml 檔案，在 artifacts 設定 Gitlab pages 的目錄，並設定只有在 main 的分支才會部署
 # .gitlab-ci.ymlimage:alpine:latestpages:stage:deployscript:- echo &amp;#39;Do nothing&amp;#39;# gitlab page 目錄artifacts:paths:- public# 只有在 main 分支的 public 目錄才會被部署only:- main部署 Gitlab Pages 將建立的網站 public 目錄及 .gitlab-ci.yml 檔案 push 到 Gitlab，然後到 Repo 的 CI/CD &amp;gt; Piplines 可以看到會立即執行部署的指令，看到狀態變更為 passed 就表示執行成功了</description>
     </item>
@@ -188,9 +215,9 @@ $ docker images REPOSITORY TAG IMAGE ID CREATED SIZE my_cron_image v1.0 91e20032
       <guid>https://dev.kejyun.com/article/2021/08/powerful-terminal-command-line-powerlevel10k/</guid>
       <description>安裝 Oh My Zsh $ sh -c &amp;#34;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;#34; 安裝 Nerd 字型 可以使用 powerlevel10k 推薦的 MesloLGS NF 字型
  MesloLGS NF Regular.ttf MesloLGS NF Bold.ttf MesloLGS NF Italic.ttf MesloLGS NF Bold Italic.ttf  在 Mac 環境將字體下載後，點開檔案按右下方的 Install Font 即可安裝字型
-powerful-terminal-command-line-powerlevel10k
+ powerful-terminal-command-line-powerlevel10k 
 設定 iTerm2 字形 在 iTerm2 的 preference 中，點選 Profile &amp;gt; Text 頁籤，修改下方的 Font 設定為剛剛安裝的 MesloLGS NF 字型
-powerful-terminal-command-line-powerlevel10k
+ powerful-terminal-command-line-powerlevel10k 
 下載 powerlevel10k 到 Oh My Zsh 主題中 git clone --depth=1 https://github.</description>
     </item>
     

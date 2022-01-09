@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/nginx/</link>
+    <description>Recent content in Nginx on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 09 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解決 /run/nginx.pid 的 No such file or directory 問題</title>
+      <link>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</link>
+      <pubDate>Sun, 09 Jan 2022 00:13:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</guid>
+      <description>在啟動 Nginx 時會出現找不到 nginx.pid 的訊息
+$ nginx -s reload [error] 13265#13265: open() &amp;#34;/run/nginx.pid&amp;#34; failed (2: No such file or directory) 找到 nginx.pid 設定 在 /etc/nginx/nginx.conf 的 nginx 設定檔案可以看到 pid 的設定，可以確定 pid 檔案的設定是放在哪邊
+可能是設定在 /run/nginx.pid 或 /var/run/nginx.pid，要看看自己的設定 nginx.pid 設定在哪，我這邊是設定在 /run/nginx.pid
+# /etc/nginx/nginx.conf pid /run/nginx.pid; nginx.pid 生命週期 一般狀況在重啟 nginx 就會產生 nginx.pid 的檔案，關閉或刪除 nginx 程序時 nginx.pid 檔案就會不見
+$ cd /run $ find -name nginx.pid 所以在 nginx 服務啟動時理論上應該就會有 nginx.pid 的檔案，但若這個檔案不見的話可能會有幾種原因
+ 誤刪 rm -f nginx.</description>
+    </item>
+    
+    <item>
+      <title>解決 Nginx conflicting server name 問題</title>
+      <link>https://dev.kejyun.com/article/2022/01/nginx-conflicting-server-name/</link>
+      <pubDate>Sun, 09 Jan 2022 00:13:19 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2022/01/nginx-conflicting-server-name/</guid>
+      <description>在執行 nginx 服務時，出現了 conflicting server name on 0.0.0.0:80, ignored 的訊息
+$ nginx -s reload nginx: [warn] conflicting server name &amp;#34;kejyun.com&amp;#34; on 0.0.0.0:80, ignored 通常這個訊息表示，同一個網址或 port 有 2 個以上的設定，通常這樣是不會影響 nginx 的執行，nginx 會以優先載入的設定當作這個網址的設定，後面多餘的設定就會忽略不處理
+但看到這樣的訊息出現還是有點礙眼，可能會導致之後設定錯誤到錯誤的設定檔案，所以儘量還是不要出現錯誤警告訊息比較好
+出現 conflicting server name on 0.0.0.0:80, ignored 可能原因 同一個 server_name 但有相同的 port 像是我們要針對 80 port 的請求都 301 導向至 443 port，所以我們的設定會長得像這樣
+server { listen 80; server_name kejyun.com; return 301 https://$host$request_uri; } 然後在原本的 80 port 設定檔案加入了 listen 443 ssl; 傾聽 443 port 的設定，但忘了把原本的 80 port 設定刪除，這樣就導致有同樣的 80 port 都在等著處理請求</description>
+    </item>
+    
+  </channel>
+</rss>

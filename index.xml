@@ -6,7 +6,120 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Thu, 06 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>解決 /run/nginx.pid 的 No such file or directory 問題</title>
+        <link>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</link>
+        <pubDate>Sun, 09 Jan 2022 00:13:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/cover.png" alt="Featured image of post 解決 /run/nginx.pid 的 No such file or directory 問題" /&gt;&lt;p&gt;在啟動 Nginx 時會出現找不到 nginx.pid 的訊息&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nginx -s reload
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;error&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 13265#13265: open&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/run/nginx.pid&amp;#34;&lt;/span&gt; failed &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;2: No such file or directory&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;找到-nginxpid-設定&#34;&gt;找到 nginx.pid 設定&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; 的 nginx 設定檔案可以看到 pid 的設定，可以確定 pid 檔案的設定是放在哪邊&lt;/p&gt;
+&lt;p&gt;可能是設定在 &lt;code&gt;/run/nginx.pid&lt;/code&gt; 或 &lt;code&gt;/var/run/nginx.pid&lt;/code&gt;，要看看自己的設定 nginx.pid 設定在哪，我這邊是設定在 &lt;code&gt;/run/nginx.pid&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/nginx/nginx.conf&lt;/span&gt;
+pid /run/nginx.pid&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nginxpid-生命週期&#34;&gt;nginx.pid 生命週期&lt;/h2&gt;
+&lt;p&gt;一般狀況在重啟 nginx 就會產生 nginx.pid 的檔案，關閉或刪除 nginx 程序時 nginx.pid 檔案就會不見&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /run
+$ find -name nginx.pid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所以在 nginx 服務啟動時理論上應該就會有 nginx.pid 的檔案，但若這個檔案不見的話可能會有幾種原因&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;誤刪 rm -f nginx.pid&lt;/li&gt;
+&lt;li&gt;被同事惡搞？？？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;解決找不到-nginxpid-問題&#34;&gt;解決找不到 nginx.pid 問題&lt;/h2&gt;
+&lt;h3 id=&#34;1-找到-nginx-master-程序編號&#34;&gt;1. 找到 nginx master 程序編號&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;ps -ef | grep nginx&lt;/code&gt; 指令找出目前 nginx 執行中的程序有哪些&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ ps -ef &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep nginx
+ps -ef &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep nginx
+root     &lt;span class=&#34;m&#34;&gt;12964&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 03:27 ?        00:00:00 nginx: master process nginx -c /etc/nginx/nginx.conf
+www-data &lt;span class=&#34;m&#34;&gt;13614&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12964&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 03:47 ?        00:00:00 nginx: worker process
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上面可以找到 &lt;code&gt;nginx: master&lt;/code&gt; 的主要程序編號是 &lt;code&gt;12964&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root     &lt;span class=&#34;m&#34;&gt;12964&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 03:27 ?        00:00:00 nginx: master process nginx -c /etc/nginx/nginx.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-建立-nginxpid-檔案&#34;&gt;2. 建立 nginx.pid 檔案&lt;/h3&gt;
+&lt;p&gt;自己手動在 &lt;code&gt;/run/nginx.pid&lt;/code&gt; 路徑下建立 nginx.pid 檔案，並將 nginx 主要程序編號寫入到這個檔案中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每個人自己主機的 nginx 程序編號不同，要自己查清楚&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這裡將 nginx 主要程序編號寫入 &lt;code&gt;/run/nginx.pid&lt;/code&gt; 檔案中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /run
+$ touch nginx.pid
+$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;12964&amp;#34;&lt;/span&gt; &amp;gt; nginx.pid
+$ cat nginx.pid
+&lt;span class=&#34;m&#34;&gt;12964&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-重新啟動-nginx&#34;&gt;3. 重新啟動 nginx&lt;/h3&gt;
+&lt;p&gt;nginx.pid 建立完成後，重新載入 nginx，就不會看到 &lt;code&gt;open() &amp;quot;/run/nginx.pid&amp;quot; failed (2: No such file or directory)&lt;/code&gt; 的訊息了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nginx -s reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/Small-sunshine/p/11214305.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;谁掳走了 nginx.pid 文件？ - 活出自己范儿 - 博客园&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>解決 Nginx conflicting server name 問題</title>
+        <link>https://dev.kejyun.com/article/2022/01/nginx-conflicting-server-name/</link>
+        <pubDate>Sun, 09 Jan 2022 00:13:19 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2022/01/nginx-conflicting-server-name/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2022/01/nginx-conflicting-server-name/cover.png" alt="Featured image of post 解決 Nginx conflicting server name 問題" /&gt;&lt;p&gt;在執行 nginx 服務時，出現了 &lt;code&gt;conflicting server name on 0.0.0.0:80, ignored&lt;/code&gt; 的訊息&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ nginx -s reload
+nginx: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;warn&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; conflicting server name &lt;span class=&#34;s2&#34;&gt;&amp;#34;kejyun.com&amp;#34;&lt;/span&gt; on 0.0.0.0:80, ignored
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通常這個訊息表示，同一個網址或 port 有 2 個以上的設定，通常這樣是不會影響 nginx 的執行，nginx 會以優先載入的設定當作這個網址的設定，後面多餘的設定就會忽略不處理&lt;/p&gt;
+&lt;p&gt;但看到這樣的訊息出現還是有點礙眼，可能會導致之後設定錯誤到錯誤的設定檔案，所以儘量還是不要出現錯誤警告訊息比較好&lt;/p&gt;
+&lt;h2 id=&#34;出現-conflicting-server-name-on-000080-ignored-可能原因&#34;&gt;出現 conflicting server name on 0.0.0.0:80, ignored 可能原因&lt;/h2&gt;
+&lt;h3 id=&#34;同一個-server_name-但有相同的-port&#34;&gt;同一個 server_name 但有相同的 port&lt;/h3&gt;
+&lt;p&gt;像是我們要針對 80 port 的請求都 301 導向至 443 port，所以我們的設定會長得像這樣&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    listen 80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    server_name kejyun.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;301&lt;/span&gt; https://&lt;span class=&#34;nv&#34;&gt;$host$request_uri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然後在原本的 80 port 設定檔案加入了 &lt;code&gt;listen 443 ssl;&lt;/code&gt; 傾聽 443 port 的設定，但忘了把原本的 80 port 設定刪除，這樣就導致有同樣的 80 port 都在等著處理請求&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    listen 80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    listen &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; ssl&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    server_name kejyun.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;為了解決這個問題就需要把不需要的 port 設定關掉，這裡就把 443 port 中的 &lt;code&gt;listen 80&lt;/code&gt; 註解掉，這樣就不會出現錯誤訊息了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# listen 80;&lt;/span&gt;
+    listen &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; ssl&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    server_name kejyun.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;解決-conflicting-server-name-on-000080-ignored&#34;&gt;解決 conflicting server name on 0.0.0.0:80, ignored&lt;/h2&gt;
+&lt;h3 id=&#34;1-找出目前-nginx-設定檔案目錄&#34;&gt;1. 找出目前 nginx 設定檔案目錄&lt;/h3&gt;
+&lt;p&gt;通常網站的設定檔案沒有異動的話都會放在下面目錄中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/nginx/conf.d/&lt;/li&gt;
+&lt;li&gt;/etc/nginx/sites-enabled/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以我們會需要找 &lt;code&gt;/etc/nginx&lt;/code&gt; 目錄下面所有設定即可，若找不到的話，可以到 nginx 設定檔案 &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; 看看還有載入哪些目錄的設定檔&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/nginx/nginx.conf&lt;/span&gt;
+include /etc/nginx/conf.d/*.conf&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+include /etc/nginx/sites-enabled/*&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-找出-conflicting-server-name-的網址設定在哪些檔案&#34;&gt;2. 找出 conflicting server name 的網址設定在哪些檔案&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;grep&lt;/code&gt; 指令搜尋 &lt;code&gt;/etc/nginx&lt;/code&gt; 目錄中有出現 &lt;code&gt;kejyun.com&lt;/code&gt; 字樣的設定在哪，可以看到相關的設定檔案在 &lt;code&gt;/etc/nginx/sites-available/kejyun.com&lt;/code&gt; 檔案中，若有其他設定的話，可能會有重複出現在多個檔案，像是 &lt;code&gt;/etc/nginx/sites-available/other.kejyun.com&lt;/code&gt; ，那就要從這些設定檔案找到出現設定網址的地方&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ grep -r kejyun.com /etc/nginx/
+/etc/nginx/sites-available/kejyun.com:    server_name kejyun.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+/etc/nginx/sites-available/kejyun.com:    error_log  /var/log/nginx/kejyun.com-error.log error&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+/etc/nginx/sites-available/kejyun.com:    ssl_certificate /etc/letsencrypt/live/kejyun.com/fullchain.pem&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# managed by Certbot&lt;/span&gt;
+/etc/nginx/sites-available/kejyun.com:    ssl_certificate_key /etc/letsencrypt/live/kejyun.com/privkey.pem&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# managed by Certbot&lt;/span&gt;
+/etc/nginx/sites-available/kejyun.com:    server_name kejyun.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-檢查所有-server-name-出現的檔案&#34;&gt;3. 檢查所有 server name 出現的檔案&lt;/h3&gt;
+&lt;p&gt;檢查網域出現的設定檔案看彼此有沒有 &lt;code&gt;重複設定&lt;/code&gt; 的地方，像是 &lt;code&gt;設定同樣的 port&lt;/code&gt; 在處理請求，找出重複設定的狀況即可解決 &lt;code&gt;onflicting server name on 0.0.0.0:80, ignored&lt;/code&gt; 的問題了&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zhuiluoyu/p/5805650.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;服务器部署nginx报错 nginx: [warn] conflicting server name &amp;ldquo;localhost&amp;rdquo; on 0.0.0.0:80, ignored - 坠落鱼 - 博客园&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>使用 PotPlayer 擷取影片中的聲音</title>
         <link>https://dev.kejyun.com/article/2022/01/extract-audio-from-video-via-potplayer/</link>
         <pubDate>Thu, 06 Jan 2022 00:13:29 +0800</pubDate>
