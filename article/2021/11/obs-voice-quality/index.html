@@ -141,7 +141,7 @@
 		],
 		"genre":[""],
 		"articleSection": "",
-		"articleBody": "OBS 是一個開源的影片錄製及直撥軟體，可以支援跨平台系統\n支援系統  Windows Mac OS Ubuntu  錄音雜訊抑制 - Noise Suppression 雜訊抑制 再透過麥克風錄音，難免會錄到一些環境的噪音，像是 冷氣、電風扇，CPU 風扇、馬路上車流聲等等環境的噪音，可以透過 OBS 降噪過濾功能，將這些噪音過濾掉，讓錄音品質更好\n在錄音設備點選 齒輪圖示，然後點選 Filters，設定過濾功能\n OBS 提升錄音聲音品質 \n在 Filters 視窗中點選左下角加號，加入 Noise Suppression 雜訊抑制 選項\n OBS 提升錄音聲音品質   OBS 提升錄音聲音品質 \n加入降噪選項後，即可在選單左方看到多了降噪的功能，降噪的選項有兩種\n Speex (low CPU usage, low quality) RNNoise (good quality, more CPU usage)  預設為 RNNoise 降噪方式\n OBS 提升錄音聲音品質 \nRNNoise 降噪 降噪品質較好，但會需要 CPU 去運算需要降噪的聲音，若 CPU 運算能力不錯的話，建議使用這個選項\n OBS 提升錄音聲音品質 \nSpeex 降噪 指定降噪的分貝數，預設為 -30 dB，可以測試錄音看看，看看你的環境適合什麼樣的降噪分貝數\n0 dB 是沒有降噪，最高降噪分貝數為 -60 dB，降噪分貝數越多則錄音的聲音會越小聲，要先自行測試自己環境需要降噪的 dB 數為何，避免原本要錄的聲音也被降噪了\n   降噪結果 處理方式     0 dB 無降噪   -60 dB 最大降噪     OBS 提升錄音聲音品質 \n 提升錄音聲音音量 - Gain 增益 在錄音音量不夠高或過高的時候，可以透過 Gain Filter 去對音量大小進行處理，看要增大音量還是要降低音量\n在 Filters 視窗中點選左下角加號，加入 Gain 增益 選項\n OBS 提升錄音聲音品質 \n聲音增益範圍為 -30 dB ~ 30 dB 可以看你的聲音需要增強或降低多少\n OBS 提升錄音聲音品質 \n 錄音音量狀態控制 - Noise Gate 噪音閾 當有聲音夠大聲的時候才錄音，不夠大聲就不錄音，可以透過 Noise Gate Filter 對聲音進行偵測，指定音量以上的聲音才會進行收音\n 底噪聲音還是會錄進去，不能取代降噪功能\n  OBS 提升錄音聲音品質 \n可以控制音量的 Threshold 閾值 去設定音量要多少會做錄音與否的控制\n   選項 說明     Close Threshold 關閉閾值 小於指定 dB 數，關閉收音   Open Threshold 開啟閾值 大於指定 dB 數，開啟收音    控制音量不會爆音 - Compressor 動態壓縮處理器 在錄音時偶爾會音量過大而出現爆音，可以透過 Compressor 動態壓縮處理器 降低超過指定音量的爆音\n OBS 提升錄音聲音品質 \n只有超過音量的聲音才會被降低，在指定音量範圍內的聲音不會被降低\n   選項 說明     Ratio 比率 降低音量的比率，比率範圍為 32 ~ 1，預設為 10   Threshold 閾值 超過多大的音量會降低，閾值範圍為 -60 dB ~ 0 dB，預設為 -18 dB     OBS 提升錄音聲音品質 \n限制聲音最大大小 - Limiter 限制器 為了避免聲音超過範圍，可以設定聲音不會超過指定分貝數，超過的聲音皆降為 Threshold 臨界值 設定的分貝數\n OBS 提升錄音聲音品質 \n   選項 說明     Threshold 臨界值 聲音限制分貝數，閾值範圍為 -60 dB ~ 0 dB，預設為 -6 dB     OBS 提升錄音聲音品質 \n   限制結果 處理方式     0 dB 無限制   -60 dB 最大限制    參考資料  Open Broadcaster Software | OBS Wiki - Filters Guide | OBS Open Broadcaster Software - 維基百科，自由的百科全書 How to remove background noise in OBS Studio? (Step-by-step guide) OBS分享EP2│讓錄出來的聲音更乾淨，去除背景雜音，限制太大的音量！雜訊抑制、動態壓縮處理器、限制器、增益等內建聲音濾鏡使用分享！ - YouTube  "
+		"articleBody": "OBS 是一個開源的影片錄製及直撥軟體，可以支援跨平台系統\n支援系統  Windows Mac OS Ubuntu  錄音雜訊抑制 - Noise Suppression 雜訊抑制 再透過麥克風錄音，難免會錄到一些環境的噪音，像是 冷氣、電風扇，CPU 風扇、馬路上車流聲等等環境的噪音，可以透過 OBS 降噪過濾功能，將這些噪音過濾掉，讓錄音品質更好\n在錄音設備點選 齒輪圖示，然後點選 Filters，設定過濾功能\n\rOBS 提升錄音聲音品質\r\n在 Filters 視窗中點選左下角加號，加入 Noise Suppression 雜訊抑制 選項\n\rOBS 提升錄音聲音品質\r \rOBS 提升錄音聲音品質\r\n加入降噪選項後，即可在選單左方看到多了降噪的功能，降噪的選項有兩種\n Speex (low CPU usage, low quality) RNNoise (good quality, more CPU usage)  預設為 RNNoise 降噪方式\n\rOBS 提升錄音聲音品質\r\nRNNoise 降噪 降噪品質較好，但會需要 CPU 去運算需要降噪的聲音，若 CPU 運算能力不錯的話，建議使用這個選項\n\rOBS 提升錄音聲音品質\r\nSpeex 降噪 指定降噪的分貝數，預設為 -30 dB，可以測試錄音看看，看看你的環境適合什麼樣的降噪分貝數\n0 dB 是沒有降噪，最高降噪分貝數為 -60 dB，降噪分貝數越多則錄音的聲音會越小聲，要先自行測試自己環境需要降噪的 dB 數為何，避免原本要錄的聲音也被降噪了\n   降噪結果 處理方式     0 dB 無降噪   -60 dB 最大降噪    \rOBS 提升錄音聲音品質\r\n\r提升錄音聲音音量 - Gain 增益 在錄音音量不夠高或過高的時候，可以透過 Gain Filter 去對音量大小進行處理，看要增大音量還是要降低音量\n在 Filters 視窗中點選左下角加號，加入 Gain 增益 選項\n\rOBS 提升錄音聲音品質\r\n聲音增益範圍為 -30 dB ~ 30 dB 可以看你的聲音需要增強或降低多少\n\rOBS 提升錄音聲音品質\r\n\r錄音音量狀態控制 - Noise Gate 噪音閾 當有聲音夠大聲的時候才錄音，不夠大聲就不錄音，可以透過 Noise Gate Filter 對聲音進行偵測，指定音量以上的聲音才會進行收音\n 底噪聲音還是會錄進去，不能取代降噪功能\n \rOBS 提升錄音聲音品質\r\n可以控制音量的 Threshold 閾值 去設定音量要多少會做錄音與否的控制\n   選項 說明     Close Threshold 關閉閾值 小於指定 dB 數，關閉收音   Open Threshold 開啟閾值 大於指定 dB 數，開啟收音    控制音量不會爆音 - Compressor 動態壓縮處理器 在錄音時偶爾會音量過大而出現爆音，可以透過 Compressor 動態壓縮處理器 降低超過指定音量的爆音\n\rOBS 提升錄音聲音品質\r\n只有超過音量的聲音才會被降低，在指定音量範圍內的聲音不會被降低\n   選項 說明     Ratio 比率 降低音量的比率，比率範圍為 32 ~ 1，預設為 10   Threshold 閾值 超過多大的音量會降低，閾值範圍為 -60 dB ~ 0 dB，預設為 -18 dB    \rOBS 提升錄音聲音品質\r\n限制聲音最大大小 - Limiter 限制器 為了避免聲音超過範圍，可以設定聲音不會超過指定分貝數，超過的聲音皆降為 Threshold 臨界值 設定的分貝數\n\rOBS 提升錄音聲音品質\r\n   選項 說明     Threshold 臨界值 聲音限制分貝數，閾值範圍為 -60 dB ~ 0 dB，預設為 -6 dB    \rOBS 提升錄音聲音品質\r\n   限制結果 處理方式     0 dB 無限制   -60 dB 最大限制    參考資料  Open Broadcaster Software | OBS Wiki - Filters Guide | OBS Open Broadcaster Software - 維基百科，自由的百科全書 How to remove background noise in OBS Studio? (Step-by-step guide) OBS分享EP2│讓錄出來的聲音更乾淨，去除背景雜音，限制太大的音量！雜訊抑制、動態壓縮處理器、限制器、增益等內建聲音濾鏡使用分享！ - YouTube  "
 	}
 </script>
 
@@ -321,7 +321,7 @@
 	{
 		"@type": "Organization",
 		"name": "",
-		"sameAs": [ "\n"
+		"sameAs": [ "\r\n"
 		]
   	}
 ],
@@ -334,14 +334,14 @@
 	{
 		"@type": "Organization",
 		"name": "",
-		"sameAs": [ "\n"
+		"sameAs": [ "\r\n"
 		]
 	}
 ],
 "url": "https:\/\/dev.kejyun.com",
 "image": "https:\/\/dev.kejyun.com\/company\/team\/KeJyun.png",
 
-"sameAs": [ "\n\n\n\n\n\n\"https://ca.linkedin.com/in/kejyun/en\",\n\n\n\"https://github.com/kejyun\",\n\n\n\n\n\n\n\n\n\n\n\n\"\"\n"
+"sameAs": [ "\r\n\r\n\r\n\r\n\r\n\r\n\"https://ca.linkedin.com/in/kejyun/en\",\r\n\r\n\r\n\"https://github.com/kejyun\",\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\"\"\r\n"
 	]
 }
 </script>

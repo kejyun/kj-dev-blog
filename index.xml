@@ -6,7 +6,103 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Sun, 09 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 18 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用 PotPlayer 擷取影片中的截圖</title>
+        <link>https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/</link>
+        <pubDate>Tue, 18 Jan 2022 00:13:29 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/cover.png" alt="Featured image of post 使用 PotPlayer 擷取影片中的截圖" /&gt;&lt;p&gt;影片中若有一些畫面想要擷取出來，可以直接使用 PotPlayer 的影像擷取功能將影像儲存成圖片&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 81; flex-basis: 194px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1.png&#34; data-size=&#34;754x929&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1_huefd7e1d568aafbf12ce93940d3ed64e2_276280_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1_huefd7e1d568aafbf12ce93940d3ed64e2_276280_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;754&#34;
+				height=&#34;929&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;設定截圖路徑&#34;&gt;設定截圖路徑&lt;/h2&gt;
+&lt;p&gt;點選 &lt;code&gt;選擇截圖儲存路徑&lt;/code&gt;，可以設定截圖後的圖片要儲存在哪裡&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 81; flex-basis: 194px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2.png&#34; data-size=&#34;754x929&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2_huefd7e1d568aafbf12ce93940d3ed64e2_274333_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2_huefd7e1d568aafbf12ce93940d3ed64e2_274333_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;754&#34;
+				height=&#34;929&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;設定截圖檔案類型&#34;&gt;設定截圖檔案類型&lt;/h2&gt;
+&lt;p&gt;可以設定的截圖類型有下列 3 種&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BMP&lt;/li&gt;
+&lt;li&gt;JPEG&lt;/li&gt;
+&lt;li&gt;PNG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這邊可以設定你截圖的圖片類型格式&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 81; flex-basis: 194px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3.png&#34; data-size=&#34;754x929&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3_huefd7e1d568aafbf12ce93940d3ed64e2_274453_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3_huefd7e1d568aafbf12ce93940d3ed64e2_274453_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;754&#34;
+				height=&#34;929&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;截圖儲存成圖片到截圖路徑&#34;&gt;截圖儲存成圖片到截圖路徑&lt;/h2&gt;
+&lt;p&gt;截圖圖片有 2 種圖片大小可以選擇，一個是 &lt;code&gt;原始影片解析度&lt;/code&gt;，另一個是 &lt;code&gt;目前畫面大小&lt;/code&gt;，可以點選截圖選單或按快捷鍵進行圖片擷取&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原始影片解析度 &lt;code&gt;Ctrl + E&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;目前畫面大小 &lt;code&gt;Ctrl + Alt + E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 81; flex-basis: 194px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4.png&#34; data-size=&#34;754x929&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4_huefd7e1d568aafbf12ce93940d3ed64e2_275786_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4_huefd7e1d568aafbf12ce93940d3ed64e2_275786_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;754&#34;
+				height=&#34;929&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;複製影片圖片到剪貼簿&#34;&gt;複製影片圖片到剪貼簿&lt;/h2&gt;
+&lt;p&gt;複製圖片有 2 種圖片大小可以選擇，一個是 &lt;code&gt;原始影片解析度&lt;/code&gt;，另一個是 &lt;code&gt;目前畫面大小&lt;/code&gt;，可以點選截圖選單或按快捷鍵進行圖片複製&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原始影片解析度 &lt;code&gt;Ctrl + C&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;目前畫面大小 &lt;code&gt;Ctrl + Alt + C&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 81; flex-basis: 194px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5.png&#34; data-size=&#34;754x929&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5_huefd7e1d568aafbf12ce93940d3ed64e2_276918_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5_huefd7e1d568aafbf12ce93940d3ed64e2_276918_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;754&#34;
+				height=&#34;929&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;PotPlayer&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;PotPlayer&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ewdna.com/2014/06/potplayer-cut-picture.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用Potplayer將影片連續截圖(可設定間隔秒數及時間範圍) @ 符碼記憶&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>解決 /run/nginx.pid 的 No such file or directory 問題</title>
         <link>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</link>
         <pubDate>Sun, 09 Jan 2022 00:13:29 +0800</pubDate>

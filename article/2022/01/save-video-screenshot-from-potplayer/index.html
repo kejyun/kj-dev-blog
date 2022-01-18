@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='使用 PotPlayer 擷取影片中的截圖'><title>使用 PotPlayer 擷取影片中的截圖</title>
+
+<link rel='canonical' href='https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='使用 PotPlayer 擷取影片中的截圖'>
+<meta property='og:description' content='使用 PotPlayer 擷取影片中的截圖'>
+<meta property='og:url' content='https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/'>
+<meta property='og:site_name' content='KJ Dev'>
+<meta property='og:type' content='article'><meta property='article:section' content='Article' /><meta property='article:tag' content='PotPlayer' /><meta property='article:tag' content='影片截圖' /><meta property='article:tag' content='Video Screenshot' /><meta property='article:published_time' content='2022-01-18T00:13:29&#43;08:00'/><meta property='article:modified_time' content='2022-01-18T00:13:29&#43;08:00'/><meta property='og:image' content='https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/cover.png' />
+<meta name="twitter:title" content="使用 PotPlayer 擷取影片中的截圖">
+<meta name="twitter:description" content="使用 PotPlayer 擷取影片中的截圖"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/cover.png' />
+    <link rel="shortcut icon" href="images/observe-universe.png" />
+
+
+
+
+  
+    
+
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type":"Article",
+    "headline":"使用 PotPlayer 擷取影片中的截圖",
+    "url":"https:\/\/dev.kejyun.com\/article\/2022\/01\/save-video-screenshot-from-potplayer\/",
+    "keywords":[
+    
+        
+          
+          "PotPlayer"
+        
+          , 
+          "影片截圖"
+        
+          , 
+          "Video Screenshot"
+        
+    
+    ],
+    "image":{
+        "@type":"ImageObject",
+        "url" :
+        
+          "https:\/\/dev.kejyun.com",
+        
+        "width":"1200",
+        "height":"627"
+    },
+    "mainEntityOfPage":"True",
+    "publisher":{
+        "@type":"Organization",
+        "name":"",
+        "url":"https:\/\/dev.kejyun.com",
+        "logo":{
+            "@type":"ImageObject",
+            "url":"https:\/\/dev.kejyun.com",
+            "width":"357",
+            "height":"60"
+        }
+    },
+    "dateCreated":"2022-01-18T00:13:29\u002b08:00",
+    "datePublished":"2022-01-18T00:13:29\u002b08:00",
+    
+    
+    "author":"KeJyun",
+    "creator":"KeJyun",
+    
+    "dateModified":"2022-01-18T00:13:29\u002b08:00",
+    "articleSection":"TechArticle"
+}
+</script>
+
+  
+
+  
+    
+<script type="application/ld+json">
+	{
+		"@context":"http://schema.org",
+		"@type": "BlogPosting",
+		"image":
+		
+			"https:\/\/dev.kejyun.com",
+		
+		"url": "https:\/\/dev.kejyun.com\/article\/2022\/01\/save-video-screenshot-from-potplayer\/",
+		"headline": "使用 PotPlayer 擷取影片中的截圖",
+		"alternativeHeadline": "使用 PotPlayer 擷取影片中的截圖",
+		"dateCreated": "2022-01-18T00:13:29\u002b08:00",
+		"datePublished": "2022-01-18T00:13:29\u002b08:00",
+		"dateModified": "2022-01-18T00:13:29\u002b08:00",
+		"inLanguage": "zh-tw",
+		"isFamilyFriendly": "true",
+		"copyrightYear": "2022",
+		"copyrightHolder": "",
+		"contentLocation": {
+			"@type": "Place",
+			"name": "Taipei City"
+		},
+		
+		"accountablePerson": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"author": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		"creator": {
+			"@type": "Person",
+			"name": "KeJyun",
+			"url": "https:\/\/dev.kejyun.com"
+		},
+		
+		"publisher": {
+			"@type": "Organization",
+			"name": "",
+			"url": "https:\/\/dev.kejyun.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https:\/\/dev.kejyun.com",
+				"width":"357",
+				"height":"60"
+			}
+		},
+		"mainEntityOfPage": "True",
+		"keywords": [ 
+			"PotPlayer", "影片截圖", "Video Screenshot"
+		
+		],
+		"genre":[""],
+		"articleSection": "",
+		"articleBody": "影片中若有一些畫面想要擷取出來，可以直接使用 PotPlayer 的影像擷取功能將影像儲存成圖片\n\rPotPlayer\r\n設定截圖路徑 點選 選擇截圖儲存路徑，可以設定截圖後的圖片要儲存在哪裡\n\rPotPlayer\r\n設定截圖檔案類型 可以設定的截圖類型有下列 3 種\n BMP JPEG PNG  這邊可以設定你截圖的圖片類型格式\n\rPotPlayer\r\n截圖儲存成圖片到截圖路徑 截圖圖片有 2 種圖片大小可以選擇，一個是 原始影片解析度，另一個是 目前畫面大小，可以點選截圖選單或按快捷鍵進行圖片擷取\n 原始影片解析度 Ctrl \u002b E 目前畫面大小 Ctrl \u002b Alt \u002b E  \rPotPlayer\r\n複製影片圖片到剪貼簿 複製圖片有 2 種圖片大小可以選擇，一個是 原始影片解析度，另一個是 目前畫面大小，可以點選截圖選單或按快捷鍵進行圖片複製\n 原始影片解析度 Ctrl \u002b C 目前畫面大小 Ctrl \u002b Alt \u002b C  \rPotPlayer\r\n參考資料  使用Potplayer將影片連續截圖(可設定間隔秒數及時間範圍) @ 符碼記憶  "
+	}
+</script>
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+	  
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+
+
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement":
+		[{
+			"@type": "ListItem",
+				"position": 1,
+				"item": {
+					"@id": "https:\/\/dev.kejyun.com",
+					"name": "Home"
+				}
+		},
+		
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  2 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article",
+						"name": "Article"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  3 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2022",
+						"name": "2022nd"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  4 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2022\/01",
+						"name": "1st"
+					}
+				}
+				, 
+			
+		
+			
+				{
+					"@type": "ListItem",
+					"position":  5 ,
+					"item": {
+						"@id": "https:\/\/dev.kejyun.co\/\/article\/2022\/01\/save-video-screenshot-from-potplayer",
+						"name": "Save video screenshot from potplayer"
+					}
+				}
+				, 
+			
+		
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+<script type="application/ld+json">
+{
+"@context": "http://www.schema.org",
+"@type": "Person",
+"@id": "https:\/\/dev.kejyun.com\/article\/2022\/01\/save-video-screenshot-from-potplayer\/",
+"name": "KeJyun",
+"alternateName": "KeJyun",
+"nationality": "Taiwan",
+
+"affiliation": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\r\n"
+		]
+  	}
+],
+
+"gender": "male",
+"Description": "IT Manager",
+"disambiguatingDescription": "Hi I\u0027m Web Developer in Taiwan",
+
+"worksFor": [
+	{
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [ "\r\n"
+		]
+	}
+],
+"url": "https:\/\/dev.kejyun.com",
+"image": "https:\/\/dev.kejyun.com\/company\/team\/KeJyun.png",
+
+"sameAs": [ "\r\n\r\n\r\n\r\n\r\n\r\n\"https://ca.linkedin.com/in/kejyun/en\",\r\n\r\n\r\n\"https://github.com/kejyun\",\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\"\"\r\n"
+	]
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+<script type="application/ld+json">
+[
+	{
+		"@context": "http://schema.org",
+		"@type": "Webpage",
+		"specialty": "",
+		"mainContentOfPage": {
+			"@context": "http://schema.org/",
+			"@type": "WebPageElement",
+			"cssSelector": ".body-content"
+		},
+		"primaryImageOfPage": "https:\/\/dev.kejyun.com"
+	},
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"@id": "https:\/\/dev.kejyun.com",
+		"additionalType": ["CreativeWork", "Person"],
+		"url": "https:\/\/dev.kejyun.com",
+		"name": "KJ Dev",
+		"alternateName": "KJ Dev",
+		"headline": "",
+		"image": "https:\/\/dev.kejyun.com",
+		"inLanguage": "zh-tw",
+		"author": "",
+		"description": "",
+		"disambiguatingDescription": "",
+		"isFamilyFriendly": "http://schema.org/True",
+		"contentRating": "NR",
+		"sourceOrganization": "KJ Dev",
+		"publisher": {
+		  "@type": "Organization",
+		  "name": "KJ Dev",
+		  "logo": {
+		    "@type": "ImageObject",
+		    "url": "https:\/\/dev.kejyun.com",
+		    "height": 60,
+		    "width": 107
+		  }
+		},
+		"mainEntity": {
+			"@context": "http://schema.org",
+			"@type": "localBusiness",
+			"name": "KJ Dev",
+			"image":"https:\/\/dev.kejyun.com",
+			
+
+			
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Taipei street",
+				"addressLocality": "Taipei City",
+				"addressRegion": "Taipei",
+				"addressCountry": "Taiwan",
+				"postalCode": "100"
+			},
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.5",
+				"reviewCount": "50"
+			}
+		},
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https:\/\/dev.kejyun.com?search={search_term}",
+			"query-input": "required name=search_term"
+		},
+		"keywords":[
+			
+		],
+		"hasPart": [
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPHeader",
+				"@id": "#header",
+				"headline": "",
+				"cssSelector": "#header",
+				"potentialAction": [],
+				"@graph":
+				[
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "",
+						"url": "https:\/\/dev.kejyun.com\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "About",
+						"url": "https:\/\/dev.kejyun.com\/about\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Archives",
+						"url": "https:\/\/dev.kejyun.com\/archives\/"
+					}, 
+					{
+						"@context": "https://schema.org",
+						"@type":"SiteNavigationElement",
+						"@id":"#header",
+						"name": "Search",
+						"url": "https:\/\/dev.kejyun.com\/search\/"
+					}]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPSidebar",
+				"cssSelector": "#sidebar",
+				"citation": [
+				"https:\/\/dev.kejyun.com\/", "https:\/\/dev.kejyun.com\/about\/", "https:\/\/dev.kejyun.com\/archives\/", "https:\/\/dev.kejyun.com\/search\/"
+				]
+			},
+			{
+				"@context": "http://schema.org/",
+				"@type": "WPFooter",
+				"cssSelector": ".footer",
+				"@id": "#footer",
+				"copyrightHolder":"KJ Dev",
+				"publisher": "KJ Dev",
+				"copyrightYear":"2022"
+			}
+		]
+	}
+]
+</script>
+
+  
+
+  
+
+<link rel="canonical" href="https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/" />
+
+
+<script async 
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1990193713845546"
+        crossorigin="anonymous"
+></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZQ2D0XJX3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RZQ2D0XJX3', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/observe-universe_hua7e3d7bd738448651eaa0b1d778255e2_652378_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://dev.kejyun.com">KJ Dev</a></h1>
+        <h2 class="site-description">KJ 開發日誌</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/article/2022/01/save-video-screenshot-from-potplayer/">
+                <img src="/article/2022/01/save-video-screenshot-from-potplayer/cover_hu5dfe8c7ed77aac64cd47918e0ae04b0a_381819_800x0_resize_box_2.png"
+                        srcset="/article/2022/01/save-video-screenshot-from-potplayer/cover_hu5dfe8c7ed77aac64cd47918e0ae04b0a_381819_800x0_resize_box_2.png 800w, /article/2022/01/save-video-screenshot-from-potplayer/cover_hu5dfe8c7ed77aac64cd47918e0ae04b0a_381819_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="378" 
+                        loading="lazy"
+                        alt="Featured image of post 使用 PotPlayer 擷取影片中的截圖" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/potplayer/" >
+                PotPlayer
+            </a>
+        
+            <a href="/categories/%E5%BD%B1%E7%89%87%E6%88%AA%E5%9C%96/" >
+                影片截圖
+            </a>
+        
+            <a href="/categories/video-screenshot/" >
+                Video Screenshot
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/article/2022/01/save-video-screenshot-from-potplayer/">使用 PotPlayer 擷取影片中的截圖</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        使用 PotPlayer 擷取影片中的截圖
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jan 18, 2022</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+  
+  
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1990193713845546"
+     data-ad-slot="5417606383"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+  
+  
+  <p>影片中若有一些畫面想要擷取出來，可以直接使用 PotPlayer 的影像擷取功能將影像儲存成圖片</p>
+<p><figure style="flex-grow: 81; flex-basis: 194px">
+		<a href="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1.png" data-size="754x929"><img src="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1.png"
+				srcset="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1_huefd7e1d568aafbf12ce93940d3ed64e2_276280_480x0_resize_box_2.png 480w, /article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-1_huefd7e1d568aafbf12ce93940d3ed64e2_276280_1024x0_resize_box_2.png 1024w"
+				width="754"
+				height="929"
+				loading="lazy"
+				alt="PotPlayer">
+		</a>
+		
+		<figcaption>PotPlayer</figcaption>
+		
+	</figure></p>
+<h2 id="設定截圖路徑">設定截圖路徑</h2>
+<p>點選 <code>選擇截圖儲存路徑</code>，可以設定截圖後的圖片要儲存在哪裡</p>
+<p><figure style="flex-grow: 81; flex-basis: 194px">
+		<a href="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2.png" data-size="754x929"><img src="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2.png"
+				srcset="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2_huefd7e1d568aafbf12ce93940d3ed64e2_274333_480x0_resize_box_2.png 480w, /article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-2_huefd7e1d568aafbf12ce93940d3ed64e2_274333_1024x0_resize_box_2.png 1024w"
+				width="754"
+				height="929"
+				loading="lazy"
+				alt="PotPlayer">
+		</a>
+		
+		<figcaption>PotPlayer</figcaption>
+		
+	</figure></p>
+<h2 id="設定截圖檔案類型">設定截圖檔案類型</h2>
+<p>可以設定的截圖類型有下列 3 種</p>
+<ul>
+<li>BMP</li>
+<li>JPEG</li>
+<li>PNG</li>
+</ul>
+<p>這邊可以設定你截圖的圖片類型格式</p>
+<p><figure style="flex-grow: 81; flex-basis: 194px">
+		<a href="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3.png" data-size="754x929"><img src="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3.png"
+				srcset="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3_huefd7e1d568aafbf12ce93940d3ed64e2_274453_480x0_resize_box_2.png 480w, /article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-3_huefd7e1d568aafbf12ce93940d3ed64e2_274453_1024x0_resize_box_2.png 1024w"
+				width="754"
+				height="929"
+				loading="lazy"
+				alt="PotPlayer">
+		</a>
+		
+		<figcaption>PotPlayer</figcaption>
+		
+	</figure></p>
+<h2 id="截圖儲存成圖片到截圖路徑">截圖儲存成圖片到截圖路徑</h2>
+<p>截圖圖片有 2 種圖片大小可以選擇，一個是 <code>原始影片解析度</code>，另一個是 <code>目前畫面大小</code>，可以點選截圖選單或按快捷鍵進行圖片擷取</p>
+<ul>
+<li>原始影片解析度 <code>Ctrl + E</code></li>
+<li>目前畫面大小 <code>Ctrl + Alt + E</code></li>
+</ul>
+<p><figure style="flex-grow: 81; flex-basis: 194px">
+		<a href="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4.png" data-size="754x929"><img src="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4.png"
+				srcset="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4_huefd7e1d568aafbf12ce93940d3ed64e2_275786_480x0_resize_box_2.png 480w, /article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-4_huefd7e1d568aafbf12ce93940d3ed64e2_275786_1024x0_resize_box_2.png 1024w"
+				width="754"
+				height="929"
+				loading="lazy"
+				alt="PotPlayer">
+		</a>
+		
+		<figcaption>PotPlayer</figcaption>
+		
+	</figure></p>
+<h2 id="複製影片圖片到剪貼簿">複製影片圖片到剪貼簿</h2>
+<p>複製圖片有 2 種圖片大小可以選擇，一個是 <code>原始影片解析度</code>，另一個是 <code>目前畫面大小</code>，可以點選截圖選單或按快捷鍵進行圖片複製</p>
+<ul>
+<li>原始影片解析度 <code>Ctrl + C</code></li>
+<li>目前畫面大小 <code>Ctrl + Alt + C</code></li>
+</ul>
+<p><figure style="flex-grow: 81; flex-basis: 194px">
+		<a href="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5.png" data-size="754x929"><img src="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5.png"
+				srcset="/article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5_huefd7e1d568aafbf12ce93940d3ed64e2_276918_480x0_resize_box_2.png 480w, /article/2022/01/save-video-screenshot-from-potplayer/images/potplayer-video-image-capture-5_huefd7e1d568aafbf12ce93940d3ed64e2_276918_1024x0_resize_box_2.png 1024w"
+				width="754"
+				height="929"
+				loading="lazy"
+				alt="PotPlayer">
+		</a>
+		
+		<figcaption>PotPlayer</figcaption>
+		
+	</figure></p>
+<h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a class="link" href="https://www.ewdna.com/2014/06/potplayer-cut-picture.html"  target="_blank" rel="noopener"
+    >使用Potplayer將影片連續截圖(可設定間隔秒數及時間範圍) @ 符碼記憶</a></li>
+</ul>
+
+
+  
+  
+
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="8247872484"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+
+  
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-1990193713845546"
+       data-ad-slot="3237080773"></ins>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/potplayer/">PotPlayer</a>
+        
+            <a href="/tags/%E5%BD%B1%E7%89%87%E6%88%AA%E5%9C%96/">影片截圖</a>
+        
+            <a href="/tags/video-screenshot/">Video Screenshot</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kj-dev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+            2021 -
+        
+        2022 KJ Dev
+    </section>
+
+    <section class="powerby">
+        
+            All rights reserved，未經允許不得隨意轉載 <br/>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

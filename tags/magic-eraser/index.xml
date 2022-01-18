@@ -16,14 +16,14 @@
       <description>Photo by Joseph Pearson on Unsplash
  在 iPad 我們可以用 Magic Eraser 加上 Apple Pencil 快速地替圖片去背，取得我們想要的圖片素材
 Magic Eraser 去背流程 選擇你要去背的照片，這邊以對 Apple Pencil 去做範例
- Magic Eraser 去背 
+Magic Eraser 去背
 可以透過四周的移動點，縮小素材範圍
- Magic Eraser 去背   Magic Eraser 去背 
+Magic Eraser 去背 Magic Eraser 去背
 點選下方第一個 Magic Wand 魔術棒，然後選擇下方的 相似色 容許值，若容許值越大，會有越多顏色範圍被選取到
 因為 Apple Pencil 是白色，背景也是白色，所以我這邊的容許值就不能設定很高，不然會連 Apple Pencil 素材也被選到，這邊是設定為 2%，可以根據自己素材的狀況去做調整
- Magic Eraser 去背 
+Magic Eraser 去背
 選擇下方第 2 個 Erase 清除 工具，將 Magic Wand 魔術棒 沒有選到的去背背景手動清除
- Magic Eraser 去背</description>
+Magic Eraser 去背</description>
     </item>
     
   </channel>

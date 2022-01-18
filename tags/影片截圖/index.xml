@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>影片截圖 on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/%E5%BD%B1%E7%89%87%E6%88%AA%E5%9C%96/</link>
+    <description>Recent content in 影片截圖 on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 18 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/%E5%BD%B1%E7%89%87%E6%88%AA%E5%9C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 PotPlayer 擷取影片中的截圖</title>
+      <link>https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/</link>
+      <pubDate>Tue, 18 Jan 2022 00:13:29 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/</guid>
+      <description>影片中若有一些畫面想要擷取出來，可以直接使用 PotPlayer 的影像擷取功能將影像儲存成圖片
+PotPlayer
+設定截圖路徑 點選 選擇截圖儲存路徑，可以設定截圖後的圖片要儲存在哪裡
+PotPlayer
+設定截圖檔案類型 可以設定的截圖類型有下列 3 種
+ BMP JPEG PNG  這邊可以設定你截圖的圖片類型格式
+PotPlayer
+截圖儲存成圖片到截圖路徑 截圖圖片有 2 種圖片大小可以選擇，一個是 原始影片解析度，另一個是 目前畫面大小，可以點選截圖選單或按快捷鍵進行圖片擷取
+ 原始影片解析度 Ctrl + E 目前畫面大小 Ctrl + Alt + E  PotPlayer
+複製影片圖片到剪貼簿 複製圖片有 2 種圖片大小可以選擇，一個是 原始影片解析度，另一個是 目前畫面大小，可以點選截圖選單或按快捷鍵進行圖片複製
+ 原始影片解析度 Ctrl + C 目前畫面大小 Ctrl + Alt + C  PotPlayer
+參考資料  使用Potplayer將影片連續截圖(可設定間隔秒數及時間範圍) @ 符碼記憶  </description>
+    </item>
+    
+  </channel>
+</rss>
