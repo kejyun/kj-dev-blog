@@ -6,7 +6,217 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Tue, 18 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 16 Feb 2022 00:00:42 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2022 使用剪映 2.6 版本 AI 辨識產生繁體中文字幕</title>
+        <link>https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/</link>
+        <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/cover.png" alt="Featured image of post 2022 使用剪映 2.6 版本 AI 辨識產生繁體中文字幕" /&gt;&lt;blockquote&gt;
+&lt;p&gt;剪映版本: 2.6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;前期準備&#34;&gt;前期準備&lt;/h2&gt;
+&lt;p&gt;目前 (2022/02) 使用剪映 AI 識別字幕需要影片檔才能夠識別，若單純只有聲音檔的話識別會失敗，所以可以將你要識別的影片，&lt;strong&gt;去除掉背景音樂僅留對話聲音，減少辨識錯誤機率，並使用最低解析度輸出，盡量讓檔案越小越好&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;這邊在 Adobe Premiere Pro 使用 &lt;code&gt;HEVC (H.265) / SD 480p&lt;/code&gt; 格式輸出&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 182; flex-basis: 436px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/premiere-pro-caption-1.png&#34; data-size=&#34;446x245&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/premiere-pro-caption-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/premiere-pro-caption-1_hu0383f325dad9087464b36217398ca51e_14808_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/premiere-pro-caption-1_hu0383f325dad9087464b36217398ca51e_14808_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;446&#34;
+				height=&#34;245&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;匯出僅含對話最小解析度的影片聲音檔&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;匯出僅含對話最小解析度的影片聲音檔&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用剪映-ai-辨識字幕&#34;&gt;使用剪映 AI 辨識字幕&lt;/h2&gt;
+&lt;p&gt;打開剪映後，將素材拖曳至時間軸&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前測試 60 分鐘左右的影片是可以正常輸出的，辨識時間大概 10 分鐘左右，但每次要辨識新的影片需要將剪映關閉再重新打開，才能夠再繼續辨識&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 109; flex-basis: 261px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-1.png&#34; data-size=&#34;897x822&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-1.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-1_hufae027f16dab908b0de760d9fd60b082_37137_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-1_hufae027f16dab908b0de760d9fd60b082_37137_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;897&#34;
+				height=&#34;822&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;點選左上方的工具箱 &lt;code&gt;文本 / 智能字幕 / 開始識別&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 160; flex-basis: 386px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-2.png&#34; data-size=&#34;771x479&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-2.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-2_hufa51515a2fac0cc3aac04dc4405649d6_35692_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-2_hufa51515a2fac0cc3aac04dc4405649d6_35692_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;771&#34;
+				height=&#34;479&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;你會在畫面上看到影片正在識別中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;確保你的電腦是有連線到網路的，因為剪映 AI 識別是需要連線到網路才能夠進行識別&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 98; flex-basis: 237px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-3.png&#34; data-size=&#34;177x179&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-3.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-3_huf2179ac31f3176daa10c48f8482af322_4540_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-3_huf2179ac31f3176daa10c48f8482af322_4540_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;177&#34;
+				height=&#34;179&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;字幕識別完成後會在時間軸上方看到整個完整的字幕，由於剪映是中國 &lt;code&gt;抖音&lt;/code&gt; 開發提供給創作者的免費剪輯軟體，所以產生出來的字幕為 &lt;code&gt;簡體中文&lt;/code&gt;，我們會需要再將字幕轉換成 &lt;code&gt;繁體中文&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 191; flex-basis: 459px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-4.png&#34; data-size=&#34;1500x784&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-4.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-4_hu5c42bbb3c26af0e68f1a650d848de49a_71423_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-4_hu5c42bbb3c26af0e68f1a650d848de49a_71423_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1500&#34;
+				height=&#34;784&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;轉換簡體中文字幕為繁體中文字幕&#34;&gt;轉換簡體中文字幕為繁體中文字幕&lt;/h2&gt;
+&lt;p&gt;我們可以下載&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackychu0830/jy-srt-tools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;剪映字幕工具箱&lt;/a&gt;來做剪映字幕翻譯工具，他提供 Mac 及 Windows 版本&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 109; flex-basis: 263px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-5.png&#34; data-size=&#34;957x871&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-5.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-5_hu75df79c368bf25c9bb2e3f377cccc4ba_340348_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-5_hu75df79c368bf25c9bb2e3f377cccc4ba_340348_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;957&#34;
+				height=&#34;871&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackychu0830/jy-srt-tools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;剪映字幕工具箱&lt;/a&gt;需要 Java 11 以上的環境才可以執行，在執行前請先確定自己作業系統符合的執行環境&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 110; flex-basis: 264px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-6.png&#34; data-size=&#34;961x871&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-6.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-6_hu95213f65d2aa8e215ed769537f2457ae_87729_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-6_hu95213f65d2aa8e215ed769537f2457ae_87729_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;961&#34;
+				height=&#34;871&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;我這邊是下載 &lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/java/openjdk/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Java OpenJDK 17&lt;/a&gt; 版本，這邊可以選擇自己作業系統環境的版本下載安裝即可&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 118; flex-basis: 285px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-7.png&#34; data-size=&#34;886x745&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-7.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-7_hu19ce45a78a311206f6bf442efbde4a96_65532_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-7_hu19ce45a78a311206f6bf442efbde4a96_65532_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;886&#34;
+				height=&#34;745&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;再來執行&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackychu0830/jy-srt-tools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;剪映字幕工具箱&lt;/a&gt;軟體，可以看到左方會自動載入目前剪映的所有編輯中的影片專案，點選該專案後可以在右方看到剛剛剪映 AI 辨識的簡體中文字幕&lt;/p&gt;
+&lt;p&gt;點選 &lt;code&gt;簡體轉換為繁體&lt;/code&gt; 按鈕後即可立即將字幕翻譯成繁體中文&lt;/p&gt;
+&lt;p&gt;翻譯完成後到剪映軟體即可立即看到字幕已經變成繁體中文了&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 183; flex-basis: 440px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-8.png&#34; data-size=&#34;1371x747&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-8.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-8_hua5775cd1e07595af5a604f7b99ba629d_90392_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-8_hua5775cd1e07595af5a604f7b99ba629d_90392_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1371&#34;
+				height=&#34;747&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;
+&lt;figure style=&#34;flex-grow: 183; flex-basis: 440px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-9.png&#34; data-size=&#34;1366x745&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-9.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-9_hu9b80b752ae32619d1522aeb672b0a87f_82825_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-9_hu9b80b752ae32619d1522aeb672b0a87f_82825_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1366&#34;
+				height=&#34;745&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;畢竟剪映 AI 可以幫我們自動產生出字幕，但畢竟還是有辨識錯誤的狀況發生，&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackychu0830/jy-srt-tools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;剪映字幕工具箱&lt;/a&gt;提供字幕編輯工具即可尋找並取代錯誤的文字&lt;/p&gt;
+&lt;p&gt;在軟體選單上方點選 &lt;code&gt;編輯 / 替換&lt;/code&gt;，並輸入 &lt;code&gt;尋找字串&lt;/code&gt; 及 &lt;code&gt;替換字串&lt;/code&gt;，並全部取代即可快速將辨識錯誤的文字進行修正&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 183; flex-basis: 441px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-10.png&#34; data-size=&#34;1367x743&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-10.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-10_hu4cf7c6e5816058b63b2918ca91c6e5bb_100928_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-10_hu4cf7c6e5816058b63b2918ca91c6e5bb_100928_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1367&#34;
+				height=&#34;743&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;輸出字幕&#34;&gt;輸出字幕&lt;/h2&gt;
+&lt;p&gt;字幕可以直接輸出成 STR 或 TXT 檔，可以再將這個字幕檔案匯入到你使用的剪輯軟體中即可&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 183; flex-basis: 440px&#34;&gt;
+		&lt;a href=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-11.png&#34; data-size=&#34;1371x747&#34;&gt;&lt;img src=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-11.png&#34;
+				srcset=&#34;https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-11_hu79772c998174f7ebe2e747c5eaaa96fb_89137_480x0_resize_box_2.png 480w, https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/images/jianying-pro-caption-11_hu79772c998174f7ebe2e747c5eaaa96fb_89137_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1371&#34;
+				height=&#34;747&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;使用剪映 2.6 AI 辨識繁體中文字幕&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;使用剪映 2.6 AI 辨識繁體中文字幕&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://lv.ulikecam.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;剪映专业版-全能易用的桌面端剪辑软件-轻而易剪 上演大幕&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=td1EO3I1jJA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;剪映字幕工具箱 2.0 | 簡轉繁 | SRT 匯出 | SRT 載入 | 字幕編輯 - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackychu0830/jy-srt-tools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub - jackychu0830/jy-srt-tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackychu0830/jy-cn-tw-translator&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub - jackychu0830/jy-cn-tw-translator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://otranscribe.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;oTranscribe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=0pwgkgKbmGE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2021字幕最快上法大公開| AI語音辨識?! Srt輸出&amp;amp;支援Final Cut Pro字幕內置| 步驟完整教學 - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=meuo9zSR5AQ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2021最新最快上字幕的方法！完全免費 支持繁體中文｜剪映專業版 電腦版 簡轉繁 完整教學 比 pyTranscriber 準確率更高 - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=UWyYYE_y9Hk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2021必學的上字幕方式！搭配剪映AI輔助上字幕節省超多時間！加入我自己的流程讓斷句更自然精準，改錯字也更容易快速！ - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=xADh2qa8-c8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【影片上字幕教學】如何快速上字幕 | 免費字幕製作軟體 - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=2s45I25Hg-o&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;最快、最準的「AI上字幕」！cc字幕＋內嵌字幕一次搞定！（可上繁中） - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://baike.baidu.hk/item/%E5%89%AA%E6%98%A0%E5%B0%88%E6%A5%AD%E7%89%88/56755550&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;剪映專業版_百度百科&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>使用 PotPlayer 擷取影片中的截圖</title>
         <link>https://dev.kejyun.com/article/2022/01/save-video-screenshot-from-potplayer/</link>
         <pubDate>Tue, 18 Jan 2022 00:13:29 +0800</pubDate>

@@ -6,7 +6,124 @@
     <description>Recent content in Tags on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 18 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Feb 2022 00:00:42 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI字幕</title>
+      <link>https://dev.kejyun.com/tags/ai%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/ai%E5%AD%97%E5%B9%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中文字幕自動產生</title>
+      <link>https://dev.kejyun.com/tags/%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9F/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中文字幕辨識</title>
+      <link>https://dev.kejyun.com/tags/%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95%E8%BE%A8%E8%AD%98/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95%E8%BE%A8%E8%AD%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>剪映</title>
+      <link>https://dev.kejyun.com/tags/%E5%89%AA%E6%98%A0/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E5%89%AA%E6%98%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>字幕</title>
+      <link>https://dev.kejyun.com/tags/%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E5%AD%97%E5%B9%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>字幕產生</title>
+      <link>https://dev.kejyun.com/tags/%E5%AD%97%E5%B9%95%E7%94%A2%E7%94%9F/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E5%AD%97%E5%B9%95%E7%94%A2%E7%94%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>快速上字幕</title>
+      <link>https://dev.kejyun.com/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E5%AD%97%E5%B9%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>繁體中文字幕</title>
+      <link>https://dev.kejyun.com/tags/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>聲音轉字幕</title>
+      <link>https://dev.kejyun.com/tags/%E8%81%B2%E9%9F%B3%E8%BD%89%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E8%81%B2%E9%9F%B3%E8%BD%89%E5%AD%97%E5%B9%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自動上字幕</title>
+      <link>https://dev.kejyun.com/tags/%E8%87%AA%E5%8B%95%E4%B8%8A%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E8%87%AA%E5%8B%95%E4%B8%8A%E5%AD%97%E5%B9%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自動產生srt</title>
+      <link>https://dev.kejyun.com/tags/%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9Fsrt/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9Fsrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>語音識別</title>
+      <link>https://dev.kejyun.com/tags/%E8%AA%9E%E9%9F%B3%E8%AD%98%E5%88%A5/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E8%AA%9E%E9%9F%B3%E8%AD%98%E5%88%A5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>語音轉字幕</title>
+      <link>https://dev.kejyun.com/tags/%E8%AA%9E%E9%9F%B3%E8%BD%89%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/tags/%E8%AA%9E%E9%9F%B3%E8%BD%89%E5%AD%97%E5%B9%95/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PotPlayer</title>
       <link>https://dev.kejyun.com/tags/potplayer/</link>

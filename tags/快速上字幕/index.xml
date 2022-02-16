@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>快速上字幕 on KJ Dev</title>
+    <link>https://dev.kejyun.com/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E5%AD%97%E5%B9%95/</link>
+    <description>Recent content in 快速上字幕 on KJ Dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 16 Feb 2022 00:00:42 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E5%AD%97%E5%B9%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022 使用剪映 2.6 版本 AI 辨識產生繁體中文字幕</title>
+      <link>https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/</guid>
+      <description>剪映版本: 2.6
+ 前期準備 目前 (2022/02) 使用剪映 AI 識別字幕需要影片檔才能夠識別，若單純只有聲音檔的話識別會失敗，所以可以將你要識別的影片，去除掉背景音樂僅留對話聲音，減少辨識錯誤機率，並使用最低解析度輸出，盡量讓檔案越小越好
+這邊在 Adobe Premiere Pro 使用 HEVC (H.265) / SD 480p 格式輸出
+匯出僅含對話最小解析度的影片聲音檔
+使用剪映 AI 辨識字幕 打開剪映後，將素材拖曳至時間軸
+ 目前測試 60 分鐘左右的影片是可以正常輸出的，辨識時間大概 10 分鐘左右，但每次要辨識新的影片需要將剪映關閉再重新打開，才能夠再繼續辨識
+ 使用剪映 2.6 AI 辨識繁體中文字幕
+點選左上方的工具箱 文本 / 智能字幕 / 開始識別
+使用剪映 2.6 AI 辨識繁體中文字幕
+你會在畫面上看到影片正在識別中
+ 確保你的電腦是有連線到網路的，因為剪映 AI 識別是需要連線到網路才能夠進行識別
+ 使用剪映 2.6 AI 辨識繁體中文字幕
+字幕識別完成後會在時間軸上方看到整個完整的字幕，由於剪映是中國 抖音 開發提供給創作者的免費剪輯軟體，所以產生出來的字幕為 簡體中文，我們會需要再將字幕轉換成 繁體中文</description>
+    </item>
+    
+  </channel>
+</rss>
