@@ -6,7 +6,50 @@
         <description>Recent content on KJ Dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Wed, 16 Feb 2022 00:00:42 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 24 Feb 2022 00:00:42 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>解決 Nginx -s reload 時，出現 /var/run/nginx.pid failed 的問題</title>
+        <link>https://dev.kejyun.com/article/2022/02/nginx-s-reload-var-run-nginx-pid-failed/</link>
+        <pubDate>Thu, 24 Feb 2022 00:00:42 +0800</pubDate>
+        
+        <guid>https://dev.kejyun.com/article/2022/02/nginx-s-reload-var-run-nginx-pid-failed/</guid>
+        <description>&lt;img src="https://dev.kejyun.com/article/2022/02/nginx-s-reload-var-run-nginx-pid-failed/cover.png" alt="Featured image of post 解決 Nginx -s reload 時，出現 /var/run/nginx.pid failed 的問題" /&gt;&lt;p&gt;在使用 &lt;code&gt;nginx -s reload&lt;/code&gt; 載入時跑出錯誤訊息&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nginx: [error] open() &amp;ldquo;/var/run/nginx.pid&amp;rdquo; failed (2: No such file or directory)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;解決方式&#34;&gt;解決方式&lt;/h2&gt;
+&lt;p&gt;重新載入設定&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nginx -c /etc/nginx/nginx.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重新啟動 Nginx，Problem Solved!!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nginx -s reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;分析&#34;&gt;分析&lt;/h2&gt;
+&lt;p&gt;指令說明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nginx 	        &lt;span class=&#34;c1&#34;&gt;#打開 nginx&lt;/span&gt;
+nginx -t        &lt;span class=&#34;c1&#34;&gt;#測試配置文件是否有語法錯誤&lt;/span&gt;
+nginx -s reopen	&lt;span class=&#34;c1&#34;&gt;#重啟 Nginx&lt;/span&gt;
+nginx -s reload	&lt;span class=&#34;c1&#34;&gt;#重新加載 Nginx 配置文件，然後以優雅的方式重啟 Nginx&lt;/span&gt;
+nginx -s stop  	&lt;span class=&#34;c1&#34;&gt;#強制停止 Nginx 服務&lt;/span&gt;
+nginx -s quit  	&lt;span class=&#34;c1&#34;&gt;#停止Nginx服務（即處理完所有請求後再停止服務）&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;參數說明&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nginx [-?hvVtq] [-s signal] [-c filename] [-p prefix] [-g directives]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;-?,-h           &lt;span class=&#34;c1&#34;&gt;# 打開幫助信息&lt;/span&gt;
+-v              &lt;span class=&#34;c1&#34;&gt;# 顯示版本信息並退出&lt;/span&gt;
+-V              &lt;span class=&#34;c1&#34;&gt;# 顯示版本和配置選項信息，然後退出&lt;/span&gt;
+-t              &lt;span class=&#34;c1&#34;&gt;# 檢測配置文件是否有語法錯誤，然後退出&lt;/span&gt;
+-q              &lt;span class=&#34;c1&#34;&gt;# 在檢測配置文件期間屏蔽非錯誤信息&lt;/span&gt;
+-s signal       &lt;span class=&#34;c1&#34;&gt;# 給一個 nginx 主進程發送信號：stop（強制停止）, quit（優雅退出）, reopen（重啟）, reload（重新加載配置文件）&lt;/span&gt;
+-p prefix       &lt;span class=&#34;c1&#34;&gt;# 設置前綴路徑（默認是：/usr/share/nginx/）&lt;/span&gt;
+-c filename     &lt;span class=&#34;c1&#34;&gt;# 設置配置文件（默認是：/etc/nginx/nginx.conf）&lt;/span&gt;
+-g directives   &lt;span class=&#34;c1&#34;&gt;# 設置配置文件外的全局指令&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ld246.com/article/1563147639170&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[日常問題] 解决 Nginx -s reload 時 炸出 /var/run/nginx.pid failed 的問 - 链滴&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>2022 使用剪映 2.6 版本 AI 辨識產生繁體中文字幕</title>
         <link>https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/</link>
         <pubDate>Wed, 16 Feb 2022 00:00:42 +0800</pubDate>

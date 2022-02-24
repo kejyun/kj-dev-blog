@@ -6,7 +6,22 @@
     <description>Recent content in Nginx on KJ Dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 09 Jan 2022 00:13:29 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Feb 2022 00:00:42 +0800</lastBuildDate><atom:link href="https://dev.kejyun.com/categories/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解決 Nginx -s reload 時，出現 /var/run/nginx.pid failed 的問題</title>
+      <link>https://dev.kejyun.com/article/2022/02/nginx-s-reload-var-run-nginx-pid-failed/</link>
+      <pubDate>Thu, 24 Feb 2022 00:00:42 +0800</pubDate>
+      
+      <guid>https://dev.kejyun.com/article/2022/02/nginx-s-reload-var-run-nginx-pid-failed/</guid>
+      <description>在使用 nginx -s reload 載入時跑出錯誤訊息
+ nginx: [error] open() &amp;ldquo;/var/run/nginx.pid&amp;rdquo; failed (2: No such file or directory)
+ 解決方式 重新載入設定
+nginx -c /etc/nginx/nginx.conf 重新啟動 Nginx，Problem Solved!!
+nginx -s reload 分析 指令說明
+nginx #打開 nginx nginx -t #測試配置文件是否有語法錯誤 nginx -s reopen	#重啟 Nginx nginx -s reload	#重新加載 Nginx 配置文件，然後以優雅的方式重啟 Nginx nginx -s stop #強制停止 Nginx 服務 nginx -s quit #停止Nginx服務（即處理完所有請求後再停止服務） 參數說明
+ nginx [-?hvVtq] [-s signal] [-c filename] [-p prefix] [-g directives]</description>
+    </item>
+    
     <item>
       <title>解決 /run/nginx.pid 的 No such file or directory 問題</title>
       <link>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</link>

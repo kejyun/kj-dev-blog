@@ -16,10 +16,10 @@
       <description>在影片中若有哪一段聲音是你想要特別剪輯擷取出來的，可以在使用 Potplayer 播放時順便將聲音剪輯出來
 擷取聲音 使用 PotPlayer 開啟任一你要剪輯的影片後，按下鍵盤的 Shift + G 開啟 聲音錄製的視窗
 1. 設定錄製聲音的目錄 在 資料夾設定 可以設定錄製後影片是要存放到哪
-PotPlayer 影片聲音擷取
+ PotPlayer 影片聲音擷取 
 2. 設定錄製格式 錄製的格式可以選擇你想要的聲音格式，支援的格式有
  WAV OGG FLAC WavPack WMA V1 WMA V2 MP3 MP2 ACC ACC+ AC3 EAC3 DTS TTA  我這邊選擇的是 MP3 格式
-PotPlayer 影片聲音擷取
+ PotPlayer 影片聲音擷取 
 3. 設定音質 聲音取樣的音質可以選擇的有
  24 kbps 48 kbps 64 kbps 96 kbps 128 kbps 192 kbps 320 kbps  我這邊選擇的是 320 kbps 音質</description>
     </item>

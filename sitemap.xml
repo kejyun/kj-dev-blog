@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dev.kejyun.com/article/</loc>
+    <lastmod>2022-02-24T00:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/categories/</loc>
+    <lastmod>2022-02-24T00:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/</loc>
+    <lastmod>2022-02-24T00:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/nginx/</loc>
+    <lastmod>2022-02-24T00:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/categories/nginx/</loc>
+    <lastmod>2022-02-24T00:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/tags/</loc>
+    <lastmod>2022-02-24T00:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://dev.kejyun.com/article/2022/02/nginx-s-reload-var-run-nginx-pid-failed/</loc>
+    <lastmod>2022-02-24T00:00:42+08:00</lastmod>
+  </url><url>
     <loc>https://dev.kejyun.com/article/2022/02/jianying-pro-ai-recognize-zhtw-caption/</loc>
     <lastmod>2022-02-16T00:00:42+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/tags/ai%E5%AD%97%E5%B9%95/</loc>
-    <lastmod>2022-02-16T00:00:42+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/article/</loc>
-    <lastmod>2022-02-16T00:00:42+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/categories/</loc>
-    <lastmod>2022-02-16T00:00:42+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/</loc>
-    <lastmod>2022-02-16T00:00:42+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/tags/</loc>
     <lastmod>2022-02-16T00:00:42+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/tags/%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9F/</loc>
@@ -85,12 +94,6 @@
   </url><url>
     <loc>https://dev.kejyun.com/categories/%E5%BD%B1%E7%89%87%E6%88%AA%E5%9C%96/</loc>
     <lastmod>2022-01-18T00:13:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/tags/nginx/</loc>
-    <lastmod>2022-01-09T00:13:29+08:00</lastmod>
-  </url><url>
-    <loc>https://dev.kejyun.com/categories/nginx/</loc>
-    <lastmod>2022-01-09T00:13:29+08:00</lastmod>
   </url><url>
     <loc>https://dev.kejyun.com/article/2022/01/nginx-pid-no-such-file-or-directory/</loc>
     <lastmod>2022-01-09T00:13:29+08:00</lastmod>
